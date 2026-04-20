@@ -97,7 +97,7 @@
                 </div>
             </div>
             
-            <div class="flex-1 flex justify-center overflow-x-auto hide-scrollbar px-2 mx-2">
+            <div class="flex-1 flex justify-start md:justify-center overflow-x-auto hide-scrollbar px-2 mx-2">
                 <div class="flex items-center gap-2 md:gap-4 text-xs md:text-sm font-bold text-slate-500 whitespace-nowrap">
                     <a href="#hero" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">專案介紹</a>
                     <a href="#mechanism" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">運作機制</a>
@@ -113,7 +113,7 @@
                         <span id="navUserEmail" class="text-[10px] font-bold text-slate-500"></span>
                         <span class="text-xs font-black text-brand font-cute">Lv.<span id="navUserLevel">1</span></span>
                     </div>
-                    <button id="logoutBtn" class="w-6 h-6 md:w-8 md:h-8 bg-slate-200 text-slate-500 rounded-full hover:bg-red-100 hover:text-red-500 transition-colors flex items-center justify-center">
+                    <button id="logoutBtn" class="w-8 h-8 bg-slate-200 text-slate-500 rounded-full hover:bg-red-100 hover:text-red-500 transition-colors flex items-center justify-center shrink-0">
                         <i class="fa-solid fa-right-from-bracket text-xs"></i>
                     </button>
                 </div>
@@ -124,30 +124,30 @@
         </div>
     </nav>
 
-    <main class="pt-28 md:pt-32 pb-20 px-4 max-w-6xl mx-auto space-y-24">
+    <main class="pt-24 md:pt-32 pb-20 px-4 max-w-6xl mx-auto space-y-16 md:space-y-24">
 
         <section id="hero" class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <div class="inline-block px-4 py-1 bg-brand-light text-brand-dark font-bold rounded-full text-sm shadow-sm">
+            <div class="space-y-6 text-center md:text-left">
+                <div class="inline-block px-4 py-1 bg-brand-light text-brand-dark font-bold rounded-full text-xs md:text-sm shadow-sm">
                     新北循環經濟專案・TanJi Loop
                 </div>
                 <h1 class="text-4xl md:text-5xl font-black leading-tight text-slate-800">
-                    讓日常提神<br>
+                    讓日常提神<br class="hidden md:block">
                     變成城市的<span class="text-brand">永續魔法</span>
                 </h1>
-                <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                <p class="text-base md:text-lg text-slate-600 leading-relaxed font-medium">
                     我們正在募集 1,000 公斤的有機廢棄物資源，於在地建置首座「智慧發酵站」。您的每一次回收分類，都能幫助咖啡渣免於進入焚化爐，轉化為滋養社區農園的有機黑金土。
                 </p>
                 
-                <div class="glass-card rounded-3xl p-6 space-y-4">
+                <div class="glass-card rounded-3xl p-6 space-y-4 text-left">
                     <div class="flex justify-between items-end">
                         <div>
-                            <p class="text-sm text-slate-500 font-bold mb-1">已攔截有機廢棄物</p>
-                            <p class="text-3xl font-black text-brand font-cute"><span id="display-waste-global">讀取中...</span> <span class="text-xl">kg</span></p>
+                            <p class="text-xs md:text-sm text-slate-500 font-bold mb-1">已攔截有機廢棄物</p>
+                            <p class="text-2xl md:text-3xl font-black text-brand font-cute"><span id="display-waste-global">讀取中...</span> <span class="text-lg md:text-xl">kg</span></p>
                         </div>
                         <div class="text-right">
-                            <p class="text-sm text-slate-500 font-bold mb-1">第一階段目標</p>
-                            <p class="text-xl font-bold text-slate-700 font-cute">1,000 kg</p>
+                            <p class="text-xs md:text-sm text-slate-500 font-bold mb-1">第一階段目標</p>
+                            <p class="text-lg md:text-xl font-bold text-slate-700 font-cute">1,000 kg</p>
                         </div>
                     </div>
                     <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden shadow-inner">
@@ -155,28 +155,28 @@
                             <div class="absolute right-0 top-0 bottom-0 w-10 bg-white/30 animate-pulse"></div>
                         </div>
                     </div>
-                    <div class="flex justify-between text-sm font-bold text-slate-500 pt-2">
+                    <div class="flex justify-between text-xs md:text-sm font-bold text-slate-500 pt-2">
                         <span><i class="fa-solid fa-users text-brand mr-1"></i> <span id="display-participants">--</span> 人參與共創</span>
                         <span><i class="fa-solid fa-leaf text-emerald-500 mr-1"></i> 進行中</span>
                     </div>
                 </div>
             </div>
-            <div class="relative flex justify-center items-center h-80">
-                <div class="absolute w-72 h-72 bg-brand-light rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
-                <div class="absolute w-64 h-64 bg-amber-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse" style="animation-delay: 1s"></div>
-                <div class="w-72 h-72 relative z-10 animate-float rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white p-2">
+            <div class="relative flex justify-center items-center h-64 md:h-80">
+                <div class="absolute w-56 h-56 md:w-72 md:h-72 bg-brand-light rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
+                <div class="absolute w-48 h-48 md:w-64 md:h-64 bg-amber-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse" style="animation-delay: 1s"></div>
+                <div class="w-56 h-56 md:w-72 md:h-72 relative z-10 animate-float rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white p-2">
                     <img id="hero-avatar" src="tanjibaby.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full">
                 </div>
             </div>
         </section>
 
-        <section id="mechanism" class="space-y-16">
+        <section id="mechanism" class="space-y-10 md:space-y-16">
             <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-3xl font-black text-slate-800">資源與系統如何運作？</h2>
-                <p class="text-slate-500 font-medium mt-3">透明標準的回收機制，確保您的行動百分之百轉化為在地永續力量</p>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800">資源與系統如何運作？</h2>
+                <p class="text-slate-500 font-medium mt-3 text-sm md:text-base">透明標準的回收機制，確保您的行動百分之百轉化為在地永續力量</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 relative pt-12 hover:-translate-y-2 transition-transform text-center">
                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg border-4 border-white"><i class="fa-solid fa-box-archive"></i></div>
                     <h4 class="text-xl font-extrabold text-slate-800 mb-3">1. 資源集中點收</h4>
@@ -194,51 +194,51 @@
                 </div>
             </div>
 
-            <div class="glass-card rounded-[3rem] p-8 md:p-12 text-center relative overflow-hidden border-t-8 border-t-brand">
-                <h2 class="text-2xl font-black mb-2">專屬永續履歷：養育碳吉寶寶</h2>
-                <p class="text-slate-500 font-medium mb-10">現在就點擊下方按鈕，登錄您的回收行動，觀察寶寶成長與數據累積！</p>
+            <div class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 text-center relative overflow-hidden border-t-8 border-t-brand">
+                <h2 class="text-xl md:text-2xl font-black mb-2">專屬永續履歷：養育碳吉寶寶</h2>
+                <p class="text-slate-500 text-sm md:text-base font-medium mb-10">現在就點擊下方按鈕，登錄您的回收行動，觀察寶寶成長與數據累積！</p>
                 
-                <div class="flex flex-col md:flex-row justify-center items-center gap-12">
-                    <div class="space-y-4 w-full md:w-1/3">
-                        <button id="btnFeedCoffee" class="w-full bg-slate-700 text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-mug-hot text-amber-400 text-2xl"></i>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+                    <div class="space-y-3 w-full md:w-1/3">
+                        <button id="btnFeedCoffee" class="w-full bg-slate-700 text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-mug-hot text-amber-400 text-xl md:text-2xl"></i>
                             貢獻咖啡渣
                         </button>
                         <p class="text-xs text-slate-400 font-bold">登錄回收，提供發酵所需氮源</p>
                     </div>
 
-                    <div class="relative">
-                        <div class="w-48 h-48 bg-white rounded-full mx-auto shadow-xl flex justify-center items-center border-8 border-brand-light relative z-10 overflow-hidden p-2">
+                    <div class="relative shrink-0">
+                        <div class="w-40 h-40 md:w-48 md:h-48 bg-white rounded-full mx-auto shadow-xl flex justify-center items-center border-8 border-brand-light relative z-10 overflow-hidden p-2">
                             <img id="interactive-avatar" src="tanjibaby.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full">
                         </div>
-                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black/10 rounded-[100%] filter blur-sm"></div>
+                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-6 bg-black/10 rounded-[100%] filter blur-sm"></div>
                     </div>
 
-                    <div class="space-y-4 w-full md:w-1/3">
-                        <button id="btnFeedLeaf" class="w-full bg-brand text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3">
-                            <i class="fa-solid fa-leaf text-emerald-300 text-2xl"></i>
+                    <div class="space-y-3 w-full md:w-1/3">
+                        <button id="btnFeedLeaf" class="w-full bg-brand text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-leaf text-emerald-300 text-xl md:text-2xl"></i>
                             貢獻落葉碳源
                         </button>
                         <p class="text-xs text-slate-400 font-bold">參與社區行動，調節碳氮比例</p>
                     </div>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 bg-slate-50 rounded-3xl p-6 border-2 border-slate-100">
-                    <div>
-                        <p class="text-slate-500 text-sm font-bold">我的累積回收</p>
-                        <p class="text-2xl font-black text-amber-600"><span id="stat-waste">0</span> kg</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12 bg-slate-50 rounded-2xl p-4 md:p-6 border-2 border-slate-100">
+                    <div class="p-2">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold">我的累積回收</p>
+                        <p class="text-xl md:text-2xl font-black text-amber-600"><span id="stat-waste">0</span> <span class="text-base">kg</span></p>
                     </div>
-                    <div>
-                        <p class="text-slate-500 text-sm font-bold">我的迴避碳排</p>
-                        <p class="text-2xl font-black text-blue-500"><span id="stat-carbon">0</span> kg CO2e</p>
+                    <div class="p-2 border-l border-slate-200 md:border-none">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold">我的迴避碳排</p>
+                        <p class="text-xl md:text-2xl font-black text-blue-500"><span id="stat-carbon">0</span> <span class="text-sm md:text-base">kg CO2e</span></p>
                     </div>
-                    <div>
-                        <p class="text-slate-500 text-sm font-bold">預期產出黑金土</p>
-                        <p class="text-2xl font-black text-brand-dark"><span id="stat-soil">0</span> kg</p>
+                    <div class="p-2 border-t border-slate-200 md:border-none">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold">預期產出黑金土</p>
+                        <p class="text-xl md:text-2xl font-black text-brand-dark"><span id="stat-soil">0</span> <span class="text-base">kg</span></p>
                     </div>
-                    <div>
-                        <p class="text-slate-500 text-sm font-bold">寶寶經驗值</p>
-                        <p class="text-2xl font-black text-purple-500">Lv. <span id="stat-level">1</span></p>
+                    <div class="p-2 border-t border-l border-slate-200 md:border-none">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold">寶寶經驗值</p>
+                        <p class="text-xl md:text-2xl font-black text-purple-500">Lv. <span id="stat-level">1</span></p>
                     </div>
                 </div>
             </div>
@@ -246,66 +246,132 @@
 
         <!-- 進階升級藍圖區塊 -->
         <section id="blueprint" class="py-8">
-            <div class="text-center mb-12">
-                <span class="text-brand-dark font-extrabold bg-brand-light px-4 py-1 rounded-full text-sm inline-block mb-3 shadow-sm border border-brand/20">Future Roadmap</span>
-                <h2 class="text-3xl font-black text-slate-800">平台進階升級藍圖</h2>
-                <p class="text-slate-500 font-medium mt-3 max-w-2xl mx-auto">從概念展示原型到具備真實營運潛力的 Web App，結合雲端技術與循環經濟，打造完整的永續數位生態系。</p>
+            <div class="text-center mb-10 md:mb-12">
+                <span class="text-brand-dark font-extrabold bg-brand-light px-4 py-1 rounded-full text-xs md:text-sm inline-block mb-3 shadow-sm border border-brand/20">Future Roadmap</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800">平台進階升級藍圖</h2>
+                <p class="text-slate-500 font-medium mt-3 text-sm md:text-base max-w-2xl mx-auto">從概念展示原型到具備真實營運潛力的 Web App，結合雲端技術與循環經濟，打造完整的永續數位生態系。</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-5 hover:border-brand-light transition-colors">
-                    <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 text-2xl shrink-0 shadow-inner">
+            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-4 md:gap-5 hover:border-brand-light transition-colors">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 text-xl md:text-2xl shrink-0 shadow-inner">
                         <i class="fa-solid fa-id-badge"></i>
                     </div>
                     <div>
-                        <h4 class="text-xl font-extrabold text-slate-800 mb-2">一、永續循環履歷</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-medium">結合 Firebase Auth 系統，讓使用者登入並在 Firestore 記錄「累積回收咖啡渣重量」、「預期產出黑金土」與「寶寶等級」，讓每次真實回收行動都帶來成就感。</p>
+                        <h4 class="text-lg md:text-xl font-extrabold text-slate-800 mb-2">一、永續循環履歷</h4>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">結合 Firebase Auth 系統，讓使用者登入並在 Firestore 記錄「累積回收咖啡渣重量」、「預期產出黑金土」與「寶寶等級」，讓每次真實回收行動都帶來成就感。</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-5 hover:border-brand-light transition-colors">
-                    <div class="w-14 h-14 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 text-2xl shrink-0 shadow-inner">
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-4 md:gap-5 hover:border-brand-light transition-colors">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 text-xl md:text-2xl shrink-0 shadow-inner">
                         <i class="fa-solid fa-qrcode"></i>
                     </div>
                     <div>
-                        <h4 class="text-xl font-extrabold text-slate-800 mb-2">二、O2O 回收打卡機制</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-medium">設計虛實整合的掃碼功能。當居民把收集好的咖啡渣拿到發酵站時，用手機掃描 QR Code 即可為帳戶增加經驗值，並即時觸發寶寶慶祝動畫。</p>
+                        <h4 class="text-lg md:text-xl font-extrabold text-slate-800 mb-2">二、O2O 回收打卡機制</h4>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">設計虛實整合的掃碼功能。當居民把收集好的咖啡渣拿到發酵站時，用手機掃描 QR Code 即可為帳戶增加經驗值，並即時觸發寶寶慶祝動畫。</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-5 hover:border-brand-light transition-colors">
-                    <div class="w-14 h-14 bg-amber-50 rounded-full flex items-center justify-center text-amber-500 text-2xl shrink-0 shadow-inner">
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-4 md:gap-5 hover:border-brand-light transition-colors">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-amber-50 rounded-full flex items-center justify-center text-amber-500 text-xl md:text-2xl shrink-0 shadow-inner">
                         <i class="fa-solid fa-file-contract"></i>
                     </div>
                     <div>
-                        <h4 class="text-xl font-extrabold text-slate-800 mb-2">三、正式減碳憑證匯出</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-medium">提供一鍵產出「官方減碳憑證」功能。學生可作為高品質的學習歷程檔案，合作店家也可將憑證列印張貼，做為推動在地 ESG 最佳的公關素材。</p>
+                        <h4 class="text-lg md:text-xl font-extrabold text-slate-800 mb-2">三、正式減碳憑證匯出</h4>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">提供一鍵產出「官方減碳憑證」功能。學生可作為高品質的學習歷程檔案，合作店家也可將憑證列印張貼，做為推動在地 ESG 最佳的公關素材。</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-5 hover:border-brand-light transition-colors">
-                    <div class="w-14 h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-500 text-2xl shrink-0 shadow-inner">
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-4 md:gap-5 hover:border-brand-light transition-colors">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-purple-50 rounded-full flex items-center justify-center text-purple-500 text-xl md:text-2xl shrink-0 shadow-inner">
                         <i class="fa-solid fa-comments"></i>
                     </div>
                     <div>
-                        <h4 class="text-xl font-extrabold text-slate-800 mb-2">四、社區動態與智能助手</h4>
-                        <p class="text-slate-500 text-sm leading-relaxed font-medium">即時動態牆監聽資料庫最新回收紀錄，展示社區行動；專屬「碳吉寶寶智能助手」隨時在線，引導新使用者了解好氧發酵與廚餘分類知識。</p>
+                        <h4 class="text-lg md:text-xl font-extrabold text-slate-800 mb-2">四、社區動態與智能助手</h4>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">即時動態牆監聽資料庫最新回收紀錄，展示社區行動；專屬「碳吉寶寶智能助手」隨時在線，引導新使用者了解好氧發酵與廚餘分類知識。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="dashboard" class="grid lg:grid-cols-3 gap-8 pt-8 border-t border-slate-100">
-            <div class="lg:col-span-2 glass-card rounded-[3rem] p-8 relative flex flex-col">
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h2 class="text-2xl font-black mb-1 text-slate-800">個人減碳軌跡</h2>
-                        <p class="text-slate-500 text-sm font-bold">即時呈現您的行動帶來的永續影響力</p>
+        <section id="rewards" class="py-8 border-t border-slate-100">
+            <div class="text-center max-w-3xl mx-auto mb-10 pt-8">
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800">階梯式永續回饋</h2>
+                <p class="text-slate-500 text-sm md:text-base font-medium mt-3">您的回收行動將轉化為經驗值 (EXP)，解鎖在地生態與數位獎勵</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="lg:col-span-1 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 h-full flex flex-col justify-center">
+                    <h4 class="font-black text-slate-700 mb-6 flex items-center gap-2 text-lg md:text-xl">
+                        <i class="fa-solid fa-chart-pie text-brand"></i> 資源應用明細
+                    </h4>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2">
+                                <span>發酵設備與耗材</span><span class="text-brand">50%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-brand h-3 rounded-full shadow-inner" style="width: 50%"></div></div>
+                            <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-medium">智慧發酵箱採購與感測器安裝</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2">
+                                <span>農園植栽與維運</span><span class="text-blue-500">30%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-blue-400 h-3 rounded-full shadow-inner" style="width: 30%"></div></div>
+                            <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-medium">頂樓農園土壤改良與香草種子</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2">
+                                <span>系統與回饋品維護</span><span class="text-amber-500">20%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-amber-400 h-3 rounded-full shadow-inner" style="width: 20%"></div></div>
+                            <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-medium">平台系統營運與實體回饋品製作</p>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-end gap-2">
-                        <span class="bg-brand/10 text-brand px-3 py-1 rounded-full text-xs font-bold border border-brand/20">即時同步</span>
+                </div>
+
+                <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4 md:gap-6">
+                    <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm flex flex-col">
+                        <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100">🏅</div>
+                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1">永續新星</h4>
+                        <p class="text-brand font-black mb-3 text-sm md:text-base">累積 100 EXP</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-medium">解鎖「淨零新星數位徽章」，於平台上永久展示您的專屬循環履歷，彰顯行動力。</p>
+                        <button class="w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base">查看進度</button>
+                    </div>
+                    
+                    <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm flex flex-col">
+                        <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100">🌱</div>
+                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1">低碳推手</h4>
+                        <p class="text-brand font-black mb-3 text-sm md:text-base">累積 300 EXP</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-medium">解鎖「社區自種香草植物盆栽」，將使用回收咖啡渣培育出的薄荷或迷迭香帶回家。</p>
+                        <button class="w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base">查看進度</button>
+                    </div>
+                    
+                    <div class="bg-brand-light border-2 border-brand rounded-3xl p-6 shadow-md sm:col-span-2 flex flex-col sm:flex-row items-center gap-4 md:gap-6 text-center sm:text-left">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm shrink-0">☕</div>
+                        <div class="flex-1 w-full">
+                            <h4 class="text-lg md:text-xl font-black text-brand-dark mb-1">循環見證人</h4>
+                            <p class="text-brand-dark font-black mb-2 text-sm md:text-base">累積 800 EXP</p>
+                            <p class="text-xs md:text-sm text-brand-dark/90 mb-0 font-bold">解鎖「在地低碳咖啡兌換券」，前往合作店舖免費品嚐永續好滋味，完成完美商業閉環。</p>
+                        </div>
+                        <button class="w-full sm:w-auto px-6 py-3 bg-brand text-white font-bold rounded-xl btn-cute hover:bg-brand-dark text-sm md:text-base shrink-0">目標衝刺中</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="grid lg:grid-cols-3 gap-6 md:gap-8 pt-8 border-t border-slate-100">
+            <div class="lg:col-span-2 glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 relative flex flex-col">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                    <div>
+                        <h2 class="text-xl md:text-2xl font-black mb-1 text-slate-800">個人減碳軌跡</h2>
+                        <p class="text-slate-500 text-xs md:text-sm font-bold">即時呈現您的行動帶來的永續影響力</p>
+                    </div>
+                    <div class="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end">
+                        <span class="bg-brand/10 text-brand px-3 py-1.5 rounded-full text-xs font-bold border border-brand/20">即時同步</span>
                         <!-- 生成憑證的按鈕 (登入後才會顯示) -->
-                        <button id="openCertBtn" class="text-xs bg-slate-800 text-white px-3 py-2 rounded-xl font-bold hover:bg-slate-700 transition-colors shadow-sm hidden flex items-center gap-1.5">
+                        <button id="openCertBtn" class="text-xs md:text-sm bg-slate-800 text-white px-3 md:px-4 py-2 rounded-xl font-bold hover:bg-slate-700 transition-colors shadow-sm hidden flex items-center gap-1.5 shrink-0">
                             <i class="fa-solid fa-certificate"></i> 產出專屬憑證
                         </button>
                     </div>
@@ -315,33 +381,33 @@
                 </div>
             </div>
             
-            <div class="bg-slate-800 rounded-[3rem] p-8 text-white flex flex-col border border-slate-700">
-                <h3 class="text-xl font-black mb-6 flex items-center gap-3 border-b border-slate-700 pb-4">
-                    <span class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-sm"><i class="fa-solid fa-bolt"></i></span>
+            <div class="bg-slate-800 rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 text-white flex flex-col border border-slate-700 min-h-[350px]">
+                <h3 class="text-lg md:text-xl font-black mb-4 md:mb-6 flex items-center gap-3 border-b border-slate-700 pb-4">
+                    <span class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-sm shrink-0"><i class="fa-solid fa-bolt"></i></span>
                     社區即時動態牆
                 </h3>
                 <div class="flex-1 overflow-hidden relative">
-                    <div class="absolute inset-0 overflow-y-auto pr-2 space-y-4">
-                        <div class="bg-slate-700/50 p-4 rounded-2xl border border-slate-600 text-sm hover:bg-slate-700 transition-colors">
+                    <div class="absolute inset-0 overflow-y-auto pr-2 space-y-3 md:space-y-4 hide-scrollbar">
+                        <div class="bg-slate-700/50 p-3 md:p-4 rounded-2xl border border-slate-600 text-xs md:text-sm hover:bg-slate-700 transition-colors">
                             <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center font-bold shadow-inner">林</div>
-                                <span class="font-bold text-brand-light">北大社區住戶</span>
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-blue-400 rounded-full flex items-center justify-center font-bold shadow-inner shrink-0">林</div>
+                                <span class="font-bold text-brand-light line-clamp-1">北大社區住戶</span>
                             </div>
                             <p class="text-slate-300">剛剛投入了 <span class="font-bold text-white">2 kg 咖啡渣</span></p>
-                            <p class="text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded border border-brand-dark">產生 1.4kg 黑金土</p>
+                            <p class="text-[10px] md:text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded border border-brand-dark">產生 1.4kg 黑金土</p>
                         </div>
-                        <div class="bg-slate-700/50 p-4 rounded-2xl border border-slate-600 text-sm hover:bg-slate-700 transition-colors">
+                        <div class="bg-slate-700/50 p-3 md:p-4 rounded-2xl border border-slate-600 text-xs md:text-sm hover:bg-slate-700 transition-colors">
                             <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center font-bold shadow-inner">學</div>
-                                <span class="font-bold text-brand-light">北大學生代表</span>
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-purple-400 rounded-full flex items-center justify-center font-bold shadow-inner shrink-0">學</div>
+                                <span class="font-bold text-brand-light line-clamp-1">北大學生代表</span>
                             </div>
                             <p class="text-slate-300">打卡回收了 <span class="font-bold text-white">3 kg 落葉碳源</span></p>
-                            <p class="text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded border border-brand-dark">+30 EXP 經驗值</p>
+                            <p class="text-[10px] md:text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded border border-brand-dark">+30 EXP 經驗值</p>
                         </div>
-                        <div class="bg-slate-700/50 p-4 rounded-2xl border border-slate-600 text-sm hover:bg-slate-700 transition-colors">
+                        <div class="bg-slate-700/50 p-3 md:p-4 rounded-2xl border border-slate-600 text-xs md:text-sm hover:bg-slate-700 transition-colors">
                             <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-800 shadow-inner">店</div>
-                                <span class="font-bold text-brand-light">合作店家</span>
+                                <div class="w-7 h-7 md:w-8 md:h-8 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-800 shadow-inner shrink-0">店</div>
+                                <span class="font-bold text-brand-light line-clamp-1">合作店家</span>
                             </div>
                             <p class="text-slate-300">完成了 <span class="font-bold text-white">本週資源點交作業</span></p>
                         </div>
@@ -350,161 +416,124 @@
             </div>
         </section>
 
-        <section id="timeline" class="py-12 border-t-2 border-dashed border-slate-200">
-            <div class="text-center mb-16">
-                <span class="text-brand font-black tracking-widest text-sm mb-2 block uppercase">FUTURE BLUEPRINT</span>
-                <h2 class="text-3xl font-black text-slate-800">新北擴散藍圖</h2>
-                <p class="text-slate-500 font-medium mt-3">從三峽北大社區出發，打造覆蓋全新北市的循環生態系</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto relative">
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-brand/20 hidden md:block rounded-full"></div>
-                <div class="space-y-16">
-                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right pr-0 md:pr-10 mb-6 md:mb-0">
-                            <h4 class="text-3xl font-black text-brand mb-2">2026</h4>
-                            <p class="text-slate-800 font-bold text-xl mb-2">三峽示範點啟動</p>
-                            <p class="text-sm text-slate-500 leading-relaxed font-medium">於北大特區進行概念驗證，串聯在地咖啡店與萊茵社區，建立發酵設備與循環標準作業流程。</p>
-                        </div>
-                        <div class="w-14 h-14 bg-brand text-white rounded-full flex items-center justify-center font-black text-xl z-10 shadow-[0_0_15px_rgba(16,185,129,0.5)] border-4 border-white group-hover:scale-110 transition-transform">1</div>
-                        <div class="md:w-5/12 pl-0 md:pl-10 mt-4 md:mt-0 hidden md:block"></div>
-                    </div>
-                    
-                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
-                        <div class="md:w-5/12 pr-0 md:pr-10 mb-6 md:mb-0 hidden md:block"></div>
-                        <div class="w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center font-black text-xl z-10 shadow-[0_0_15px_rgba(59,130,246,0.5)] border-4 border-white group-hover:scale-110 transition-transform">2</div>
-                        <div class="md:w-5/12 text-center md:text-left pl-0 md:pl-10 mt-4 md:mt-0">
-                            <h4 class="text-3xl font-black text-blue-500 mb-2">2027</h4>
-                            <p class="text-slate-800 font-bold text-xl mb-2">氣候挑戰區擴散</p>
-                            <p class="text-sm text-slate-500 leading-relaxed font-medium">將成功模組複製至淡水、林口等行政區，針對不同的溫濕度氣候條件，調整發酵參數與植栽策略。</p>
-                        </div>
-                    </div>
-                    
-                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right pr-0 md:pr-10 mb-6 md:mb-0">
-                            <h4 class="text-3xl font-black text-purple-500 mb-2">2028</h4>
-                            <p class="text-slate-800 font-bold text-xl mb-2">全市共創生態系</p>
-                            <p class="text-sm text-slate-500 leading-relaxed font-medium">平台正式轉型為開放式孵化器，協助新北市各地的優質循環經濟專案上架，實現全市淨零共好。</p>
-                        </div>
-                        <div class="w-14 h-14 bg-purple-500 text-white rounded-full flex items-center justify-center font-black text-xl z-10 shadow-[0_0_15px_rgba(168,85,247,0.5)] border-4 border-white group-hover:scale-110 transition-transform">3</div>
-                        <div class="md:w-5/12 pl-0 md:pl-10 mt-4 md:mt-0 hidden md:block"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="bg-slate-800 text-white pt-16 pb-8 rounded-t-[4rem] border-t-8 border-brand">
+    <footer class="bg-slate-800 text-white pt-12 md:pt-16 pb-8 rounded-t-[3rem] md:rounded-t-[4rem] border-t-8 border-brand">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-3">
-                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden shadow-md">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center p-0.5 overflow-hidden shadow-md shrink-0">
                     <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full">
                 </div>
                 <div class="flex flex-col justify-center">
-                    <span class="font-black text-2xl tracking-wide font-cute leading-none">碳吉圈圈</span>
-                    <span class="font-bold text-xs tracking-widest text-brand-light opacity-80 uppercase mt-1">TanJi Loop</span>
+                    <span class="font-black text-xl md:text-2xl tracking-wide font-cute leading-none">碳吉圈圈</span>
+                    <span class="font-bold text-[10px] md:text-xs tracking-widest text-brand-light opacity-80 uppercase mt-1">TanJi Loop</span>
                 </div>
             </div>
-            <div class="font-medium text-xs md:text-sm text-center md:text-right text-slate-400 leading-relaxed">
-                <p class="text-slate-300 mb-1">2026 新北市青年氣候行動徵件提案作品｜作品受著作權法保護，未經授權請勿複製轉載</p>
+            <div class="font-medium text-[10px] md:text-sm text-center md:text-right text-slate-400 leading-relaxed">
+                <p class="text-slate-300 mb-1">2026 新北市青年氣候行動徵件提案作品｜作品受著作權法保護</p>
                 <p>團隊聯絡信箱：tanji2026@gmail.com</p>
             </div>
         </div>
     </footer>
 
-    <!-- 數位憑證 Modal -->
-    <div id="certificateModal" class="fixed inset-0 bg-slate-900/90 z-[110] hidden flex flex-col items-center justify-center backdrop-blur-md p-4">
-        <div class="w-full max-w-2xl relative">
-            <button id="closeCertBtn" class="absolute -top-12 right-0 text-white hover:text-brand-light transition-colors w-10 h-10 flex items-center justify-center bg-white/20 rounded-full z-20">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-            
-            <div class="overflow-hidden rounded-[2rem] shadow-2xl bg-white">
-                <!-- 實際要給 html2canvas 截圖的區塊 -->
-                <div id="certificateNode" class="bg-white p-8 md:p-12 border-[12px] border-double border-brand-light relative overflow-hidden">
-                    <!-- 背景浮水印/裝飾 -->
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-bl-full pointer-events-none"></div>
-                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-amber-500/5 rounded-tr-full pointer-events-none"></div>
-                    
-                    <!-- 憑證 Header -->
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 border-b-2 border-slate-100 pb-6 relative z-10 gap-4">
-                        <div class="flex items-center gap-4">
-                            <img src="tanjibaby.png" class="w-16 h-16 rounded-full border-2 border-brand shadow-sm bg-brand-light p-1">
-                            <div>
-                                <h3 class="font-black text-2xl text-slate-800 tracking-widest font-cute">碳吉圈圈 TanJi Loop</h3>
-                                <p class="text-xs text-brand font-bold uppercase tracking-widest mt-1">Official Carbon Reduction Certificate</p>
+    <!-- 數位憑證 Modal (優化行動版排版防止切字) -->
+    <div id="certificateModal" class="fixed inset-0 z-[110] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto hide-scrollbar">
+        <div class="min-h-screen px-4 flex items-center justify-center py-10">
+            <div class="w-full max-w-3xl relative text-left">
+                <!-- 關閉按鈕 -->
+                <div class="flex justify-end mb-4 sm:absolute sm:-top-12 sm:right-0 sm:mb-0">
+                    <button id="closeCertBtn" class="text-white hover:text-brand-light transition-colors w-10 h-10 flex items-center justify-center bg-white/20 rounded-full z-20 shadow-md">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- 憑證預覽區 (加上橫向滑動確保比例與排版不破裂) -->
+                <div class="overflow-x-auto hide-scrollbar rounded-[2rem] shadow-2xl bg-white w-full">
+                    <!-- 強制最小寬度確保轉出圖片比例 -->
+                    <div id="certificateNode" class="min-w-[640px] bg-white p-8 md:p-12 border-[12px] border-double border-brand-light relative overflow-hidden">
+                        <!-- 背景浮水印/裝飾 -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-bl-full pointer-events-none"></div>
+                        <div class="absolute bottom-0 left-0 w-48 h-48 bg-amber-500/5 rounded-tr-full pointer-events-none"></div>
+                        
+                        <!-- 憑證 Header -->
+                        <div class="flex flex-row items-center justify-between mb-8 border-b-2 border-slate-100 pb-6 relative z-10 gap-4">
+                            <div class="flex items-center gap-4">
+                                <img src="tanjibaby.png" class="w-16 h-16 rounded-full border-2 border-brand shadow-sm bg-brand-light p-1">
+                                <div>
+                                    <h3 class="font-black text-2xl text-slate-800 tracking-widest font-cute">碳吉圈圈 TanJi Loop</h3>
+                                    <p class="text-xs text-brand font-bold uppercase tracking-widest mt-1">Official Carbon Reduction Certificate</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">Certificate NO.</p>
+                                <p id="certNo" class="text-sm font-black text-slate-700 font-mono bg-slate-100 px-3 py-1 rounded-md tracking-wider"></p>
                             </div>
                         </div>
-                        <div class="text-left sm:text-right">
-                            <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">Certificate NO.</p>
-                            <p id="certNo" class="text-sm font-black text-slate-700 font-mono bg-slate-100 px-3 py-1 rounded-md tracking-wider"></p>
+                        
+                        <!-- 憑證內文 (修正字中間被劃線問題) -->
+                        <div class="text-center relative z-10 py-4">
+                            <h2 class="text-3xl md:text-4xl font-black text-slate-800 tracking-[0.2em] mb-8 cert-font text-brand-dark">永續行動憑證</h2>
+                            <p class="text-slate-600 font-medium leading-loose text-center px-4 md:px-8 text-sm md:text-base cert-font">
+                                茲證明 <span id="certUser" class="inline-block font-bold text-xl text-brand-dark border-b-2 border-brand-dark px-4 mx-1 min-w-[120px] text-center leading-tight pb-1"></span> <br>
+                                熱心參與新北北大特區「微型循環生態系」共創計畫。<br>
+                                透過實際的資源分類與行動，成功攔截有機廢棄物，並轉化為具備生態價值的黑金土，為城市的循環經濟與淨零轉型做出卓越貢獻。
+                            </p>
                         </div>
-                    </div>
-                    
-                    <!-- 憑證內文 -->
-                    <div class="text-center relative z-10 py-6">
-                        <h2 class="text-3xl md:text-4xl font-black text-slate-800 tracking-[0.2em] mb-8 cert-font text-brand-dark">永續行動憑證</h2>
-                        <p class="text-slate-600 font-medium leading-loose text-justify md:text-center px-0 md:px-8 text-sm md:text-base cert-font">
-                            茲證明 <span id="certUser" class="font-bold text-xl text-brand-dark border-b-2 border-brand-dark px-2 mx-1"></span> <br class="hidden md:block">
-                            熱心參與新北北大特區「微型循環生態系」共創計畫。<br>
-                            透過實際的資源分類與行動，成功攔截有機廢棄物，並轉化為具備生態價值的黑金土，為城市的循環經濟與淨零轉型做出卓越貢獻。
-                        </p>
-                    </div>
 
-                    <!-- 憑證數據 -->
-                    <div class="grid grid-cols-3 gap-3 md:gap-6 mt-8 mb-10 relative z-10">
-                        <div class="bg-slate-50 py-5 px-2 rounded-2xl text-center border border-slate-200 shadow-sm">
-                            <p class="text-[10px] md:text-xs text-slate-500 font-bold mb-2">攔截廢棄物</p>
-                            <p class="text-2xl md:text-3xl font-black text-amber-600"><span id="certWaste">0</span><span class="text-xs md:text-sm text-amber-500/70 ml-1">kg</span></p>
+                        <!-- 憑證數據 -->
+                        <div class="grid grid-cols-3 gap-4 md:gap-6 mt-8 mb-10 relative z-10">
+                            <div class="bg-slate-50 py-5 px-2 rounded-2xl text-center border border-slate-200 shadow-sm">
+                                <p class="text-xs text-slate-500 font-bold mb-2">攔截廢棄物</p>
+                                <p class="text-3xl font-black text-amber-600"><span id="certWaste">0</span><span class="text-sm text-amber-500/70 ml-1">kg</span></p>
+                            </div>
+                            <div class="bg-brand-light/30 py-5 px-2 rounded-2xl text-center border border-brand/20 shadow-sm relative overflow-hidden">
+                                <div class="absolute top-0 left-0 w-full h-1 bg-brand"></div>
+                                <p class="text-xs text-brand-dark font-bold mb-2">總迴避碳排</p>
+                                <p class="text-3xl font-black text-brand-dark"><span id="certCarbon">0</span><span class="text-sm text-brand/70 ml-1">kg CO2e</span></p>
+                            </div>
+                            <div class="bg-slate-50 py-5 px-2 rounded-2xl text-center border border-slate-200 shadow-sm">
+                                <p class="text-xs text-slate-500 font-bold mb-2">轉化黑金土</p>
+                                <p class="text-3xl font-black text-slate-700"><span id="certSoil">0</span><span class="text-sm text-slate-400 ml-1">kg</span></p>
+                            </div>
                         </div>
-                        <div class="bg-brand-light/30 py-5 px-2 rounded-2xl text-center border border-brand/20 shadow-sm relative overflow-hidden">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-brand"></div>
-                            <p class="text-[10px] md:text-xs text-brand-dark font-bold mb-2">總迴避碳排</p>
-                            <p class="text-2xl md:text-3xl font-black text-brand-dark"><span id="certCarbon">0</span><span class="text-xs md:text-sm text-brand/70 ml-1">kg CO2e</span></p>
-                        </div>
-                        <div class="bg-slate-50 py-5 px-2 rounded-2xl text-center border border-slate-200 shadow-sm">
-                            <p class="text-[10px] md:text-xs text-slate-500 font-bold mb-2">轉化黑金土</p>
-                            <p class="text-2xl md:text-3xl font-black text-slate-700"><span id="certSoil">0</span><span class="text-xs md:text-sm text-slate-400 ml-1">kg</span></p>
-                        </div>
-                    </div>
 
-                    <!-- 結尾與數位章 -->
-                    <div class="flex justify-between items-end relative z-10 pt-4">
-                        <div class="flex flex-col">
-                            <p class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-widest">Issue Date</p>
-                            <p id="certDate" class="text-sm font-bold text-slate-700 font-mono tracking-wider"></p>
-                        </div>
-                        <!-- 模擬官方印章效果 -->
-                        <div class="w-24 h-24 md:w-28 md:h-28 border-[3px] border-red-600/70 rounded-full flex flex-col items-center justify-center transform -rotate-12 opacity-80 bg-transparent relative">
-                            <div class="absolute inset-2 border border-dashed border-red-600/50 rounded-full"></div>
-                            <span class="text-[8px] md:text-[10px] text-red-600 font-black tracking-widest uppercase">TanJi Loop</span>
-                            <span class="text-sm md:text-base text-red-600 font-black tracking-widest my-1 cert-font">永續認證</span>
-                            <span class="text-[8px] md:text-[10px] text-red-600 font-bold">2026</span>
+                        <!-- 結尾與數位章 -->
+                        <div class="flex justify-between items-end relative z-10 pt-4">
+                            <div class="flex flex-col">
+                                <p class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-widest">Issue Date</p>
+                                <p id="certDate" class="text-sm font-bold text-slate-700 font-mono tracking-wider"></p>
+                            </div>
+                            <!-- 模擬官方印章效果 -->
+                            <div class="w-28 h-28 border-[3px] border-red-600/70 rounded-full flex flex-col items-center justify-center transform -rotate-12 opacity-80 bg-transparent relative shrink-0">
+                                <div class="absolute inset-2 border border-dashed border-red-600/50 rounded-full"></div>
+                                <span class="text-[10px] text-red-600 font-black tracking-widest uppercase">TanJi Loop</span>
+                                <span class="text-base text-red-600 font-black tracking-widest my-1 cert-font">永續認證</span>
+                                <span class="text-[10px] text-red-600 font-bold">2026</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- 操作按鈕 -->
-            <div class="mt-6 flex flex-col sm:flex-row gap-4">
-                <button id="downloadCertBtn" class="flex-1 bg-brand hover:bg-brand-dark text-white py-4 rounded-2xl font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
-                    <i class="fa-solid fa-download"></i> 匯出憑證圖片 (PNG)
-                </button>
+                <!-- 操作按鈕 -->
+                <div class="mt-4 flex flex-col sm:flex-row gap-4 shrink-0">
+                    <button id="downloadCertBtn" class="w-full bg-brand hover:bg-brand-dark text-white py-4 rounded-2xl font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
+                        <i class="fa-solid fa-download"></i> 匯出憑證圖片 (PNG)
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- 智能小幫手 -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-        <div id="chatModal" class="hidden bg-white w-80 rounded-3xl shadow-2xl border border-slate-100 mb-4 flex flex-col overflow-hidden transform transition-all" style="height: 400px;">
-            <div class="bg-brand p-4 text-white flex justify-between items-center shadow-md">
+    <!-- 智能小幫手 (自適應高度避免被鍵盤擋住) -->
+    <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end">
+        <div id="chatModal" class="hidden bg-white w-[calc(100vw-2rem)] max-w-80 rounded-3xl shadow-2xl border border-slate-100 mb-4 flex flex-col overflow-hidden transform transition-all max-h-[70vh] h-[400px]">
+            <div class="bg-brand p-4 text-white flex justify-between items-center shadow-md shrink-0">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-white rounded-full overflow-hidden p-0.5 border border-white">
+                    <div class="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full overflow-hidden p-0.5 border border-white">
                         <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full">
                     </div>
                     <div>
-                        <h4 class="font-extrabold text-sm tracking-wide">碳吉寶寶智能助手</h4>
+                        <h4 class="font-extrabold text-xs md:text-sm tracking-wide">碳吉寶寶智能助手</h4>
                         <div class="flex items-center mt-0.5">
                             <span class="w-2 h-2 bg-green-300 rounded-full animate-pulse mr-1.5"></span>
                             <p class="text-[10px] font-medium text-green-100">線上服務中</p>
@@ -512,53 +541,55 @@
                     </div>
                 </div>
                 <button id="closeChatBtn" class="text-white/80 hover:text-white p-1">
-                    <i class="fa-solid fa-xmark text-xl"></i>
+                    <i class="fa-solid fa-xmark text-lg md:text-xl"></i>
                 </button>
             </div>
-            <div id="chatMessages" class="flex-1 bg-slate-50 p-5 overflow-y-auto flex flex-col gap-4 text-sm">
-                <div class="self-start bg-white p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-medium leading-relaxed">
+            <div id="chatMessages" class="flex-1 bg-slate-50 p-4 md:p-5 overflow-y-auto flex flex-col gap-4 text-sm">
+                <div class="self-start bg-white p-3 md:p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-medium leading-relaxed">
                     嗨！我是碳吉寶寶 🍃<br>您可以問我關於「O2O打卡機制」、「發酵流程」或是「數位憑證」的問題喔！
                 </div>
             </div>
-            <div class="p-3 bg-white border-t border-slate-100 flex items-center gap-2 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.05)]">
-                <input type="text" id="chatInput" placeholder="輸入問題..." class="flex-1 bg-slate-100 rounded-full px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand font-medium">
-                <button id="sendChatBtn" class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-brand-dark transition-colors">
-                    <i class="fa-solid fa-paper-plane"></i>
+            <div class="p-3 bg-white border-t border-slate-100 flex items-center gap-2 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] shrink-0">
+                <input type="text" id="chatInput" placeholder="輸入問題..." class="flex-1 bg-slate-100 rounded-full px-4 py-2 text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-brand font-medium">
+                <button id="sendChatBtn" class="bg-brand text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center hover:bg-brand-dark transition-colors shrink-0">
+                    <i class="fa-solid fa-paper-plane text-xs md:text-base"></i>
                 </button>
             </div>
         </div>
-        <button id="chatToggleBtn" class="bg-brand hover:bg-brand-dark text-white rounded-full p-4 shadow-2xl transition-all transform hover:-translate-y-1.5 focus:outline-none flex items-center justify-center relative group">
-            <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
-            <i class="fa-solid fa-comment-dots text-2xl"></i>
+        <button id="chatToggleBtn" class="bg-brand hover:bg-brand-dark text-white rounded-full p-3 md:p-4 shadow-2xl transition-all transform hover:-translate-y-1.5 focus:outline-none flex items-center justify-center relative group">
+            <span class="absolute -top-1 -right-1 w-2.5 h-2.5 md:w-3 md:h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
+            <i class="fa-solid fa-comment-dots text-xl md:text-2xl"></i>
         </button>
     </div>
 
-    <!-- 登入 Modal -->
-    <div id="loginModal" class="fixed inset-0 bg-slate-900/80 z-[100] hidden flex items-center justify-center backdrop-blur-sm">
-        <div class="bg-white rounded-[2rem] p-8 max-w-sm w-full mx-4 shadow-2xl relative border-4 border-brand-light">
-            <button id="closeLoginBtn" class="absolute top-4 right-4 text-slate-400 hover:text-brand transition-colors w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <div class="text-center mb-6">
-                <div class="w-20 h-20 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-2 shadow-inner">
-                    <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full drop-shadow-md">
+    <!-- 登入 Modal (自適應避免超出螢幕) -->
+    <div id="loginModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen px-4 flex items-center justify-center py-10">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
+                <button id="closeLoginBtn" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-slate-400 hover:text-brand transition-colors w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-2 shadow-inner">
+                        <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full drop-shadow-md">
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-black text-brand-dark font-cute">登入碳吉圈圈</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 font-bold mt-1">建立專屬的永續循環履歷</p>
                 </div>
-                <h3 class="text-2xl font-black text-brand-dark font-cute">登入碳吉圈圈</h3>
-                <p class="text-sm text-slate-500 font-bold mt-1">建立專屬的永續循環履歷</p>
+                <div id="authError" class="hidden bg-red-50 text-red-500 text-xs sm:text-sm font-bold p-3 rounded-xl mb-4 text-center border border-red-100"></div>
+                <form id="authForm" class="space-y-3 sm:space-y-4">
+                    <input type="email" id="emailInput" placeholder="電子郵件" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-slate-700 focus:border-brand focus:outline-none transition-colors" required>
+                    <input type="password" id="passwordInput" placeholder="密碼" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-slate-700 focus:border-brand focus:outline-none transition-colors" required>
+                    <button type="submit" id="submitSignInBtn" class="w-full bg-brand text-white rounded-xl py-3 sm:py-3.5 font-bold text-base sm:text-lg btn-cute hover:bg-brand-dark transition-colors mt-2">登入</button>
+                    <button type="button" id="submitSignUpBtn" class="w-full bg-white border-2 border-brand-light text-brand-dark rounded-xl py-2.5 sm:py-3 font-bold text-base sm:text-lg btn-cute hover:bg-brand-light transition-colors">註冊新帳號</button>
+                    
+                    <div class="relative flex items-center justify-center w-full py-2">
+                        <div class="border-t border-slate-200 w-full"></div>
+                        <span class="bg-white px-4 text-[10px] sm:text-xs font-bold text-slate-400 absolute">或者</span>
+                    </div>
+                    <button type="button" id="anonLoginBtn" class="w-full bg-slate-800 text-white rounded-xl py-2.5 sm:py-3 font-bold text-sm sm:text-lg btn-cute hover:bg-slate-700 transition-colors">先以訪客身分體驗</button>
+                </form>
             </div>
-            <div id="authError" class="hidden bg-red-50 text-red-500 text-sm font-bold p-3 rounded-xl mb-4 text-center border border-red-100"></div>
-            <form id="authForm" class="space-y-4">
-                <input type="email" id="emailInput" placeholder="電子郵件" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-3 font-bold text-slate-700 focus:border-brand focus:outline-none transition-colors" required>
-                <input type="password" id="passwordInput" placeholder="密碼" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-3 font-bold text-slate-700 focus:border-brand focus:outline-none transition-colors" required>
-                <button type="submit" id="submitSignInBtn" class="w-full bg-brand text-white rounded-xl py-3.5 font-bold text-lg btn-cute hover:bg-brand-dark transition-colors mt-2">登入</button>
-                <button type="button" id="submitSignUpBtn" class="w-full bg-white border-2 border-brand-light text-brand-dark rounded-xl py-3 font-bold text-lg btn-cute hover:bg-brand-light transition-colors">註冊新帳號</button>
-                
-                <div class="relative flex items-center justify-center w-full py-2">
-                    <div class="border-t border-slate-200 w-full"></div>
-                    <span class="bg-white px-4 text-xs font-bold text-slate-400 absolute">或者</span>
-                </div>
-                <button type="button" id="anonLoginBtn" class="w-full bg-slate-800 text-white rounded-xl py-3 font-bold text-lg btn-cute hover:bg-slate-700 transition-colors">先以訪客身分體驗</button>
-            </form>
         </div>
     </div>
 
@@ -567,18 +598,19 @@
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-        const defaultMockConfig = {
-            apiKey: "AIzaSy_mock_key_for_testing",
-            authDomain: "mock.firebaseapp.com",
-            projectId: "mock-project",
-            storageBucket: "mock.firebasestorage.app",
-            messagingSenderId: "123456789",
-            appId: "1:12345:web:abcde"
+        // 請將以下內容替換成您的 Firebase 專案設定金鑰
+        const fallbackConfig = {
+            apiKey: "填入您的_API_KEY",
+            authDomain: "填入您的_AUTH_DOMAIN",
+            projectId: "填入您的_PROJECT_ID",
+            storageBucket: "填入您的_STORAGE_BUCKET",
+            messagingSenderId: "填入您的_MESSAGING_SENDER_ID",
+            appId: "填入您的_APP_ID"
         };
 
         const firebaseConfig = typeof __firebase_config !== 'undefined' && __firebase_config 
             ? JSON.parse(__firebase_config) 
-            : defaultMockConfig;
+            : fallbackConfig;
             
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
