@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>碳吉圈圈 TanJi Loop | 新北在地循環經濟群募平台</title>
+    <title>碳吉圈圈 TanJi Loop | 在地微型循環網絡</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -54,9 +54,9 @@
             background-attachment: fixed;
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border: 2px solid rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 4px solid #ffffff;
             box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
         }
         .btn-cute {
@@ -71,17 +71,17 @@
 </head>
 <body class="text-brand-text antialiased relative">
 
-    <nav class="fixed w-full z-50 glass-card rounded-b-3xl mx-auto max-w-7xl left-0 right-0 top-0">
+    <nav class="fixed w-full z-50 glass-card rounded-b-3xl border-t-0 border-x-0 mx-auto max-w-7xl left-0 right-0 top-0">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center text-brand text-xl overflow-hidden p-0.5 border-2 border-white shadow-sm">
+                <div class="w-10 h-10 bg-brand-light rounded-full flex items-center justify-center text-brand text-xl overflow-hidden p-1">
                     <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'">
                 </div>
                 <span class="font-black text-2xl tracking-wide text-brand-dark font-cute">碳吉圈圈</span>
             </div>
             
             <div class="flex items-center gap-4">
-                <div id="navUserPanel" class="hidden items-center gap-3 bg-slate-50 px-4 py-1.5 rounded-full border border-slate-200 shadow-sm">
+                <div id="navUserPanel" class="hidden items-center gap-3 bg-slate-50 px-4 py-1.5 rounded-full border-2 border-slate-100">
                     <div class="flex flex-col text-right">
                         <span id="navUserEmail" class="text-xs font-bold text-slate-500"></span>
                         <span class="text-sm font-black text-brand font-cute">Lv.<span id="navUserLevel">1</span></span>
@@ -99,163 +99,91 @@
 
     <main class="pt-32 pb-20 px-4 max-w-6xl mx-auto space-y-24">
 
-        <section id="hero" class="grid md:grid-cols-2 gap-12 items-center">
+        <section id="campaign" class="grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
-                <div class="inline-block px-4 py-1 bg-brand-light text-brand-dark font-bold rounded-full text-sm shadow-sm">
-                    新北循環經濟專案・三峽示範點
+                <div class="inline-block px-4 py-1 bg-brand-light text-brand-dark font-bold rounded-full text-sm">
+                    資源共創・在地行動
                 </div>
                 <h1 class="text-4xl md:text-5xl font-black leading-tight text-slate-800">
-                    讓日常提神<br>
+                    讓日常的廢棄物<br>
                     變成城市的<span class="text-brand">永續魔法</span>
                 </h1>
                 <p class="text-lg text-slate-600 leading-relaxed font-medium">
-                    我們正在募集 10 萬元，於三峽北大特區建置首座「智慧咖啡渣發酵站」。現在就參與專案，認養專屬的碳吉寶寶，一起推動城市微型循環網絡！
+                    我們將在地店家的咖啡渣與社區落葉，透過好氧發酵轉化為餵養可食地景的黑金土。
+                    現在就加入微型循環網絡，登錄您的回收行動並認養專屬的碳吉寶寶！
                 </p>
                 
                 <div class="glass-card rounded-3xl p-6 space-y-4">
                     <div class="flex justify-between items-end">
                         <div>
-                            <p class="text-sm text-slate-500 font-bold mb-1">目前募資金額</p>
-                            <p class="text-3xl font-black text-brand font-cute" id="display-funds">讀取中...</p>
+                            <p class="text-sm text-slate-500 font-bold mb-1">全站已攔截有機廢棄物</p>
+                            <p class="text-3xl font-black text-brand font-cute"><span id="display-waste-global">讀取中...</span> <span class="text-xl">kg</span></p>
                         </div>
                         <div class="text-right">
-                            <p class="text-sm text-slate-500 font-bold mb-1">目標金額</p>
-                            <p class="text-xl font-bold text-slate-700 font-cute">NT$ 100,000</p>
+                            <p class="text-sm text-slate-500 font-bold mb-1">第一階段目標</p>
+                            <p class="text-xl font-bold text-slate-700 font-cute">1,000 kg</p>
                         </div>
                     </div>
+                    
                     <div class="w-full bg-slate-100 rounded-full h-4 overflow-hidden shadow-inner">
                         <div id="progress-bar" class="bg-brand h-4 rounded-full transition-all duration-1000 ease-out relative" style="width: 0%">
                             <div class="absolute right-0 top-0 bottom-0 w-10 bg-white/30 animate-pulse"></div>
                         </div>
                     </div>
+                    
                     <div class="flex justify-between text-sm font-bold text-slate-500 pt-2">
-                        <span><i class="fa-solid fa-users text-brand mr-1"></i> <span id="display-backers">--</span> 人支持</span>
-                        <span><i class="fa-solid fa-clock text-amber-500 mr-1"></i> 剩餘 45 天</span>
+                        <span><i class="fa-solid fa-users text-brand mr-1"></i> <span id="display-participants">--</span> 人參與共創</span>
+                        <span><i class="fa-solid fa-leaf text-emerald-500 mr-1"></i> 進行中</span>
                     </div>
                 </div>
             </div>
+            
             <div class="relative flex justify-center items-center h-80">
                 <div class="absolute w-72 h-72 bg-brand-light rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
                 <div class="absolute w-64 h-64 bg-amber-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse" style="animation-delay: 1s"></div>
-                <div class="w-72 h-72 relative z-10 animate-float rounded-full overflow-hidden border-8 border-white shadow-2xl bg-white p-2">
-                    <img id="hero-avatar" src="tanjibaby.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full">
+                <div class="w-72 h-72 relative z-10 animate-float rounded-full overflow-hidden border-8 border-white shadow-2xl">
+                    <img id="hero-avatar" src="tanjibaby.png" alt="碳吉寶寶" class="w-full h-full object-cover">
                 </div>
             </div>
         </section>
 
-        <section id="mechanism" class="space-y-10">
-            <div class="text-center">
-                <h2 class="text-3xl font-black text-slate-800">運作機制：廢棄物如何變黃金</h2>
-                <p class="text-slate-500 font-medium mt-3">簡單四步驟，打造生生不息的在地資源閉環</p>
+        <section id="science" class="relative">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-slate-800">循環科學：從廢棄物到黑金土</h2>
+                <p class="text-slate-500 font-medium mt-2">符合自然法則的標準化好氧堆肥流程</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-32 rounded-2xl overflow-hidden mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-10 h-10 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-black text-lg mb-3">1</div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-2">收集資源</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">從北大特區合作的連鎖咖啡店與便利商店，每日定時回收富含氮源的咖啡渣。</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl text-left border-t-8 border-t-amber-500">
+                    <div class="text-amber-500 text-4xl mb-4"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">1. 碳氮比調節 (C/N Ratio)</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed text-justify">咖啡渣富含氮元素（碳氮比約 20:1），若直接使用容易發酵生熱燒傷植物根系。我們將其與富含碳源的社區乾燥落葉（碳氮比約 60:1）均勻混合，將整體碳氮比調節至微生物最活躍的 25:1 至 30:1 黃金比例。</p>
                 </div>
-                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-32 rounded-2xl overflow-hidden mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1592439272693-c56a0d123e47?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-10 h-10 bg-brand-light text-brand-dark rounded-full flex items-center justify-center font-black text-lg mb-3">2</div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-2">醱酵轉化</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">送入社區智慧發酵箱，混合社區落葉碳源，進行高溫好氧發酵消滅病菌。</p>
+                <div class="glass-card p-8 rounded-3xl text-left border-t-8 border-t-red-400">
+                    <div class="text-red-400 text-4xl mb-4"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">2. 高溫好氧發酵</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed text-justify">在控制含水率於 50%-60% 的環境下，好氧微生物會大量繁殖並分解有機質。發酵中心溫度將快速攀升至 60°C - 70°C，維持此高溫期可有效殺滅病原菌與雜草種子。期間輔以定期翻堆，確保氧氣充足，避免厭氧惡臭。</p>
                 </div>
-                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-32 rounded-2xl overflow-hidden mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-lg mb-3">3</div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-2">滋養大地</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">經過 45 天等待，成功產出富含有機質且充滿泥土香氣的改良劑「黑金土」。</p>
-                </div>
-                <div class="bg-white rounded-3xl p-6 shadow-md border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
-                    <div class="h-32 rounded-2xl overflow-hidden mb-4 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover">
-                    </div>
-                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-black text-lg mb-3">4</div>
-                    <h4 class="font-bold text-slate-800 text-lg mb-2">綠色回饋</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">黑金土應用於社區頂樓農園，種植出的薄荷與香草，直接回饋給計畫贊助者。</p>
+                <div class="glass-card p-8 rounded-3xl text-left border-t-8 border-t-brand">
+                    <div class="text-brand text-4xl mb-4"><i class="fa-solid fa-seedling"></i></div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">3. 降溫腐熟與生態應用</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed text-justify">歷經 30 至 45 天的發酵與降溫，有機物會轉化為穩定的深褐色腐植質（黑金土），具備保水、透氣且富含植物所需養分之特性。這些黑金土將直接回饋至社區頂樓的薄荷與迷迭香農園，完成資源閉環。</p>
                 </div>
             </div>
         </section>
 
-        <section id="rewards" class="glass-card rounded-[3rem] p-8 md:p-12">
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="md:col-span-1 space-y-6">
-                    <h2 class="text-3xl font-black text-slate-800 leading-tight">資金規劃與<br>永續回饋方案</h2>
-                    <p class="text-slate-500 font-medium leading-relaxed">
-                        您的每一筆贊助都將專款專用。達成目標後，我們將提撥 50% 於硬體建置，30% 於農園維護，20% 用於推廣教育。
-                    </p>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                        <h4 class="font-bold text-slate-700 mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-chart-pie text-brand"></i> 資金配比
-                        </h4>
-                        <div class="space-y-3">
-                            <div>
-                                <div class="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                                    <span>智慧發酵硬體建置</span><span>50%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-brand h-2 rounded-full" style="width: 50%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                                    <span>社區農園維運與耗材</span><span>30%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-blue-400 h-2 rounded-full" style="width: 30%"></div></div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-xs font-bold text-slate-500 mb-1">
-                                    <span>社群推廣與回饋品製作</span><span>20%</span>
-                                </div>
-                                <div class="w-full bg-slate-200 rounded-full h-2"><div class="bg-amber-400 h-2 rounded-full" style="width: 20%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:col-span-2 grid sm:grid-cols-2 gap-6">
-                    <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm">
-                        <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100">🏅</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-1">永續新星</h4>
-                        <p class="text-brand font-black mb-4">贊助 NT$ 100</p>
-                        <p class="text-sm text-slate-500 mb-6 h-10">獲得 100 EXP 及碳吉圈圈「淨零新星數位徽章」，展示於專屬履歷。</p>
-                        <button class="w-full py-2.5 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition">即刻解鎖</button>
-                    </div>
-                    <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm">
-                        <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100">☕</div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-1">低碳推手</h4>
-                        <p class="text-brand font-black mb-4">贊助 NT$ 500</p>
-                        <p class="text-sm text-slate-500 mb-6 h-10">獲得 500 EXP 及「在地低碳咖啡兌換券」一張，品嚐永續好滋味。</p>
-                        <button class="w-full py-2.5 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition">即刻解鎖</button>
-                    </div>
-                    <div class="bg-brand-light border-2 border-brand rounded-3xl p-6 shadow-md sm:col-span-2 flex flex-col sm:flex-row items-center gap-6">
-                        <div class="flex-1">
-                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl mb-4 shadow-sm">🌱</div>
-                            <h4 class="text-xl font-bold text-brand-dark mb-1">城市綠手指</h4>
-                            <p class="text-brand-dark font-black mb-2">贊助 NT$ 1,000</p>
-                            <p class="text-sm text-brand-dark/80 mb-4 font-medium">獲得 1000 EXP、碳吉寶寶專屬環保杯，以及社區農園產出的「專屬薄荷盆栽」。</p>
-                        </div>
-                        <button class="w-full sm:w-auto px-8 py-3 bg-brand text-white font-bold rounded-xl btn-cute hover:bg-brand-dark">選擇此方案</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="interactive" class="glass-card rounded-[3rem] p-8 md:p-12 text-center relative overflow-hidden border-t-8 border-t-brand">
-            <h2 class="text-3xl font-black mb-2">試算您的永續影響力</h2>
-            <p class="text-slate-500 font-medium mb-10">動動手指，看看您的微型行動能為新北市帶來多大的改變！</p>
+        <section id="interactive" class="glass-card rounded-[3rem] p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-3 bg-brand"></div>
+            
+            <h2 class="text-3xl font-black mb-2">專屬永續履歷：養育碳吉寶寶</h2>
+            <p class="text-slate-500 font-medium mb-10">登入後點擊下方按鈕，記錄您的回收行動並觀察寶寶成長！</p>
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-12">
                 <div class="space-y-4 w-full md:w-1/3">
-                    <button id="btnFeed" class="w-full bg-slate-700 text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3">
-                        <i class="fa-solid fa-mug-hot text-amber-400 text-2xl"></i>
-                        提供咖啡渣
+                    <button id="btnFeedCoffee" class="w-full bg-amber-700 text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3 hover:bg-amber-800">
+                        <i class="fa-solid fa-mug-hot text-amber-300 text-2xl"></i>
+                        貢獻咖啡渣
                     </button>
-                    <p class="text-xs text-slate-400 font-bold">每日回收，幫助減少廢棄物</p>
+                    <p class="text-xs text-slate-400 font-bold">登錄回收，提供發酵氮源</p>
                 </div>
 
                 <div class="relative">
@@ -266,21 +194,21 @@
                 </div>
 
                 <div class="space-y-4 w-full md:w-1/3">
-                    <button id="btnSponsor" class="w-full bg-brand text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3">
-                        <i class="fa-solid fa-coins text-yellow-300 text-2xl"></i>
-                        資金贊助 $500
+                    <button id="btnFeedLeaf" class="w-full bg-emerald-700 text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3 hover:bg-emerald-800">
+                        <i class="fa-solid fa-leaf text-emerald-300 text-2xl"></i>
+                        貢獻落葉碳源
                     </button>
-                    <p class="text-xs text-slate-400 font-bold">提供資金建置智慧硬體</p>
+                    <p class="text-xs text-slate-400 font-bold">參與社區行動，提供碳源</p>
                 </div>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 bg-slate-50 rounded-3xl p-6 border-2 border-slate-100">
                 <div>
-                    <p class="text-slate-500 text-sm font-bold">個人累積回收</p>
+                    <p class="text-slate-500 text-sm font-bold">我的累積回收</p>
                     <p class="text-2xl font-black text-amber-600"><span id="stat-waste">0</span> kg</p>
                 </div>
                 <div>
-                    <p class="text-slate-500 text-sm font-bold">個人迴避碳排</p>
+                    <p class="text-slate-500 text-sm font-bold">我的迴避碳排</p>
                     <p class="text-2xl font-black text-blue-500"><span id="stat-carbon">0</span> kg CO2e</p>
                 </div>
                 <div>
@@ -294,85 +222,42 @@
             </div>
         </section>
 
-        <section id="timeline" class="py-10">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-black text-slate-800">新北擴散藍圖</h2>
-                <p class="text-slate-500 font-medium mt-3">從單一社區出發，打造覆蓋全新北市的循環生態系</p>
+        <section id="partners" class="py-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-black text-slate-800">在地循環響應網絡</h2>
+                <p class="text-slate-500 font-medium mt-2">將街角的商家與住宅串聯，打造自給自足的微型生態系</p>
             </div>
-            <div class="max-w-4xl mx-auto relative">
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-brand-light hidden md:block"></div>
-                <div class="space-y-12">
-                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right pr-0 md:pr-8 mb-4 md:mb-0">
-                            <h4 class="text-2xl font-black text-brand mb-2">2026</h4>
-                            <p class="text-slate-600 font-bold text-lg">三峽示範點啟動</p>
-                            <p class="text-sm text-slate-500 mt-2">於北大特區進行概念驗證，串聯在地咖啡店與萊茵社區，建立循環標準作業流程。</p>
-                        </div>
-                        <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg border-4 border-white group-hover:scale-110 transition-transform">1</div>
-                        <div class="md:w-5/12 pl-0 md:pl-8 mt-4 md:mt-0 hidden md:block"></div>
-                    </div>
-                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
-                        <div class="md:w-5/12 pr-0 md:pr-8 mb-4 md:mb-0 hidden md:block"></div>
-                        <div class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg border-4 border-white group-hover:scale-110 transition-transform">2</div>
-                        <div class="md:w-5/12 text-center md:text-left pl-0 md:pl-8 mt-4 md:mt-0">
-                            <h4 class="text-2xl font-black text-blue-500 mb-2">2027</h4>
-                            <p class="text-slate-600 font-bold text-lg">氣候挑戰區擴散</p>
-                            <p class="text-sm text-slate-500 mt-2">將成功模組複製至淡水、林口等行政區，針對不同氣候條件調整發酵與植栽策略。</p>
-                        </div>
-                    </div>
-                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right pr-0 md:pr-8 mb-4 md:mb-0">
-                            <h4 class="text-2xl font-black text-purple-500 mb-2">2028</h4>
-                            <p class="text-slate-600 font-bold text-lg">全市群募生態系</p>
-                            <p class="text-sm text-slate-500 mt-2">平台轉型為開放式孵化器，協助新北市各地的優質循環經濟專案上架募資。</p>
-                        </div>
-                        <div class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg border-4 border-white group-hover:scale-110 transition-transform">3</div>
-                        <div class="md:w-5/12 pl-0 md:pl-8 mt-4 md:mt-0 hidden md:block"></div>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-6 text-center border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-full mx-auto flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-store"></i></div>
+                    <h4 class="font-bold text-slate-700">在地合作咖啡店</h4>
+                    <p class="text-xs text-slate-500 mt-1">提供乾淨的咖啡渣氮源</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 text-center border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-amber-50 text-amber-600 rounded-full mx-auto flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-mug-saucer"></i></div>
+                    <h4 class="font-bold text-slate-700">連鎖便利超商</h4>
+                    <p class="text-xs text-slate-500 mt-1">擴大有機資材回收節點</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 text-center border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-brand-light text-brand-dark rounded-full mx-auto flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-building-user"></i></div>
+                    <h4 class="font-bold text-slate-700">示範型住宅社區</h4>
+                    <p class="text-xs text-slate-500 mt-1">提供落葉碳源與發酵場地</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 text-center border border-slate-100 shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-brand-light text-brand-dark rounded-full mx-auto flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-seedling"></i></div>
+                    <h4 class="font-bold text-slate-700">社區可食地景</h4>
+                    <p class="text-xs text-slate-500 mt-1">使用黑金土種植香草植物</p>
                 </div>
             </div>
         </section>
 
-        <section id="dashboard" class="grid lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-2 glass-card rounded-[3rem] p-8 relative flex flex-col">
-                <h2 class="text-2xl font-black mb-1 text-slate-800">個人減碳軌跡</h2>
-                <p class="text-slate-500 text-sm font-bold mb-6">即時呈現您的行動帶來的永續影響力</p>
-                <div class="flex-1 relative min-h-[250px]">
-                    <canvas id="impactChart"></canvas>
-                </div>
+        <section id="dashboard" class="space-y-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-black mb-2">個人減碳軌跡</h2>
+                <p class="text-slate-500 font-medium">即時呈現您的分類行動帶來的永續影響力</p>
             </div>
-            <div class="bg-slate-800 rounded-[3rem] p-8 text-white flex flex-col">
-                <h3 class="text-xl font-black mb-6 flex items-center gap-3 border-b border-slate-700 pb-4">
-                    <span class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-sm"><i class="fa-solid fa-bolt"></i></span>
-                    即時贊助動態
-                </h3>
-                <div class="flex-1 overflow-hidden relative">
-                    <div class="absolute inset-0 overflow-y-auto pr-2 space-y-4">
-                        <div class="bg-slate-700/50 p-4 rounded-2xl border border-slate-600 text-sm">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center font-bold">林</div>
-                                <span class="font-bold text-brand-light">林口熱心市民</span>
-                            </div>
-                            <p class="text-slate-300">剛剛贊助了 <span class="font-bold text-white">500 元</span></p>
-                            <p class="text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded">解鎖咖啡兌換券</p>
-                        </div>
-                        <div class="bg-slate-700/50 p-4 rounded-2xl border border-slate-600 text-sm">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center font-bold">學</div>
-                                <span class="font-bold text-brand-light">北大學生代表</span>
-                            </div>
-                            <p class="text-slate-300">投入了 <span class="font-bold text-white">10 kg 咖啡渣</span></p>
-                            <p class="text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded">+50 EXP 經驗值</p>
-                        </div>
-                        <div class="bg-slate-700/50 p-4 rounded-2xl border border-slate-600 text-sm">
-                            <div class="flex items-center gap-3 mb-2">
-                                <div class="w-8 h-8 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-800">店</div>
-                                <span class="font-bold text-brand-light">合作店家 A</span>
-                            </div>
-                            <p class="text-slate-300">完成了 <span class="font-bold text-white">本週資源回收點交</span></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="glass-card rounded-[3rem] p-8 h-96 relative">
+                <canvas id="impactChart"></canvas>
             </div>
         </section>
         
@@ -412,11 +297,13 @@
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
+            
             <div id="chatMessages" class="flex-1 bg-slate-50 p-5 overflow-y-auto flex flex-col gap-4 text-sm">
                 <div class="self-start bg-white p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-medium">
-                    嗨！我是碳吉寶寶 🍃<br>您可以問我關於「咖啡渣去哪裡了」、「發酵技術」或是「如何贊助」的問題喔！
+                    嗨！我是碳吉寶寶 🍃<br>您可以問我關於「資源回收流程」、「發酵技術」或是「獎勵回饋」的問題喔！
                 </div>
             </div>
+
             <div class="p-3 bg-white border-t border-slate-100 flex items-center gap-2 relative z-10">
                 <input type="text" id="chatInput" placeholder="輸入問題..." class="flex-1 bg-slate-100 rounded-full px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand font-medium">
                 <button id="sendChatBtn" class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-brand-dark transition-colors">
@@ -424,6 +311,7 @@
                 </button>
             </div>
         </div>
+
         <button id="chatToggleBtn" class="bg-brand hover:bg-brand-dark text-white rounded-full p-4 shadow-2xl transition-all transform hover:-translate-y-1.5 focus:outline-none flex items-center justify-center relative group">
             <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
             <i class="fa-solid fa-comment-dots text-2xl"></i>
@@ -460,9 +348,10 @@
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
+        // 請將以下內容替換成您「全新 Firebase 專案」的設定金鑰
         const fallbackConfig = {
             apiKey: "填入您的_API_KEY",
             authDomain: "填入您的_AUTH_DOMAIN",
@@ -483,7 +372,7 @@
         let unsubGlobal = null;
 
         let personalStats = { waste: 0, carbon: 0, soil: 0, exp: 0, level: 1 };
-        let globalStats = { funds: 25000, backers: 125 };
+        let globalStats = { totalWaste: 250, participants: 125 };
 
         const ctx = document.getElementById('impactChart').getContext('2d');
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
@@ -521,15 +410,17 @@
         });
 
         const initAuth = async () => {
-            try {
+            if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                await signInWithCustomToken(auth, __initial_auth_token);
+            } else {
                 await signInAnonymously(auth);
-            } catch (err) {}
+            }
         };
 
         const updateGlobalUI = () => {
-            document.getElementById('display-funds').innerText = 'NT$ ' + globalStats.funds.toLocaleString();
-            document.getElementById('display-backers').innerText = globalStats.backers;
-            const progress = Math.min((globalStats.funds / 100000) * 100, 100);
+            document.getElementById('display-waste-global').innerText = globalStats.totalWaste.toLocaleString();
+            document.getElementById('display-participants').innerText = globalStats.participants;
+            const progress = Math.min((globalStats.totalWaste / 1000) * 100, 100);
             document.getElementById('progress-bar').style.width = progress + '%';
         };
 
@@ -585,7 +476,7 @@
                     }
                     updatePersonalUI();
                 }, (err) => {});
-            } else if (user && user.isAnonymous && !user.uid.startsWith('guest-')) {
+            } else if (user && user.isAnonymous) {
                 document.getElementById('navLoginBtn').classList.add('hidden');
                 document.getElementById('navUserPanel').classList.remove('hidden');
                 document.getElementById('navUserEmail').innerText = "訪客體驗中";
@@ -601,12 +492,6 @@
                     }
                     updatePersonalUI();
                 }, (err) => {});
-            } else if (user && user.uid.startsWith('guest-')) {
-                document.getElementById('navLoginBtn').classList.add('hidden');
-                document.getElementById('navUserPanel').classList.remove('hidden');
-                document.getElementById('navUserEmail').innerText = "訪客體驗中";
-                document.getElementById('loginModal').classList.add('hidden');
-                updatePersonalUI();
             } else {
                 document.getElementById('navLoginBtn').classList.remove('hidden');
                 document.getElementById('navUserPanel').classList.add('hidden');
@@ -620,7 +505,7 @@
                     if(snap.exists()) {
                         globalStats = snap.data();
                     } else {
-                        if(user && !user.uid.startsWith('guest-')) setDoc(publicRef, globalStats);
+                        if(user) setDoc(publicRef, globalStats);
                     }
                     updateGlobalUI();
                 }, (err) => {});
@@ -636,15 +521,7 @@
         });
 
         document.getElementById('logoutBtn').addEventListener('click', async () => {
-            if(currentUser && currentUser.uid.startsWith('guest-')) {
-                currentUser = null;
-                document.getElementById('navLoginBtn').classList.remove('hidden');
-                document.getElementById('navUserPanel').classList.add('hidden');
-                personalStats = { waste: 0, carbon: 0, soil: 0, exp: 0, level: 1 };
-                updatePersonalUI();
-            } else {
-                await signOut(auth);
-            }
+            await signOut(auth);
         });
 
         document.getElementById('authForm').addEventListener('submit', async (e) => {
@@ -675,61 +552,35 @@
                 const cred = await signInAnonymously(auth);
                 await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid, 'profile', 'stats'), personalStats);
             } catch (err) {
-                currentUser = { uid: 'guest-mock', isAnonymous: true };
-                document.getElementById('navLoginBtn').classList.add('hidden');
-                document.getElementById('navUserPanel').classList.remove('hidden');
-                document.getElementById('navUserEmail').innerText = "訪客體驗中";
-                document.getElementById('loginModal').classList.add('hidden');
-                updatePersonalUI();
+                showError('訪客登入失敗，請稍後再試');
             }
         });
 
-        document.getElementById('btnFeed').addEventListener('click', async () => {
+        const handleResourceAction = async (wasteAmount, expAmount) => {
             if(!currentUser) {
                 document.getElementById('loginModal').classList.remove('hidden');
                 return;
             }
-            personalStats.waste += 10;
-            personalStats.carbon += 5.6;
-            personalStats.soil += 7;
-            personalStats.exp += 50;
+            
+            personalStats.waste += wasteAmount;
+            personalStats.carbon += (wasteAmount * 0.56);
+            personalStats.soil += (wasteAmount * 0.7);
+            personalStats.exp += expAmount;
             personalStats.level = Math.floor(personalStats.exp / 200) + 1;
 
-            triggerAnimation();
-            updatePersonalUI();
-
-            if (currentUser.uid && !currentUser.uid.startsWith('guest-')) {
-                try {
-                    const userRef = doc(db, 'artifacts', appIdStr, 'users', currentUser.uid, 'profile', 'stats');
-                    await setDoc(userRef, personalStats, {merge: true});
-                } catch(e) {}
-            }
-        });
-
-        document.getElementById('btnSponsor').addEventListener('click', async () => {
-            if(!currentUser) {
-                document.getElementById('loginModal').classList.remove('hidden');
-                return;
-            }
-            globalStats.funds += 500;
-            globalStats.backers += 1;
-
-            personalStats.exp += 100;
-            personalStats.level = Math.floor(personalStats.exp / 200) + 1;
+            globalStats.totalWaste += wasteAmount;
+            globalStats.participants += 1;
 
             triggerAnimation();
-            updatePersonalUI();
-            updateGlobalUI();
 
-            if (currentUser.uid && !currentUser.uid.startsWith('guest-')) {
-                try {
-                    const userRef = doc(db, 'artifacts', appIdStr, 'users', currentUser.uid, 'profile', 'stats');
-                    const publicRef = doc(db, 'artifacts', appIdStr, 'public', 'data', 'global', 'campaign');
-                    await setDoc(userRef, personalStats, {merge: true});
-                    await setDoc(publicRef, globalStats, {merge: true});
-                } catch(e) {}
-            }
-        });
+            const userRef = doc(db, 'artifacts', appIdStr, 'users', currentUser.uid, 'profile', 'stats');
+            const publicRef = doc(db, 'artifacts', appIdStr, 'public', 'data', 'global', 'campaign');
+            await setDoc(userRef, personalStats, {merge: true});
+            await setDoc(publicRef, globalStats, {merge: true});
+        };
+
+        document.getElementById('btnFeedCoffee').addEventListener('click', () => handleResourceAction(5, 50));
+        document.getElementById('btnFeedLeaf').addEventListener('click', () => handleResourceAction(3, 30));
 
         const chatToggleBtn = document.getElementById('chatToggleBtn');
         const chatModal = document.getElementById('chatModal');
@@ -777,13 +628,13 @@
                 const loadEl = document.getElementById(loadingId);
                 if(loadEl) loadEl.remove();
 
-                let reply = "我不太懂這個問題耶。您可以問我關於「咖啡渣」、「發酵」或是「贊助」的資訊喔！";
+                let reply = "我不太懂這個問題耶。您可以問我關於「咖啡渣」、「發酵」或是「回饋」的資訊喔！";
                 if(text.includes('咖啡') || text.includes('渣') || text.includes('去哪')) {
-                    reply = "咖啡渣會統一送到合作社區的發酵站，和落葉混合進行高溫好氧發酵，變成營養的黑金土喔！";
+                    reply = "收集起來的咖啡渣會統一送到社區的發酵站，和落葉混合進行高溫好氧發酵，變成營養的黑金土喔！";
                 } else if(text.includes('發酵') || text.includes('黑金土') || text.includes('多久')) {
                     reply = "整個發酵過程大約需要 30 到 45 天，轉換出來的黑金土會直接用於社區頂樓農園種植薄荷與迷迭香！";
-                } else if(text.includes('贊助') || text.includes('錢') || text.includes('回饋')) {
-                    reply = "贊助的資金會用於採購發酵設備。累積一定的經驗值還能換取數位徽章或低碳咖啡兌換券喔！";
+                } else if(text.includes('登錄') || text.includes('參與') || text.includes('回饋')) {
+                    reply = "只要將咖啡渣拿來合作站點回收，就能累積寶寶經驗值！經驗值提升後還能換取數位徽章或低碳咖啡兌換券喔！";
                 }
 
                 addMessage(reply, false);
