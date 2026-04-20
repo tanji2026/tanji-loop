@@ -124,7 +124,8 @@
         </div>
     </nav>
 
-    <main class="pt-24 md:pt-32 pb-20 px-4 max-w-6xl mx-auto space-y-16 md:space-y-24">
+    <!-- 調整間距：從 space-y-16/24 增加為 space-y-24 md:space-y-32 讓區塊間更多留白 -->
+    <main class="pt-24 md:pt-32 pb-20 px-4 max-w-6xl mx-auto space-y-24 md:space-y-32">
 
         <section id="hero" class="grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6 text-center md:text-left">
@@ -245,14 +246,14 @@
         </section>
 
         <!-- 進階升級藍圖區塊 -->
-        <section id="blueprint" class="py-8">
+        <section id="blueprint" class="pt-8">
             <div class="text-center mb-10 md:mb-12">
                 <span class="text-brand-dark font-extrabold bg-brand-light px-4 py-1 rounded-full text-xs md:text-sm inline-block mb-3 shadow-sm border border-brand/20">Future Roadmap</span>
                 <h2 class="text-2xl md:text-3xl font-black text-slate-800">平台進階升級藍圖</h2>
                 <p class="text-slate-500 font-medium mt-3 text-sm md:text-base max-w-2xl mx-auto">從概念展示原型到具備真實營運潛力的 Web App，結合雲端技術與循環經濟，打造完整的永續數位生態系。</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-4 md:gap-6">
+            <div class="grid md:grid-cols-2 gap-4 md:gap-8">
                 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-4 md:gap-5 hover:border-brand-light transition-colors">
                     <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-50 rounded-full flex items-center justify-center text-blue-500 text-xl md:text-2xl shrink-0 shadow-inner">
                         <i class="fa-solid fa-id-badge"></i>
@@ -295,8 +296,8 @@
             </div>
         </section>
 
-        <section id="rewards" class="py-8 border-t border-slate-100">
-            <div class="text-center max-w-3xl mx-auto mb-10 pt-8">
+        <section id="rewards" class="pt-8">
+            <div class="text-center max-w-3xl mx-auto mb-10 pt-8 border-t border-slate-200">
                 <h2 class="text-2xl md:text-3xl font-black text-slate-800">階梯式永續回饋</h2>
                 <p class="text-slate-500 text-sm md:text-base font-medium mt-3">您的回收行動將轉化為經驗值 (EXP)，解鎖在地生態與數位獎勵</p>
             </div>
@@ -361,7 +362,7 @@
             </div>
         </section>
 
-        <section id="dashboard" class="grid lg:grid-cols-3 gap-6 md:gap-8 pt-8 border-t border-slate-100">
+        <section id="dashboard" class="grid lg:grid-cols-3 gap-6 md:gap-8 pt-8">
             <div class="lg:col-span-2 glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 relative flex flex-col">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                     <div>
@@ -436,19 +437,23 @@
         </div>
     </footer>
 
-    <!-- 數位憑證 Modal (優化行動版排版防止切字) -->
+    <!-- 數位憑證 Modal (優化行動版排版防止切字，並將按鈕上移) -->
     <div id="certificateModal" class="fixed inset-0 z-[110] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto hide-scrollbar">
-        <div class="min-h-screen px-4 flex items-center justify-center py-10">
+        <div class="min-h-screen px-4 flex items-center justify-center py-10 sm:py-20">
             <div class="w-full max-w-3xl relative text-left">
-                <!-- 關閉按鈕 -->
-                <div class="flex justify-end mb-4 sm:absolute sm:-top-12 sm:right-0 sm:mb-0">
-                    <button id="closeCertBtn" class="text-white hover:text-brand-light transition-colors w-10 h-10 flex items-center justify-center bg-white/20 rounded-full z-20 shadow-md">
+                
+                <!-- 頂部控制列 (包含匯出與關閉，並排於預覽區上方) -->
+                <div class="flex justify-between items-center mb-4 sm:absolute sm:-top-16 sm:left-0 sm:right-0 sm:mb-0 w-full z-20">
+                    <button id="downloadCertBtn" class="bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-full font-bold text-sm md:text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
+                        <i class="fa-solid fa-download"></i> 匯出憑證圖片
+                    </button>
+                    <button id="closeCertBtn" class="text-white hover:text-brand-light transition-colors w-10 h-10 flex items-center justify-center bg-white/20 rounded-full shadow-md ml-auto">
                         <i class="fa-solid fa-xmark text-xl"></i>
                     </button>
                 </div>
                 
                 <!-- 憑證預覽區 (加上橫向滑動確保比例與排版不破裂) -->
-                <div class="overflow-x-auto hide-scrollbar rounded-[2rem] shadow-2xl bg-white w-full">
+                <div class="overflow-x-auto hide-scrollbar rounded-[2rem] shadow-2xl bg-white w-full mt-4 sm:mt-0">
                     <!-- 強制最小寬度確保轉出圖片比例 -->
                     <div id="certificateNode" class="min-w-[640px] bg-white p-8 md:p-12 border-[12px] border-double border-brand-light relative overflow-hidden">
                         <!-- 背景浮水印/裝飾 -->
@@ -512,13 +517,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- 操作按鈕 -->
-                <div class="mt-4 flex flex-col sm:flex-row gap-4 shrink-0">
-                    <button id="downloadCertBtn" class="w-full bg-brand hover:bg-brand-dark text-white py-4 rounded-2xl font-bold text-lg transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
-                        <i class="fa-solid fa-download"></i> 匯出憑證圖片 (PNG)
-                    </button>
                 </div>
             </div>
         </div>
@@ -971,8 +969,6 @@
 
         async function fetchGeminiReply(message) {
             const apiKey = ""; 
-            if (!apiKey) return "系統目前處於本地模式，無法連線至 AI 大腦喔 🍃";
-            
             const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
             const payload = {
                 contents: [{ parts: [{ text: message }] }],
@@ -990,7 +986,18 @@
                     const result = await response.json();
                     return result.candidates[0].content.parts[0].text;
                 } catch (e) {
-                    if (i === 2) return "寶寶現在有點累了，請稍後再試喔 🍃";
+                    if (i === 2) {
+                        // 智能備援：當 API 無法連線時的本地判斷邏輯
+                        if(message.includes('O2O') || message.includes('打卡') || message.includes('掃碼')) {
+                            return "只要拿咖啡渣到合作發酵站，用手機掃描專屬 QR Code 就能即時累積經驗值並記錄您的永續循環履歷喔！🍃";
+                        } else if(message.includes('發酵') || message.includes('黑金土') || message.includes('咖啡渣')) {
+                            return "回收的咖啡渣會和落葉混合，經過45天的高溫好氧發酵，就會變成營養的黑金土喔！🌱";
+                        } else if(message.includes('回饋') || message.includes('獎勵') || message.includes('經驗')) {
+                            return "累積 100 EXP 解鎖數位徽章，300 EXP 換取香草植物，800 EXP 就能兌換在地低碳咖啡券喔！✨";
+                        } else {
+                            return "寶寶的大腦現在連線有點不穩，但您可以問我關於「O2O打卡機制」、「發酵流程」或是「階梯回饋」的問題喔！🍃";
+                        }
+                    }
                     await new Promise(res => setTimeout(res, 1000 * Math.pow(2, i)));
                 }
             }
