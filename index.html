@@ -116,7 +116,7 @@
                 <div class="glass-card rounded-3xl p-6 space-y-4">
                     <div class="flex justify-between items-end">
                         <div>
-                            <p class="text-sm text-slate-500 font-bold mb-1">已攔截有機廢棄物</p>
+                            <p class="text-sm text-slate-500 font-bold mb-1">全站已攔截有機廢棄物</p>
                             <p class="text-3xl font-black text-brand font-cute"><span id="display-waste-global">讀取中...</span> <span class="text-xl">kg</span></p>
                         </div>
                         <div class="text-right">
@@ -147,19 +147,43 @@
             </div>
         </section>
 
+        <section id="science" class="relative">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-slate-800">循環科學：從廢棄物到黑金土</h2>
+                <p class="text-slate-500 font-medium mt-2">符合自然法則的標準化好氧堆肥流程</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl text-left border-t-8 border-t-amber-500">
+                    <div class="text-amber-500 text-4xl mb-4"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">1. 碳氮比調節 (C/N Ratio)</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed text-justify">咖啡渣富含氮元素（碳氮比約 20:1），若直接使用容易發酵生熱燒傷植物根系。我們將其與富含碳源的社區乾燥落葉（碳氮比約 60:1）均勻混合，將整體碳氮比調節至微生物最活躍的 25:1 至 30:1 黃金比例。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-left border-t-8 border-t-red-400">
+                    <div class="text-red-400 text-4xl mb-4"><i class="fa-solid fa-temperature-arrow-up"></i></div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">2. 高溫好氧發酵</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed text-justify">在控制含水率於 50%-60% 的環境下，好氧微生物會大量繁殖並分解有機質。發酵中心溫度將快速攀升至 60°C - 70°C，維持此高溫期可有效殺滅病原菌與雜草種子。期間輔以定期翻堆，確保氧氣充足，避免厭氧惡臭。</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-left border-t-8 border-t-brand">
+                    <div class="text-brand text-4xl mb-4"><i class="fa-solid fa-seedling"></i></div>
+                    <h3 class="text-xl font-bold text-slate-700 mb-3">3. 降溫腐熟與生態應用</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed text-justify">歷經 30 至 45 天的發酵與降溫，有機物會轉化為穩定的深褐色腐植質（黑金土），具備保水、透氣且富含植物所需養分之特性。這些黑金土將直接回饋至社區頂樓的薄荷與迷迭香農園，完成資源閉環。</p>
+                </div>
+            </div>
+        </section>
+
         <section id="interactive" class="glass-card rounded-[3rem] p-8 md:p-12 text-center relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-3 bg-brand"></div>
             
             <h2 class="text-3xl font-black mb-2">專屬永續履歷：養育碳吉寶寶</h2>
-            <p class="text-slate-500 font-medium mb-10">登入後點擊下方按鈕，體驗實際回收運作時的數據累積與寶寶成長！</p>
+            <p class="text-slate-500 font-medium mb-10">登入後點擊下方按鈕，記錄您的回收行動並觀察寶寶成長！</p>
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-12">
                 <div class="space-y-4 w-full md:w-1/3">
                     <button id="btnFeedCoffee" class="w-full bg-amber-700 text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3 hover:bg-amber-800">
                         <i class="fa-solid fa-mug-hot text-amber-300 text-2xl"></i>
-                        貢獻咖啡渣 (模擬)
+                        貢獻咖啡渣
                     </button>
-                    <p class="text-xs text-slate-400 font-bold">提供發酵所需的氮源資材</p>
+                    <p class="text-xs text-slate-400 font-bold">登錄回收，提供發酵氮源</p>
                 </div>
 
                 <div class="relative">
@@ -172,9 +196,9 @@
                 <div class="space-y-4 w-full md:w-1/3">
                     <button id="btnFeedLeaf" class="w-full bg-emerald-700 text-white rounded-2xl p-4 font-bold text-lg btn-cute flex items-center justify-center gap-3 hover:bg-emerald-800">
                         <i class="fa-solid fa-leaf text-emerald-300 text-2xl"></i>
-                        貢獻落葉碳源 (模擬)
+                        貢獻落葉碳源
                     </button>
-                    <p class="text-xs text-slate-400 font-bold">調節堆肥碳氮比與提供孔隙</p>
+                    <p class="text-xs text-slate-400 font-bold">參與社區行動，提供碳源</p>
                 </div>
             </div>
             
@@ -609,7 +633,7 @@
                     reply = "收集起來的咖啡渣會統一送到社區的發酵站，和落葉混合進行高溫好氧發酵，變成營養的黑金土喔！";
                 } else if(text.includes('發酵') || text.includes('黑金土') || text.includes('多久')) {
                     reply = "整個發酵過程大約需要 30 到 45 天，轉換出來的黑金土會直接用於社區頂樓農園種植薄荷與迷迭香！";
-                } else if(text.includes('贊助') || text.includes('參與') || text.includes('回饋')) {
+                } else if(text.includes('登錄') || text.includes('參與') || text.includes('回饋')) {
                     reply = "只要將咖啡渣拿來合作站點回收，就能累積寶寶經驗值！經驗值提升後還能換取數位徽章或低碳咖啡兌換券喔！";
                 }
 
