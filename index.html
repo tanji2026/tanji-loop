@@ -179,15 +179,15 @@
                     <video id="hero-avatar" src="tanjibaby_hi.mp4" autoplay muted playsinline class="w-full h-full object-cover rounded-full"></video>
                 </div>
 
-                <!-- 憑證提示氣泡框 (綁定在動畫旁邊) -->
-                <div id="openCertBtn" class="absolute -right-2 md:-right-10 top-8 md:top-12 z-20 hidden cursor-pointer animate-bounce">
-                    <div class="bg-white py-2 px-4 md:py-3 md:px-5 rounded-3xl rounded-bl-none shadow-2xl border-4 border-brand-light flex items-center gap-3 hover:bg-brand-light/50 transition-colors">
+                <!-- 憑證提示氣泡框 (移除不斷跳動的動畫，保留 hover 放大效果) -->
+                <div id="certBubble" class="absolute -right-2 md:-right-12 top-8 md:top-12 z-20 cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-1">
+                    <div class="bg-white py-2 px-4 md:py-3 md:px-5 rounded-3xl rounded-bl-none shadow-2xl border-4 border-brand-light flex items-center gap-3">
                         <div class="w-8 h-8 md:w-10 md:h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-certificate text-amber-500 text-lg md:text-xl animate-pulse"></i>
+                            <i class="fa-solid fa-certificate text-amber-500 text-lg md:text-xl"></i>
                         </div>
                         <div class="text-left">
-                            <p class="text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1">太棒了！領取你的</p>
-                            <p class="text-xs md:text-sm font-black text-brand-dark leading-none">專屬永續憑證</p>
+                            <p id="certBubbleLine1" class="text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1">登入累積數據</p>
+                            <p id="certBubbleLine2" class="text-xs md:text-sm font-black text-brand-dark leading-none">解鎖永續憑證</p>
                         </div>
                     </div>
                 </div>
@@ -555,19 +555,25 @@
     </footer>
 
     <div id="certificateModal" class="fixed inset-0 z-[110] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto hide-scrollbar">
-        <div class="min-h-screen px-4 flex items-center justify-center py-10 sm:py-20">
-            <div class="w-full max-w-3xl relative text-left">
+        <div class="min-h-screen px-4 flex flex-col items-center justify-center py-10 sm:py-20">
+            <div class="w-full max-w-3xl relative text-left flex flex-col">
                 
+                <!-- 頂部控制列 (優化手機版排版：按鈕滿版、防誤觸間距) -->
                 <div class="flex justify-between items-center mb-4 sm:absolute sm:-top-16 sm:left-0 sm:right-0 sm:mb-0 w-full z-20">
-                    <button id="downloadCertBtn" class="bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-full font-bold text-sm md:text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
+                    <button id="downloadCertBtn" class="bg-brand hover:bg-brand-dark text-white px-6 py-3 md:py-2.5 rounded-full font-bold text-sm md:text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30 w-full sm:w-auto mr-4 sm:mr-0">
                         <i class="fa-solid fa-download"></i> 匯出憑證圖片
                     </button>
-                    <button id="closeCertBtn" class="text-white hover:text-brand-light transition-colors w-10 h-10 flex items-center justify-center bg-white/20 rounded-full shadow-md ml-auto">
+                    <button id="closeCertBtn" class="text-white hover:text-brand-light transition-colors w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full shadow-md shrink-0">
                         <i class="fa-solid fa-xmark text-xl"></i>
                     </button>
                 </div>
                 
-                <div class="overflow-x-auto hide-scrollbar rounded-[2rem] shadow-2xl bg-white w-full mt-4 sm:mt-0">
+                <!-- 手機版專屬滑動提示 -->
+                <div class="text-white/60 text-xs text-center mb-2 sm:hidden animate-pulse">
+                    <i class="fa-solid fa-arrows-left-right mr-1"></i> 向右滑動查看完整憑證
+                </div>
+                
+                <div class="overflow-x-auto hide-scrollbar rounded-[2rem] shadow-2xl bg-white w-full sm:mt-0 ring-4 ring-white/20">
                     <div id="certificateNode" class="min-w-[640px] bg-white p-8 md:p-12 border-[12px] border-double border-brand-light relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-bl-full pointer-events-none"></div>
                         <div class="absolute bottom-0 left-0 w-48 h-48 bg-amber-500/5 rounded-tr-full pointer-events-none"></div>
@@ -805,10 +811,15 @@
             impactChart.data.datasets[0].data[5] = parseFloat(personalStats.carbon.toFixed(1));
             impactChart.update();
 
+            const certBubbleLine1 = document.getElementById('certBubbleLine1');
+            const certBubbleLine2 = document.getElementById('certBubbleLine2');
+            
             if (currentUser) {
-                document.getElementById('openCertBtn').classList.remove('hidden');
+                certBubbleLine1.innerText = '太棒了！領取你的';
+                certBubbleLine2.innerText = '專屬永續憑證';
             } else {
-                document.getElementById('openCertBtn').classList.add('hidden');
+                certBubbleLine1.innerText = '登入累積數據';
+                certBubbleLine2.innerText = '解鎖永續憑證';
             }
         };
 
@@ -976,12 +987,15 @@
         document.getElementById('btnFeedLeaf').addEventListener('click', () => handleResourceAction(3, 30));
 
         const certModal = document.getElementById('certificateModal');
-        const openCertBtn = document.getElementById('openCertBtn');
+        const certBubble = document.getElementById('certBubble');
         const closeCertBtn = document.getElementById('closeCertBtn');
         const downloadCertBtn = document.getElementById('downloadCertBtn');
 
-        openCertBtn.addEventListener('click', () => {
-            if(!currentUser) return;
+        certBubble.addEventListener('click', () => {
+            if(!currentUser) {
+                document.getElementById('loginModal').classList.remove('hidden');
+                return;
+            }
             
             const userStr = currentUser.isAnonymous ? "熱心在地訪客" : currentUser.email.split('@')[0];
             document.getElementById('certUser').innerText = userStr;
