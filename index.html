@@ -180,7 +180,7 @@
                 </div>
 
                 <div id="certBubble" class="absolute -bottom-8 left-1/2 -translate-x-1/2 md:bottom-8 md:left-auto md:-right-8 md:translate-x-0 z-20 cursor-pointer w-[90%] max-w-[280px] sm:w-max sm:max-w-none transition-all duration-300 hover:-translate-y-1">
-                    <div id="certBubbleInner" class="bg-white py-2.5 px-5 md:py-3 md:px-6 rounded-2xl md:rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300">
+                    <div id="certBubbleInner" class="bg-white py-2.5 px-5 md:py-3 md:px-6 rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300">
                         <div class="flex items-center gap-3">
                             <div id="certBubbleIcon" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300">
                                 <i class="fa-solid fa-certificate text-amber-500 text-xl transition-all duration-300"></i>
@@ -280,7 +280,7 @@
 
                 <div class="relative shrink-0">
                     <div class="w-40 h-40 md:w-48 md:h-48 bg-white rounded-full mx-auto shadow-xl flex justify-center items-center border-8 border-brand-light relative z-10 overflow-hidden p-2">
-                        <img id="interactive-avatar" src="tanjibaby3.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full" onerror="this.src='tanjibaby.png'">
+                        <img id="interactive-avatar" src="tanjibaby.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full" onerror="this.src='tanjibaby.png'">
                     </div>
                     <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-6 bg-black/10 rounded-[100%] filter blur-sm"></div>
                 </div>
@@ -439,6 +439,9 @@
                     </div>
                     <div class="flex items-center gap-2 w-full sm:w-auto justify-between sm:justify-end">
                         <span class="bg-brand/10 text-brand px-3 py-1.5 rounded-full text-xs font-bold border border-brand/20">即時同步</span>
+                        <button id="openCertBtn" class="text-xs md:text-sm bg-slate-800 text-white px-3 md:px-4 py-2 rounded-full font-bold hover:bg-slate-700 transition-colors shadow-sm hidden flex items-center gap-1.5 shrink-0 transition-transform hover:scale-105">
+                            <i class="fa-solid fa-certificate"></i> 產出專屬憑證
+                        </button>
                     </div>
                 </div>
                 <div class="flex-1 relative min-h-[250px] w-full">
@@ -528,7 +531,7 @@
             
             <div class="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white/20 shrink-0 bg-brand-light">
-                    <img src="tanjibaby2.png" alt="在地青年團隊" class="w-full h-full object-cover">
+                    <img src="tanjibaby2.png" alt="在地青年團隊" class="w-full h-full object-cover" onerror="this.src='tanjibaby.png'">
                 </div>
                 <div class="text-center md:text-left space-y-4">
                     <span class="bg-white/20 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Our Vision</span>
@@ -563,10 +566,10 @@
             <div class="w-full max-w-3xl relative text-left flex flex-col">
                 
                 <div class="flex gap-3 items-center mb-4 sm:absolute sm:-top-16 sm:left-0 sm:right-0 sm:mb-0 w-full z-20">
-                    <button id="downloadCertBtn" class="flex-1 bg-brand hover:bg-brand-dark text-white py-3.5 sm:py-3 rounded-2xl sm:rounded-full font-bold text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
+                    <button id="downloadCertBtn" class="flex-1 bg-brand hover:bg-brand-dark text-white py-3.5 sm:py-3 rounded-full font-bold text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
                         <i class="fa-solid fa-download"></i> 匯出憑證圖片
                     </button>
-                    <button id="closeCertBtn" class="w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center text-slate-500 bg-white hover:bg-slate-100 rounded-2xl shadow-md shrink-0 transition-colors sm:text-white sm:bg-white/20 sm:hover:bg-white/30 sm:rounded-full">
+                    <button id="closeCertBtn" class="w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center text-slate-500 bg-white hover:bg-slate-100 rounded-full shadow-md shrink-0 transition-colors sm:text-white sm:bg-white/20 sm:hover:bg-white/30">
                         <i class="fa-solid fa-xmark text-xl"></i>
                     </button>
                 </div>
@@ -582,7 +585,7 @@
                         
                         <div class="flex flex-row items-center justify-between mb-8 border-b-2 border-slate-100 pb-6 relative z-10 gap-4">
                             <div class="flex items-center gap-4">
-                                <img src="tanjibaby.png" class="w-16 h-16 rounded-full border-2 border-brand shadow-sm bg-brand-light p-1">
+                                <img src="tanjibaby.png" class="w-16 h-16 rounded-full border-2 border-brand shadow-sm bg-brand-light p-1" onerror="this.src='tanjibaby.png'">
                                 <div>
                                     <h3 class="font-black text-2xl text-slate-800 tracking-widest font-cute">碳吉圈圈 TanJi Loop</h3>
                                     <p class="text-xs text-brand font-bold uppercase tracking-widest mt-1">Official Carbon Reduction Certificate</p>
@@ -642,7 +645,7 @@
             <div class="bg-brand p-4 text-white flex justify-between items-center shadow-md shrink-0">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full overflow-hidden p-0.5 border border-white">
-                        <img src="tanjibaby2.png" class="w-full h-full object-cover rounded-full">
+                        <img src="tanjibaby2.png" class="w-full h-full object-cover rounded-full" onerror="this.src='tanjibaby.png'">
                     </div>
                     <div>
                         <h4 class="font-extrabold text-xs md:text-sm tracking-wide">碳吉寶寶智能助手</h4>
@@ -682,7 +685,7 @@
                 </button>
                 <div class="text-center mb-6">
                     <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-2 shadow-inner">
-                        <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full drop-shadow-md">
+                        <img src="tanjibaby.png" class="w-full h-full object-cover rounded-full drop-shadow-md" onerror="this.src='tanjibaby.png'">
                     </div>
                     <h3 class="text-xl sm:text-2xl font-black text-brand-dark font-cute">登入碳吉圈圈</h3>
                     <p class="text-xs sm:text-sm text-slate-500 font-bold mt-1">建立專屬的永續循環履歷</p>
@@ -710,12 +713,12 @@
         import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         const fallbackConfig = {
-            apiKey: "",
-            authDomain: "",
-            projectId: "",
-            storageBucket: "",
-            messagingSenderId: "",
-            appId: ""
+            apiKey: "mock-api-key",
+            authDomain: "mock-app.firebaseapp.com",
+            projectId: "mock-project",
+            storageBucket: "mock-project.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "1:123456789:web:mock123"
         };
 
         const firebaseConfig = typeof __firebase_config !== 'undefined' && __firebase_config 
@@ -819,31 +822,40 @@
             const certBubbleArrowBg = document.getElementById('certBubbleArrowBg');
             
             if (currentUser) {
-                certBubbleLine1.innerText = '數據同步完成！';
+                certBubbleLine1.innerText = '登入成功！數據已同步';
                 certBubbleLine1.className = 'text-[10px] md:text-xs text-amber-100 font-bold leading-none mb-1.5 transition-colors duration-300';
-                certBubbleLine2.innerText = '👉 點此領取專屬憑證';
-                certBubbleLine2.className = 'text-xs md:text-sm font-black text-white leading-none transition-colors duration-300';
+                certBubbleLine2.innerText = '👉 點擊領取專屬憑證';
+                certBubbleLine2.className = 'text-sm md:text-base font-black text-white leading-none transition-colors duration-300';
                 
-                certBubbleInner.className = 'bg-brand hover:bg-brand-dark py-2 px-5 md:py-3 md:px-6 rounded-full shadow-2xl border-4 border-white flex items-center gap-3 transition-all duration-300 transform hover:scale-105';
+                certBubbleInner.className = 'bg-brand hover:bg-brand-dark py-3 px-6 rounded-full shadow-2xl border-4 border-white flex items-center justify-between gap-3 transition-all duration-300 transform hover:scale-105 animate-bounce';
                 
-                certBubbleIcon.className = 'w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-inner';
-                certBubbleIcon.innerHTML = '<i class="fa-solid fa-gift text-amber-500 text-lg md:text-xl animate-bounce"></i>';
+                certBubbleIcon.className = 'w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-inner transition-colors duration-300';
+                certBubbleIcon.innerHTML = '<i class="fa-solid fa-gift text-amber-500 text-xl"></i>';
                 
-                certBubbleArrow.className = 'fa-solid fa-chevron-right text-xs text-white transition-colors duration-300';
-                certBubbleArrowBg.className = 'w-6 h-6 rounded-full bg-transparent flex items-center justify-center shrink-0';
+                certBubbleArrow.className = 'fa-solid fa-chevron-right text-sm text-white transition-colors duration-300';
+                certBubbleArrowBg.className = 'w-8 h-8 rounded-full bg-transparent flex items-center justify-center shrink-0 md:bg-transparent';
+                
+                const dbCertBtn = document.getElementById('openCertBtn');
+                if(dbCertBtn) {
+                    dbCertBtn.classList.remove('hidden');
+                    dbCertBtn.classList.add('animate-pulse');
+                }
             } else {
                 certBubbleLine1.innerText = '登入累積數據';
                 certBubbleLine1.className = 'text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300';
                 certBubbleLine2.innerText = '解鎖永續憑證';
-                certBubbleLine2.className = 'text-xs md:text-sm font-black text-brand-dark leading-none transition-colors duration-300';
+                certBubbleLine2.className = 'text-sm font-black text-brand-dark leading-none transition-colors duration-300';
                 
-                certBubbleInner.className = 'bg-white hover:bg-brand-light/50 py-2 px-5 md:py-3 md:px-6 rounded-full shadow-2xl border-4 border-brand-light flex items-center gap-3 transition-all duration-300 transform hover:scale-105';
+                certBubbleInner.className = 'bg-white hover:bg-brand-light/50 py-2.5 px-5 md:py-3 md:px-6 rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300';
                 
-                certBubbleIcon.className = 'w-8 h-8 md:w-10 md:h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300';
-                certBubbleIcon.innerHTML = '<i class="fa-solid fa-certificate text-amber-500 text-lg md:text-xl"></i>';
+                certBubbleIcon.className = 'w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300';
+                certBubbleIcon.innerHTML = '<i class="fa-solid fa-certificate text-amber-500 text-xl transition-all duration-300"></i>';
                 
-                certBubbleArrow.className = 'fa-solid fa-chevron-right text-xs text-brand transition-colors duration-300';
-                certBubbleArrowBg.className = 'w-6 h-6 rounded-full bg-slate-50 md:bg-transparent flex items-center justify-center shrink-0';
+                certBubbleArrow.className = 'fa-solid fa-chevron-right text-sm text-brand transition-colors duration-300';
+                certBubbleArrowBg.className = 'w-8 h-8 rounded-full bg-slate-50 md:bg-transparent flex items-center justify-center shrink-0';
+                
+                const dbCertBtn = document.getElementById('openCertBtn');
+                if(dbCertBtn) dbCertBtn.classList.add('hidden');
             }
         };
 
@@ -1014,8 +1026,9 @@
         const certBubble = document.getElementById('certBubble');
         const closeCertBtn = document.getElementById('closeCertBtn');
         const downloadCertBtn = document.getElementById('downloadCertBtn');
+        const dbCertBtn = document.getElementById('openCertBtn');
 
-        certBubble.addEventListener('click', () => {
+        const openCertModal = () => {
             if(!currentUser) {
                 document.getElementById('loginModal').classList.remove('hidden');
                 return;
@@ -1034,7 +1047,10 @@
             document.getElementById('certNo').innerText = `TJ2026-${randomHash}`;
 
             certModal.classList.remove('hidden');
-        });
+        };
+
+        certBubble.addEventListener('click', openCertModal);
+        if(dbCertBtn) dbCertBtn.addEventListener('click', openCertModal);
 
         closeCertBtn.addEventListener('click', () => {
             certModal.classList.add('hidden');
