@@ -179,15 +179,19 @@
                     <video id="hero-avatar" src="tanjibaby_hi.mp4" autoplay muted playsinline class="w-full h-full object-cover rounded-full"></video>
                 </div>
 
-                <!-- 憑證提示氣泡框 (移除不斷跳動的動畫，保留 hover 放大效果) -->
-                <div id="certBubble" class="absolute -right-2 md:-right-12 top-8 md:top-12 z-20 cursor-pointer transition-transform duration-300 hover:scale-105 hover:-translate-y-1">
-                    <div class="bg-white py-2 px-4 md:py-3 md:px-5 rounded-3xl rounded-bl-none shadow-2xl border-4 border-brand-light flex items-center gap-3">
-                        <div class="w-8 h-8 md:w-10 md:h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0">
-                            <i class="fa-solid fa-certificate text-amber-500 text-lg md:text-xl"></i>
+                <div id="certBubble" class="absolute -bottom-8 left-1/2 -translate-x-1/2 md:bottom-8 md:left-auto md:-right-8 md:translate-x-0 z-20 cursor-pointer w-[90%] max-w-[280px] sm:w-max sm:max-w-none transition-all duration-300 hover:-translate-y-1">
+                    <div id="certBubbleInner" class="bg-white py-2.5 px-5 md:py-3 md:px-6 rounded-2xl md:rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300">
+                        <div class="flex items-center gap-3">
+                            <div id="certBubbleIcon" class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300">
+                                <i class="fa-solid fa-certificate text-amber-500 text-xl transition-all duration-300"></i>
+                            </div>
+                            <div class="text-left pr-2 md:border-r border-slate-100">
+                                <p id="certBubbleLine1" class="text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300">登入累積數據</p>
+                                <p id="certBubbleLine2" class="text-sm font-black text-brand-dark leading-none transition-colors duration-300">解鎖永續憑證</p>
+                            </div>
                         </div>
-                        <div class="text-left">
-                            <p id="certBubbleLine1" class="text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1">登入累積數據</p>
-                            <p id="certBubbleLine2" class="text-xs md:text-sm font-black text-brand-dark leading-none">解鎖永續憑證</p>
+                        <div class="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center shrink-0 md:bg-transparent" id="certBubbleArrowBg">
+                            <i class="fa-solid fa-chevron-right text-sm text-brand transition-colors duration-300" id="certBubbleArrow"></i>
                         </div>
                     </div>
                 </div>
@@ -524,7 +528,7 @@
             
             <div class="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white/20 shrink-0 bg-brand-light">
-                    <img src="tanjibaby8.png" alt="在地青年團隊" class="w-full h-full object-cover">
+                    <img src="tanjibaby2.png" alt="在地青年團隊" class="w-full h-full object-cover">
                 </div>
                 <div class="text-center md:text-left space-y-4">
                     <span class="bg-white/20 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Our Vision</span>
@@ -558,17 +562,15 @@
         <div class="min-h-screen px-4 flex flex-col items-center justify-center py-10 sm:py-20">
             <div class="w-full max-w-3xl relative text-left flex flex-col">
                 
-                <!-- 頂部控制列 (優化手機版排版：按鈕滿版、防誤觸間距) -->
-                <div class="flex justify-between items-center mb-4 sm:absolute sm:-top-16 sm:left-0 sm:right-0 sm:mb-0 w-full z-20">
-                    <button id="downloadCertBtn" class="bg-brand hover:bg-brand-dark text-white px-6 py-3 md:py-2.5 rounded-full font-bold text-sm md:text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30 w-full sm:w-auto mr-4 sm:mr-0">
+                <div class="flex gap-3 items-center mb-4 sm:absolute sm:-top-16 sm:left-0 sm:right-0 sm:mb-0 w-full z-20">
+                    <button id="downloadCertBtn" class="flex-1 bg-brand hover:bg-brand-dark text-white py-3.5 sm:py-3 rounded-2xl sm:rounded-full font-bold text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30">
                         <i class="fa-solid fa-download"></i> 匯出憑證圖片
                     </button>
-                    <button id="closeCertBtn" class="text-white hover:text-brand-light transition-colors w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full shadow-md shrink-0">
+                    <button id="closeCertBtn" class="w-12 h-12 sm:w-10 sm:h-10 flex items-center justify-center text-slate-500 bg-white hover:bg-slate-100 rounded-2xl shadow-md shrink-0 transition-colors sm:text-white sm:bg-white/20 sm:hover:bg-white/30 sm:rounded-full">
                         <i class="fa-solid fa-xmark text-xl"></i>
                     </button>
                 </div>
                 
-                <!-- 手機版專屬滑動提示 -->
                 <div class="text-white/60 text-xs text-center mb-2 sm:hidden animate-pulse">
                     <i class="fa-solid fa-arrows-left-right mr-1"></i> 向右滑動查看完整憑證
                 </div>
@@ -708,12 +710,12 @@
         import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         const fallbackConfig = {
-            apiKey: "填入您的_API_KEY",
-            authDomain: "填入您的_AUTH_DOMAIN",
-            projectId: "填入您的_PROJECT_ID",
-            storageBucket: "填入您的_STORAGE_BUCKET",
-            messagingSenderId: "填入您的_MESSAGING_SENDER_ID",
-            appId: "填入您的_APP_ID"
+            apiKey: "",
+            authDomain: "",
+            projectId: "",
+            storageBucket: "",
+            messagingSenderId: "",
+            appId: ""
         };
 
         const firebaseConfig = typeof __firebase_config !== 'undefined' && __firebase_config 
@@ -789,9 +791,7 @@
                 } else {
                     await signInAnonymously(auth);
                 }
-            } catch (err) {
-                console.warn("Auth init failed", err);
-            }
+            } catch (err) {}
         };
 
         const updateGlobalUI = () => {
@@ -811,15 +811,39 @@
             impactChart.data.datasets[0].data[5] = parseFloat(personalStats.carbon.toFixed(1));
             impactChart.update();
 
+            const certBubbleInner = document.getElementById('certBubbleInner');
+            const certBubbleIcon = document.getElementById('certBubbleIcon');
             const certBubbleLine1 = document.getElementById('certBubbleLine1');
             const certBubbleLine2 = document.getElementById('certBubbleLine2');
+            const certBubbleArrow = document.getElementById('certBubbleArrow');
+            const certBubbleArrowBg = document.getElementById('certBubbleArrowBg');
             
             if (currentUser) {
-                certBubbleLine1.innerText = '太棒了！領取你的';
-                certBubbleLine2.innerText = '專屬永續憑證';
+                certBubbleLine1.innerText = '數據同步完成！';
+                certBubbleLine1.className = 'text-[10px] md:text-xs text-amber-100 font-bold leading-none mb-1.5 transition-colors duration-300';
+                certBubbleLine2.innerText = '👉 點此領取專屬憑證';
+                certBubbleLine2.className = 'text-xs md:text-sm font-black text-white leading-none transition-colors duration-300';
+                
+                certBubbleInner.className = 'bg-brand hover:bg-brand-dark py-2 px-5 md:py-3 md:px-6 rounded-full shadow-2xl border-4 border-white flex items-center gap-3 transition-all duration-300 transform hover:scale-105';
+                
+                certBubbleIcon.className = 'w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-inner';
+                certBubbleIcon.innerHTML = '<i class="fa-solid fa-gift text-amber-500 text-lg md:text-xl animate-bounce"></i>';
+                
+                certBubbleArrow.className = 'fa-solid fa-chevron-right text-xs text-white transition-colors duration-300';
+                certBubbleArrowBg.className = 'w-6 h-6 rounded-full bg-transparent flex items-center justify-center shrink-0';
             } else {
                 certBubbleLine1.innerText = '登入累積數據';
+                certBubbleLine1.className = 'text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300';
                 certBubbleLine2.innerText = '解鎖永續憑證';
+                certBubbleLine2.className = 'text-xs md:text-sm font-black text-brand-dark leading-none transition-colors duration-300';
+                
+                certBubbleInner.className = 'bg-white hover:bg-brand-light/50 py-2 px-5 md:py-3 md:px-6 rounded-full shadow-2xl border-4 border-brand-light flex items-center gap-3 transition-all duration-300 transform hover:scale-105';
+                
+                certBubbleIcon.className = 'w-8 h-8 md:w-10 md:h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300';
+                certBubbleIcon.innerHTML = '<i class="fa-solid fa-certificate text-amber-500 text-lg md:text-xl"></i>';
+                
+                certBubbleArrow.className = 'fa-solid fa-chevron-right text-xs text-brand transition-colors duration-300';
+                certBubbleArrowBg.className = 'w-6 h-6 rounded-full bg-slate-50 md:bg-transparent flex items-center justify-center shrink-0';
             }
         };
 
@@ -1039,7 +1063,6 @@
                 link.href = dataUrl;
                 link.click();
             } catch (err) {
-                console.error("憑證生成失敗", err);
                 alert("生成憑證時發生錯誤，請稍後再試！");
             } finally {
                 btn.innerHTML = originalHTML;
@@ -1078,9 +1101,8 @@
         async function fetchGeminiReply(message) {
             const apiKey = ""; 
             
-            // 直接啟動本地智能備援模式，避免 API 未設定時產生無效與等待的狀況
             if (!apiKey || apiKey === "填入您的_API_KEY" || apiKey === "") {
-                await new Promise(res => setTimeout(res, 600)); // 模擬思考時間
+                await new Promise(res => setTimeout(res, 600)); 
                 if(message.includes('O2O') || message.includes('打卡') || message.includes('掃碼')) {
                     return "只要拿咖啡渣到合作發酵站，用手機掃描專屬 QR Code 就能即時累積經驗值並記錄您的永續循環履歷喔！🍃";
                 } else if(message.includes('發酵') || message.includes('黑金土') || message.includes('咖啡渣')) {
