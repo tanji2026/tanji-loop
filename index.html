@@ -195,7 +195,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -1015,38 +1014,77 @@
             }
         });
 
+        let isAuthenticating = false;
+
         document.getElementById('authForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (isAuthenticating) return;
+            isAuthenticating = true;
+            
+            const btn = document.getElementById('submitSignInBtn');
+            const originalText = btn.innerText;
+            btn.innerText = '登入中...';
+            btn.disabled = true;
+
             const email = document.getElementById('emailInput').value;
             const pwd = document.getElementById('passwordInput').value;
             try {
                 await signInWithEmailAndPassword(auth, email, pwd);
             } catch (err) {
                 showError('帳號或密碼錯誤');
+            } finally {
+                isAuthenticating = false;
+                btn.innerText = originalText;
+                btn.disabled = false;
             }
         });
 
         document.getElementById('submitSignUpBtn').addEventListener('click', async () => {
+            if (isAuthenticating) return;
+            
             const email = document.getElementById('emailInput').value;
             const pwd = document.getElementById('passwordInput').value;
             if(!email || !pwd) return showError('請輸入電子郵件與密碼');
             if(pwd.length < 6) return showError('密碼至少需要 6 個字元');
+            
+            isAuthenticating = true;
+            const btn = document.getElementById('submitSignUpBtn');
+            const originalText = btn.innerText;
+            btn.innerText = '註冊中...';
+            btn.disabled = true;
+
             try {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, pwd);
                 const userRef = doc(db, 'artifacts', appIdStr, 'users', userCredential.user.uid);
                 await setDoc(userRef, { stats: personalStats, email: email, role: 'user' }, { merge: true });
             } catch (err) {
-                showError('註冊失敗：' + err.message);
+                showError('註冊失敗，信箱可能已存在');
+            } finally {
+                isAuthenticating = false;
+                btn.innerText = originalText;
+                btn.disabled = false;
             }
         });
         
         document.getElementById('anonLoginBtn').addEventListener('click', async () => {
+            if (isAuthenticating) return;
+            isAuthenticating = true;
+            
+            const btn = document.getElementById('anonLoginBtn');
+            const originalText = btn.innerText;
+            btn.innerText = '載入中...';
+            btn.disabled = true;
+
             try {
                 const userCredential = await signInAnonymously(auth);
                 const userRef = doc(db, 'artifacts', appIdStr, 'users', userCredential.user.uid);
                 await setDoc(userRef, { stats: personalStats, email: '訪客 (匿名)', role: 'user' }, { merge: true });
             } catch (err) {
                 showError('訪客登入失敗');
+            } finally {
+                isAuthenticating = false;
+                btn.innerText = originalText;
+                btn.disabled = false;
             }
         });
 
