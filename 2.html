@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
     <title>碳吉圈圈 TanJi Loop - 在地微型循環網絡</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
     <script>
         tailwind.config = {
             theme: {
@@ -49,50 +47,17 @@
         }
     </script>
     <style>
-        body {
-            background-color: #f0fdf4;
-            background-image: radial-gradient(#10b981 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
-            background-attachment: fixed;
-            scroll-padding-top: 8rem;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
-        }
-        .btn-cute {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 0 0 rgba(0,0,0,0.1);
-        }
-        .btn-cute:active {
-            transform: translateY(4px);
-            box-shadow: 0 0 0 0 rgba(0,0,0,0.1);
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .cert-font {
-            font-family: "Times New Roman", "標楷體", serif;
-        }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary ~ * {
-            animation: slideDown 0.3s ease-in-out;
-        }
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        body { background-color: #f0fdf4; background-image: radial-gradient(#10b981 0.5px, transparent 0.5px); background-size: 20px 20px; background-attachment: fixed; scroll-padding-top: 8rem; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 2px solid rgba(255, 255, 255, 0.8); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1); }
+        .btn-cute { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 0 0 rgba(0,0,0,0.1); }
+        .btn-cute:active { transform: translateY(4px); box-shadow: 0 0 0 0 rgba(0,0,0,0.1); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .cert-font { font-family: "Times New Roman", "標楷體", serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="text-brand-text antialiased relative">
@@ -114,7 +79,6 @@
                     <a href="#rewards" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">永續回饋</a>
                     <a href="#dashboard" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">減碳軌跡</a>
                     <a href="#faq" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">常見問題</a>
-                    <a href="#team" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">關於我們</a>
                 </div>
             </div>
 
@@ -212,7 +176,7 @@
                         <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center text-xl mb-4 shrink-0"><i class="fa-solid fa-mug-hot"></i></div>
                         <h4 class="text-xl font-black text-slate-800 mb-3 break-words">咖啡渣不能直接種花？</h4>
                         <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">
-                            台灣每年產生約 30 萬噸咖啡渣。雖然富含植物所需的「氮」，但若未經發酵直接放入土中，微生物在分解過程中會產生高達 60°C 的高溫，反而會「燒壞」植物嬌嫩的根系喔！
+                            雖然富含植物所需的「氮」，但若未經發酵直接放入土中，微生物在分解過程中會產生高達 60°C 的高溫，反而會「燒壞」植物嬌嫩的根系喔！
                         </p>
                     </div>
                 </div>
@@ -220,17 +184,9 @@
                     <div class="h-3 bg-[#6F4E37] w-full group-hover:bg-[#8B5A2B] transition-colors"></div>
                     <div class="p-6 md:p-8">
                         <div class="w-12 h-12 bg-[#6F4E37]/10 text-[#6F4E37] rounded-full flex items-center justify-center text-xl mb-4 shrink-0"><i class="fa-solid fa-leaf"></i></div>
-                        <h4 class="text-xl font-black text-slate-800 mb-3 break-words flex items-center gap-2 relative group/tooltip">
-                            調節「黃金碳氮比」
-                            <i class="fa-solid fa-circle-info text-slate-300 hover:text-brand cursor-help transition-colors"></i>
-                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-[280px] md:w-80 p-5 bg-slate-800 text-white text-xs rounded-2xl shadow-xl opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all duration-300 z-50 text-left font-normal leading-relaxed">
-                                <p class="font-black text-brand-light mb-2 text-sm border-b border-slate-600 pb-2"><i class="fa-solid fa-flask mr-1"></i> 科學小知識：整體碳氮比</p>
-                                碳氮比是指整體混合物中碳與氮的總量比例。單一咖啡渣的碳氮比約 20:1，屬於高氮資材；社區落葉約 60:1，屬於高碳資材。將兩者依比例均勻混和，使最終發酵物的綜合碳氮比達到 25:1，即可讓微生物高效分解，並從根本避免氮氣過剩產生的氨氣惡臭。
-                                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-slate-800 transform rotate-45"></div>
-                            </div>
-                        </h4>
-                        <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">
-                            咖啡渣的碳氮比約為 20:1，屬於高氮資材。我們將它與社區的乾燥落葉混合，調配成微生物最喜愛之綜合碳氮比 25:1，此為無惡臭秘訣。
+                        <h4 class="text-xl font-black text-slate-800 mb-3 break-words">調節黃金碳氮比</h4>
+                        <p class="text-slate-500 text-sm font-bold leading-relaxed break-words mb-3">
+                            咖啡渣屬高氮資材。將它與社區的乾燥落葉混合，調配成微生物最喜愛之碳氮比 25:1，可高效分解並從根本避免氨氣惡臭。
                         </p>
                     </div>
                 </div>
@@ -240,7 +196,7 @@
                         <div class="w-12 h-12 bg-brand-light text-brand-dark rounded-full flex items-center justify-center text-xl mb-4 shrink-0"><i class="fa-solid fa-temperature-arrow-up"></i></div>
                         <h4 class="text-xl font-black text-slate-800 mb-3 break-words">高溫好氧發酵技術</h4>
                         <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">
-                            在水份控制於 60% 的環境下，引入充足氧氣。有益微生物會快速繁殖，核心溫度高達 65°C 殺滅病原菌。經過 45 天降溫熟成，就轉化成了富含有機質的「黑金土」。
+                            在適當水份與充足氧氣環境下，有益微生物快速繁殖，核心溫度達 65°C 殺滅病原菌。經過 45 天降溫熟成，就轉化成了富含有機質的黑金土。
                         </p>
                     </div>
                 </div>
@@ -255,32 +211,32 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 relative pt-12 hover:-translate-y-2 transition-transform text-center">
-                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg border-4 border-white shrink-0"><i class="fa-solid fa-box-archive"></i></div>
-                    <h4 class="text-xl font-black text-slate-800 mb-3 break-words">1. 資源集中點收</h4>
-                    <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">群眾貢獻的資源全數記錄於雲端資料庫。依據站點收集進度進行分批發酵，落實數位履歷追蹤，確保物料去向透明。</p>
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg border-4 border-white shrink-0"><i class="fa-solid fa-camera"></i></div>
+                    <h4 class="text-xl font-black text-slate-800 mb-3 break-words">1. 拍照上傳履歷</h4>
+                    <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">民眾將回收之咖啡渣與落葉上傳至系統，每一筆實境照片都會記錄於雲端資料庫與社區動態牆，落實數位履歷追蹤，去向透明。</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 relative pt-12 hover:-translate-y-2 transition-transform text-center">
-                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-brand text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg border-4 border-white shrink-0"><i class="fa-solid fa-recycle"></i></div>
+                    <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-brand text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg border-4 border-white shrink-0"><i class="fa-solid fa-microchip"></i></div>
                     <h4 class="text-xl font-black text-slate-800 mb-3 break-words">2. 實體轉化運轉</h4>
-                    <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">團隊將資材送入設備進行高溫好氧發酵。箱內建置 <strong>MycoNode 微型感測模組（ESP32主控與防水溫濕度計）</strong>，24小時回傳發酵物理日誌，確認高溫殺菌達標後，45天產出黑金土。</p>
+                    <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">資材送入設備進行發酵。箱內建置 <strong>MycoNode 整合型微型感測模組</strong>，24小時回傳物理日誌，確認高溫殺菌達標後產出黑金土。</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 relative pt-12 hover:-translate-y-2 transition-transform text-center">
                     <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-amber-500 text-white rounded-full flex items-center justify-center text-xl font-black shadow-lg border-4 border-white shrink-0"><i class="fa-solid fa-medal"></i></div>
                     <h4 class="text-xl font-black text-slate-800 mb-3 break-words">3. 數據與憑證回饋</h4>
-                    <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">每一批轉化的廢棄物，都會換算成精確的減碳數據。參與者可匯出專屬數位憑證，作為學習歷程或 ESG 成果展示。</p>
+                    <p class="text-slate-500 text-sm font-bold leading-relaxed break-words">每一批轉化的廢棄物，都會換算成精確的減碳數據。參與者可賺取積分兌換實體獎勵，或匯出專屬數位憑證，作為 ESG 成果展示。</p>
                 </div>
             </div>
         </section>
 
         <section id="interactive" class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 text-center relative overflow-hidden border-t-8 border-t-brand">
             <h2 class="text-xl md:text-2xl font-black mb-2 break-words">專屬永續履歷：養育碳吉寶寶</h2>
-            <p class="text-slate-500 text-sm md:text-base font-bold mb-10 break-words">現在就點擊按鈕，登錄您的回收行動，觀察寶寶成長與數據累積！</p>
+            <p class="text-slate-500 text-sm md:text-base font-bold mb-10 break-words">現在就點擊按鈕，拍照登錄您的回收行動，觀察寶寶成長與數據累積！</p>
             
             <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
                 <div class="space-y-3 w-full md:w-1/3">
                     <button id="btnFeedCoffee" class="w-full bg-slate-700 text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3 break-words">
                         <i class="fa-solid fa-mug-hot text-amber-400 text-xl md:text-2xl shrink-0"></i>
-                        貢獻咖啡渣
+                        拍照貢獻咖啡渣
                     </button>
                     <p class="text-xs text-slate-400 font-bold break-words">登錄回收，提供發酵所需氮源</p>
                 </div>
@@ -295,7 +251,7 @@
                 <div class="space-y-3 w-full md:w-1/3">
                     <button id="btnFeedLeaf" class="w-full bg-brand text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3 break-words">
                         <i class="fa-solid fa-leaf text-emerald-300 text-xl md:text-2xl shrink-0"></i>
-                        貢獻落葉碳源
+                        拍照貢獻落葉
                     </button>
                     <p class="text-xs text-slate-400 font-bold break-words">參與社區行動，調節碳氮比例</p>
                 </div>
@@ -335,17 +291,17 @@
                     </div>
                     <div>
                         <h4 class="text-lg md:text-xl font-black text-slate-800 mb-2 break-words">一、永續循環履歷</h4>
-                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">結合 Firebase Auth 系統，讓使用者登入並在 Firestore 記錄「累積回收咖啡渣重量」、「預期產出黑金土」與「寶寶等級」，讓每次真實回收行動都帶來成就感。</p>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">結合 Firebase Auth 系統，讓使用者登入並在 Firestore 記錄「累積回收量」、「預期產出」與「寶寶等級」，讓每次真實拍照上傳行動都帶來成就感。</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex gap-4 md:gap-5 hover:border-brand-light transition-colors">
                     <div class="w-12 h-12 md:w-14 md:h-14 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-500 text-xl md:text-2xl shrink-0 shadow-inner">
-                        <i class="fa-solid fa-qrcode"></i>
+                        <i class="fa-solid fa-camera-retro"></i>
                     </div>
                     <div>
-                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-2 break-words">二、O2O 回收打卡機制</h4>
-                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">設計虛實整合的掃碼功能。當居民把收集好的咖啡渣拿到發酵站時，用手機掃描 QR Code 即可為帳戶增加經驗值，並即時觸發寶寶慶祝動畫。</p>
+                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-2 break-words">二、實境拍照打卡機制</h4>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">設計虛實整合功能。當居民把收集好的資材拿到發酵站時，拍下照片並填寫重量即可為帳戶增加經驗值，建立真實社區綠色相簿。</p>
                     </div>
                 </div>
 
@@ -355,7 +311,7 @@
                     </div>
                     <div>
                         <h4 class="text-lg md:text-xl font-black text-slate-800 mb-2 break-words">三、正式減碳憑證匯出</h4>
-                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">提供一鍵產出「官方減碳憑證」功能。學生可作為高品質的學習歷程檔案，合作店家也可將憑證列印張貼，做為推動在地 ESG 最佳的公關素材。</p>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">提供一鍵產出「官方減碳憑證」功能。學生可作為高品質學習歷程檔案，合作店家也可將憑證列印張貼，做為推動在地 ESG 最佳公關素材。</p>
                     </div>
                 </div>
 
@@ -364,8 +320,8 @@
                         <i class="fa-solid fa-comments"></i>
                     </div>
                     <div>
-                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-2 break-words">四、社區動態與智能助手</h4>
-                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">即時動態牆監聽資料庫最新回收紀錄，展示社區行動；專屬「碳吉寶寶智能助手」隨時在線，引導新使用者了解好氧發酵與廚餘分類知識。</p>
+                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-2 break-words">四、照片牆與智能助手</h4>
+                        <p class="text-slate-500 text-xs md:text-sm leading-relaxed font-bold break-words">即時動態牆動態載入最新包含照片的回收紀錄；專屬「碳吉寶寶智能助手」隨時在線，引導新使用者了解好氧發酵與廚餘分類知識。</p>
                     </div>
                 </div>
             </div>
@@ -420,7 +376,7 @@
                         <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100 shrink-0">🌱</div>
                         <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1 break-words">低碳推手</h4>
                         <p class="text-brand font-black mb-3 text-sm md:text-base break-words">累積 300 EXP</p>
-                        <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-bold break-words">解鎖「社區自種香草盆栽」。由領取免費黑金土的農園認養人，承諾回饋 10% 收成給系統，達成完美的雙向物資循環。</p>
+                        <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-bold break-words">解鎖「社區自種香草盆栽」。由領取免費黑金土的農園認養人，回饋收成給系統。</p>
                         <button class="btn-reward-check w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base break-words" data-tier="2">查看進度</button>
                     </div>
                     
@@ -429,7 +385,7 @@
                         <div class="flex-1 w-full min-w-0">
                             <h4 class="text-lg md:text-xl font-black text-brand-dark mb-1 break-words">循環見證人</h4>
                             <p class="text-brand-dark font-black mb-2 text-sm md:text-base break-words">累積 800 EXP</p>
-                            <p class="text-xs md:text-sm text-brand-dark/90 mb-0 font-bold break-words">解鎖「在地低碳咖啡兌換券」。由在地商家為推動 ESG 綠色行銷所贊助提供，讓平台不需依賴政府補助即可長效營運。</p>
+                            <p class="text-xs md:text-sm text-brand-dark/90 mb-0 font-bold break-words">解鎖「在地低碳咖啡兌換券」。由商家為推動 ESG 綠色行銷贊助提供。</p>
                         </div>
                         <button class="btn-reward-check w-full sm:w-auto px-6 py-3 bg-brand text-white font-bold rounded-xl btn-cute hover:bg-brand-dark text-sm md:text-base shrink-0 break-words" data-tier="3">目標衝刺中</button>
                     </div>
@@ -461,7 +417,7 @@
                 <div class="mt-6 p-4 md:p-5 bg-slate-50 rounded-2xl border border-slate-200 text-left relative group w-full">
                     <p class="text-xs md:text-sm text-slate-500 font-bold leading-relaxed cursor-help flex items-start sm:items-center">
                         <i class="fa-solid fa-calculator text-brand mr-2 mt-0.5 sm:mt-0"></i> 
-                        <span class="flex-1"><strong>減碳量計算依據：</strong> 每攔截 1 kg 有機廚餘約可減少 0.56 kg CO2e，並由 MycoNode 實體設備提供溫濕度數據作為依據。<i class="fa-solid fa-circle-info text-slate-400 ml-1.5"></i></span>
+                        <span class="flex-1"><strong>減碳量計算依據：</strong> 每攔截 1 kg 有機廚餘約可減少 0.56 kg CO2e，由 MycoNode 實體設備提供溫濕度數據為依據。<i class="fa-solid fa-circle-info text-slate-400 ml-1.5"></i></span>
                     </p>
                     
                     <div class="absolute bottom-full left-0 mb-3 w-full md:w-[480px] p-5 md:p-6 bg-slate-800 text-white text-xs md:text-sm rounded-3xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 font-normal leading-relaxed border border-slate-700">
@@ -470,11 +426,10 @@
                         <div class="mb-3 text-amber-300 font-mono bg-slate-900 p-3 rounded-xl border border-slate-700 shadow-inner">
                             有機質 + O2 ➔ 腐植質 + CO2 + H2O + 熱能
                         </div>
-                        <p class="text-slate-300 font-bold">好氧過程產生的 CO2 屬於自然界的生物性碳循環，不增加大氣溫室氣體絕對總量，並能有效阻絕厭氧環境下產生的高暖化潛勢溫室氣體甲烷（CH4）。</p>
+                        <p class="text-slate-300 font-bold">好氧過程產生的 CO2 屬於自然界碳循環，不增加大氣溫室氣體絕對總量，並能有效阻絕厭氧掩埋產生的高暖化潛勢甲烷。</p>
                         <div class="absolute -bottom-2 left-10 w-5 h-5 bg-slate-800 border-b border-r border-slate-700 transform rotate-45"></div>
                     </div>
                 </div>
-
             </div>
             
             <div class="bg-slate-800 rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 text-white flex flex-col border border-slate-700 min-h-[350px] max-h-[450px]">
@@ -500,52 +455,22 @@
                 <div class="space-y-4">
                     <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
                         <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 md:p-6 text-slate-700 hover:bg-slate-50 transition-colors">
-                            <span class="break-words"><i class="fa-solid fa-q text-brand mr-2 shrink-0"></i> 我沒有住在北大特區，也可以參與嗎？</span>
-                            <span class="transition group-open:rotate-180 shrink-0 ml-4"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
-                        </summary>
-                        <div class="text-slate-500 font-bold p-5 md:p-6 pt-0 border-t border-slate-100 text-sm leading-relaxed break-words">
-                            目前第一階段的概念驗證（PoC）僅限於三峽北大特區的指定合作店家與社區。但我們歡迎您先註冊帳號體驗線上互動功能，未來我們計畫將這套模式開源，複製到新北市的其他行政區喔！
-                        </div>
-                    </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 md:p-6 text-slate-700 hover:bg-slate-50 transition-colors">
                             <span class="break-words"><i class="fa-solid fa-q text-brand mr-2 shrink-0"></i> 發酵站設在社區裡，會不會產生惡臭？</span>
                             <span class="transition group-open:rotate-180 shrink-0 ml-4"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
                         </summary>
                         <div class="text-slate-500 font-bold p-5 md:p-6 pt-0 border-t border-slate-100 text-sm leading-relaxed break-words">
-                            絕對不會！惡臭通常來自於含水量過高或缺乏氧氣的「厭氧發酵」。我們採用標準的碳氮比調節，並維持 60% 以下的含水率，結合定期的翻堆打氣作業，進行的是「好氧發酵」，過程中只會產生淡淡的咖啡香與溫暖的泥土味。
+                            絕對不會！惡臭通常來自於含水量過高或缺乏氧氣的「厭氧發酵」。我們採用標準的碳氮比調節，並維持 60% 以下的含水率，結合定期翻堆打氣進行「好氧發酵」，過程中只會產生淡淡的咖啡香與泥土味。
                         </div>
                     </details>
-
                     <details class="group bg-white border border-slate-200 rounded-2xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
                         <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-5 md:p-6 text-slate-700 hover:bg-slate-50 transition-colors">
                             <span class="break-words"><i class="fa-solid fa-q text-brand mr-2 shrink-0"></i> 累積的經驗值 (EXP) 可以做什麼？</span>
                             <span class="transition group-open:rotate-180 shrink-0 ml-4"><i class="fa-solid fa-chevron-down text-slate-400"></i></span>
                         </summary>
                         <div class="text-slate-500 font-bold p-5 md:p-6 pt-0 border-t border-slate-100 text-sm leading-relaxed break-words">
-                            除了能讓您的碳吉寶寶升級與匯出數位憑證外，當您達到指定等級（例如 300 EXP 與 800 EXP），我們將與在地店家合作，讓您能兌換香草盆栽或是低碳咖啡，完成實質的商業循環回饋。
+                            除了能讓您的碳吉寶寶升級與匯出數位憑證外，當您達到指定等級，我們將與在地店家合作，讓您能兌換香草盆栽或是低碳咖啡，完成實質的商業循環回饋。
                         </div>
                     </details>
-                </div>
-            </div>
-        </section>
-
-        <section id="team" class="relative overflow-hidden bg-brand-dark rounded-[3rem] text-white p-8 md:p-16 shadow-2xl">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-bl-full pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-48 h-48 bg-brand-light/10 rounded-tr-full pointer-events-none"></div>
-            
-            <div class="relative z-10 flex flex-col md:flex-row items-center gap-10 md:gap-16">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-8 border-white/20 shrink-0 bg-brand-light">
-                    <img src="assets/tanjibaby8.png" alt="在地青年團隊" class="w-full h-full object-cover" onerror="this.src='assets/tanjibaby.png'">
-                </div>
-                <div class="text-center md:text-left space-y-4 min-w-0">
-                    <span class="bg-white/20 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase break-words">Our Vision</span>
-                    <h2 class="text-3xl md:text-4xl font-black break-words">關於我們：三峽在地青年行動</h2>
-                    <p class="text-brand-light leading-relaxed font-bold text-sm md:text-base max-w-2xl text-justify md:text-left break-words">
-                        我們是一群深耕新北三峽北大特區的在地青年與社區居民。我們相信，氣候行動不該只是遙遠的口號或冰冷的數據，而是能透過每一杯日常咖啡、每一片落葉來實踐的社區共創。<br><br>
-                        透過「碳吉圈圈」計畫，我們希望打造出零門檻的微型循環網絡，讓永續成為一件有趣且充滿成就感的生活方式。
-                    </p>
                 </div>
             </div>
         </section>
@@ -566,10 +491,10 @@
         </div>
     </footer>
 
+    <!-- Cert Modal -->
     <div id="certificateModal" class="fixed inset-0 z-[110] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto hide-scrollbar">
         <div class="min-h-screen px-4 flex flex-col items-center justify-center py-10 sm:py-20">
             <div class="w-full max-w-3xl relative text-left flex flex-col">
-                
                 <div class="flex gap-3 items-center mb-4 sm:absolute sm:-top-16 sm:left-0 sm:right-0 sm:mb-0 w-full z-20">
                     <button id="downloadCertBtn" class="flex-1 bg-brand hover:bg-brand-dark text-white py-3.5 sm:py-3 rounded-full font-bold text-base transition-colors flex items-center justify-center gap-2 shadow-lg shadow-brand/30 break-words">
                         <i class="fa-solid fa-download shrink-0"></i> 匯出憑證圖片
@@ -578,16 +503,10 @@
                         <i class="fa-solid fa-xmark text-xl"></i>
                     </button>
                 </div>
-                
-                <div class="text-white/60 text-xs text-center mb-2 sm:hidden animate-pulse font-bold break-words">
-                    <i class="fa-solid fa-arrows-left-right mr-1"></i> 向右滑動查看完整憑證
-                </div>
-                
                 <div class="overflow-x-auto hide-scrollbar rounded-[2rem] shadow-2xl bg-white w-full sm:mt-0 ring-4 ring-white/20">
                     <div id="certificateNode" class="min-w-[640px] bg-white p-8 md:p-12 border-[12px] border-double border-brand-light relative overflow-hidden">
                         <div class="absolute top-0 right-0 w-64 h-64 bg-brand/5 rounded-bl-full pointer-events-none"></div>
                         <div class="absolute bottom-0 left-0 w-48 h-48 bg-amber-500/5 rounded-tr-full pointer-events-none"></div>
-                        
                         <div class="flex flex-row items-center justify-between mb-8 border-b-2 border-slate-100 pb-6 relative z-10 gap-4">
                             <div class="flex items-center gap-4 min-w-0">
                                 <img src="assets/tanjibaby.png" class="w-16 h-16 rounded-full border-2 border-brand shadow-sm bg-brand-light p-1 shrink-0" onerror="this.src='assets/tanjibaby.png'">
@@ -601,16 +520,14 @@
                                 <p id="certNo" class="text-sm font-black text-slate-700 font-mono bg-slate-100 px-3 py-1 rounded-md tracking-wider break-words"></p>
                             </div>
                         </div>
-                        
                         <div class="text-center relative z-10 py-4">
                             <h2 class="text-3xl md:text-4xl font-black text-slate-800 tracking-[0.2em] mb-8 cert-font text-brand-dark break-words">永續行動憑證</h2>
                             <p class="text-slate-600 font-bold leading-loose text-center px-4 md:px-8 text-sm md:text-base cert-font break-words">
                                 茲證明 <span id="certUser" class="inline-block font-black text-xl text-brand-dark border-b-2 border-brand-dark px-4 mx-1 min-w-[120px] text-center leading-tight pb-1 break-words"></span> <br>
                                 熱心參與新北北大特區「微型循環生態系」共創計畫。<br>
-                                透過實際的資源分類與行動，成功攔截有機廢棄物，並轉化為具備生態價值的黑金土，為城市的循環經濟與淨零轉型做出卓越貢獻。
+                                透過實際資源分類行動，成功攔截有機廢棄物並轉化為有機黑金土，為城市的循環經濟與淨零轉型做出卓越貢獻。
                             </p>
                         </div>
-
                         <div class="grid grid-cols-3 gap-4 md:gap-6 mt-8 mb-10 relative z-10">
                             <div class="bg-slate-50 py-5 px-2 rounded-2xl text-center border border-slate-200 shadow-sm">
                                 <p class="text-xs text-slate-500 font-bold mb-2 break-words">攔截廢棄物</p>
@@ -626,7 +543,6 @@
                                 <p class="text-3xl font-black text-slate-700 break-words"><span id="certSoil">0</span><span class="text-sm text-slate-400 ml-1">kg</span></p>
                             </div>
                         </div>
-
                         <div class="flex justify-between items-end relative z-10 pt-4 gap-2">
                             <div class="flex flex-col min-w-0">
                                 <p class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-widest break-words">Issue Date</p>
@@ -636,7 +552,6 @@
                                 <div class="absolute inset-2 border border-dashed border-red-600/50 rounded-full"></div>
                                 <span class="text-[10px] text-red-600 font-black tracking-widest uppercase break-words">TanJi Loop</span>
                                 <span class="text-base text-red-600 font-black tracking-widest my-1 cert-font break-words">永續認證</span>
-                                <span class="text-[10px] text-red-600 font-bold break-words">2026</span>
                             </div>
                         </div>
                     </div>
@@ -645,124 +560,148 @@
         </div>
     </div>
 
+    <!-- Upload Image Modal -->
+    <div id="uploadModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen px-4 flex items-center justify-center py-4">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
+                <button id="closeUploadBtn" class="absolute top-4 right-4 text-slate-400 hover:text-brand bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-brand-light text-brand text-2xl flex items-center justify-center mb-3 shadow-inner">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-brand-dark font-cute" id="uploadModalTitle">打卡登錄回收</h3>
+                    <p class="text-xs text-slate-500 font-bold mt-1">上傳實境照片，累積專屬永續履歷</p>
+                </div>
+                <form id="uploadForm" class="space-y-4">
+                    <input type="hidden" id="uploadType" value="coffee">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">預估重量 (kg)</label>
+                        <input type="number" id="uploadWeight" step="0.1" value="5" min="0.1" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-brand outline-none transition-colors" required>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">現場照片 <span class="text-red-500">*</span></label>
+                        <div class="relative w-full h-36 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl hover:bg-slate-100 hover:border-brand transition-colors cursor-pointer flex flex-col items-center justify-center overflow-hidden group" onclick="document.getElementById('uploadFileInput').click()">
+                            <img id="uploadPreview" class="absolute inset-0 w-full h-full object-cover hidden transition-transform group-hover:scale-105">
+                            <div id="uploadPlaceholder" class="flex flex-col items-center text-slate-400 transition-colors group-hover:text-brand">
+                                <i class="fa-solid fa-cloud-arrow-up text-3xl mb-2"></i>
+                                <span class="text-xs font-bold">點擊開啟相機 / 選擇照片</span>
+                            </div>
+                        </div>
+                        <input type="file" id="uploadFileInput" accept="image/*" class="hidden" required>
+                        <input type="hidden" id="uploadImgBase64" required>
+                    </div>
+                    <button type="submit" id="submitUploadBtn" class="w-full bg-brand text-white rounded-xl py-3.5 font-bold text-base btn-cute hover:bg-brand-dark transition-colors mt-2">上傳紀錄並獲取 EXP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle & Modal -->
     <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end">
         <div id="chatModal" class="hidden bg-white w-[calc(100vw-2rem)] max-w-80 rounded-3xl shadow-2xl border border-slate-100 mb-4 flex flex-col overflow-hidden transform transition-all max-h-[70vh] h-[400px]">
             <div class="bg-brand p-4 text-white flex justify-between items-center shadow-md shrink-0">
                 <div class="flex items-center gap-3 min-w-0">
-                    <div class="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full overflow-hidden p-0.5 border border-white shrink-0">
-                        <img src="assets/tanjibaby2.png" class="w-full h-full object-cover rounded-full" onerror="this.src='assets/tanjibaby.png'">
-                    </div>
+                    <div class="w-8 h-8 bg-white rounded-full overflow-hidden p-0.5 border border-white shrink-0"><img src="assets/tanjibaby2.png" class="w-full h-full object-cover rounded-full" onerror="this.src='assets/tanjibaby.png'"></div>
                     <div class="min-w-0">
-                        <h4 class="font-extrabold text-xs md:text-sm tracking-wide break-words">碳吉寶寶智能助手</h4>
-                        <div class="flex items-center mt-0.5">
-                            <span class="w-2 h-2 bg-green-300 rounded-full animate-pulse mr-1.5 shrink-0"></span>
-                            <p class="text-[10px] font-bold text-green-100 whitespace-nowrap">線上服務中</p>
-                        </div>
+                        <h4 class="font-extrabold text-xs tracking-wide">碳吉寶寶智能助手</h4>
+                        <div class="flex items-center mt-0.5"><span class="w-2 h-2 bg-green-300 rounded-full animate-pulse mr-1.5 shrink-0"></span><p class="text-[10px] font-bold text-green-100">線上服務中</p></div>
                     </div>
                 </div>
-                <button id="closeChatBtn" class="text-white/80 hover:text-white p-1 shrink-0 ml-2">
-                    <i class="fa-solid fa-xmark text-lg md:text-xl"></i>
-                </button>
+                <button id="closeChatBtn" class="text-white/80 hover:text-white p-1 shrink-0 ml-2"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
             <div id="chatMessages" class="flex-1 bg-slate-50 p-4 md:p-5 overflow-y-auto flex flex-col gap-4 text-sm">
-                <div class="self-start bg-white p-3 md:p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-bold leading-relaxed break-words">
-                    嗨！我是碳吉寶寶 🍃<br>您可以問我關於「碳氮比」、「發酵流程」或是「數位憑證」的問題喔！
-                </div>
+                <div class="self-start bg-white p-3 md:p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-bold leading-relaxed">嗨！我是碳吉寶寶 🍃<br>您可以問我關於「碳氮比」、「發酵流程」或是「打卡上傳」的問題喔！</div>
             </div>
             <div class="px-5 py-4 bg-white border-t border-slate-100 flex items-center gap-3 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] shrink-0">
-                <input type="text" id="chatInput" placeholder="輸入問題..." class="flex-1 bg-slate-100 rounded-full px-5 py-2.5 text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-brand font-bold min-w-0">
-                <button id="sendChatBtn" class="bg-brand text-white rounded-full w-10 h-10 md:w-11 md:h-11 flex items-center justify-center hover:bg-brand-dark transition-colors shrink-0 shadow-md">
-                    <i class="fa-solid fa-paper-plane text-sm md:text-base"></i>
-                </button>
+                <input type="text" id="chatInput" placeholder="輸入問題..." class="flex-1 bg-slate-100 rounded-full px-5 py-2.5 text-xs font-bold min-w-0 outline-none focus:ring-2 focus:ring-brand">
+                <button id="sendChatBtn" class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-brand-dark transition-colors shrink-0 shadow-md"><i class="fa-solid fa-paper-plane text-sm"></i></button>
             </div>
         </div>
-        <button id="chatToggleBtn" class="bg-brand hover:bg-brand-dark text-white rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl transition-all transform hover:-translate-y-1.5 focus:outline-none flex items-center justify-center relative group">
-            <span class="absolute top-0 right-0 md:top-1 md:right-1 w-3 h-3 md:w-3.5 md:h-3.5 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
+        <button id="chatToggleBtn" class="bg-brand hover:bg-brand-dark text-white rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl transition-all transform hover:-translate-y-1.5 flex items-center justify-center relative group">
+            <span class="absolute top-0 right-0 md:top-1 md:right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
             <i class="fa-solid fa-comment-dots text-2xl md:text-3xl"></i>
         </button>
     </div>
 
+    <!-- Login Modal -->
     <div id="loginModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
         <div class="min-h-screen px-4 flex items-center justify-center py-4">
-            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left max-h-[90dvh] overflow-y-auto">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
                 <button id="closeLoginBtn" class="absolute top-4 right-4 sm:top-5 sm:right-5 text-slate-400 hover:text-brand transition-colors w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full shrink-0">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <div class="text-center mb-6 mt-2 sm:mt-0">
-                    <div class="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-3 shadow-inner shrink-0">
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-3 shadow-inner shrink-0">
                         <img src="assets/tanjibaby.png" class="w-full h-full object-cover rounded-full drop-shadow-md" onerror="this.src='assets/tanjibaby.png'">
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-black text-brand-dark font-cute break-words">登入碳吉圈圈</h3>
-                    <p class="text-xs sm:text-sm text-slate-500 font-bold mt-1 break-words">建立專屬的永續循環履歷</p>
+                    <h3 class="text-xl sm:text-2xl font-black text-brand-dark font-cute">登入碳吉圈圈</h3>
+                    <p class="text-xs sm:text-sm text-slate-500 font-bold mt-1">建立專屬的永續循環履歷</p>
                 </div>
-                <div id="authError" class="hidden bg-red-50 text-red-500 text-xs sm:text-sm font-bold p-3 rounded-xl mb-4 text-center border border-red-100 break-words"></div>
-                <form id="authForm" class="space-y-3 sm:space-y-4">
-                    <input type="email" id="emailInput" placeholder="電子郵件" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-slate-700 focus:border-brand focus:outline-none transition-colors" required>
-                    <input type="password" id="passwordInput" placeholder="密碼" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 sm:py-3 text-sm sm:text-base font-bold text-slate-700 focus:border-brand focus:outline-none transition-colors" required>
-                    <button type="submit" id="submitSignInBtn" class="w-full bg-brand text-white rounded-xl py-3 sm:py-3.5 font-bold text-base sm:text-lg btn-cute hover:bg-brand-dark transition-colors mt-2 break-words">登入</button>
-                    <button type="button" id="submitSignUpBtn" class="w-full bg-white border-2 border-brand-light text-brand-dark rounded-xl py-2.5 sm:py-3 font-bold text-base sm:text-lg btn-cute hover:bg-brand-light transition-colors break-words">註冊新帳號</button>
-                    
+                <div id="authError" class="hidden bg-red-50 text-red-500 text-xs font-bold p-3 rounded-xl mb-4 text-center border border-red-100"></div>
+                <form id="authForm" class="space-y-3">
+                    <input type="email" id="emailInput" placeholder="電子郵件" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-brand focus:outline-none transition-colors" required>
+                    <input type="password" id="passwordInput" placeholder="密碼" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-brand focus:outline-none transition-colors" required>
+                    <button type="submit" id="submitSignInBtn" class="w-full bg-brand text-white rounded-xl py-3 font-bold text-base btn-cute hover:bg-brand-dark transition-colors mt-2">登入</button>
+                    <button type="button" id="submitSignUpBtn" class="w-full bg-white border-2 border-brand-light text-brand-dark rounded-xl py-3 font-bold text-base btn-cute hover:bg-brand-light transition-colors">註冊新帳號</button>
                     <div class="relative flex items-center justify-center w-full py-2">
                         <div class="border-t border-slate-200 w-full"></div>
-                        <span class="bg-white px-4 text-[10px] sm:text-xs font-bold text-slate-400 absolute whitespace-nowrap">或者</span>
+                        <span class="bg-white px-4 text-[10px] font-bold text-slate-400 absolute">或者</span>
                     </div>
-                    <button type="button" id="anonLoginBtn" class="w-full bg-slate-800 text-white rounded-xl py-2.5 sm:py-3 font-bold text-sm sm:text-base btn-cute hover:bg-slate-700 transition-colors break-words">先以訪客身分體驗</button>
+                    <button type="button" id="anonLoginBtn" class="w-full bg-slate-800 text-white rounded-xl py-2.5 font-bold text-sm btn-cute hover:bg-slate-700 transition-colors">先以訪客身分體驗</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Admin Modal -->
     <div id="adminModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
         <div class="min-h-screen px-4 flex items-center justify-center py-10">
-            <div class="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-md relative border-4 border-red-100 max-h-[90dvh] overflow-y-auto">
-                <button id="closeAdminBtn" class="absolute top-4 right-4 sm:top-5 sm:right-5 text-slate-400 hover:text-red-500 bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors shrink-0">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-md relative border-4 border-red-100">
+                <button id="closeAdminBtn" class="absolute top-4 right-4 text-slate-400 hover:text-red-500 bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <div class="flex items-center gap-3 mb-6 mt-2 sm:mt-0">
-                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-500 text-lg shrink-0">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h2 class="text-xl font-black text-slate-800 break-words">管理員主控台</h2>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-500 text-lg"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h2 class="text-xl font-black text-slate-800">管理員主控台</h2>
                 </div>
-                
                 <form id="adminForm" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-1 break-words">修改總攔截廢棄物 (kg)</label>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">修改總攔截廢棄物 (kg)</label>
                         <input type="number" id="adminTotalWaste" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-red-400 outline-none transition-colors" required>
                     </div>
                     <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-1 break-words">修改參與總人數</label>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">修改參與總人數</label>
                         <input type="number" id="adminParticipants" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-red-400 outline-none transition-colors" required>
                     </div>
-                    <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl py-3 transition-colors btn-cute mt-2 break-words">更新全站數據</button>
+                    <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl py-3 transition-colors btn-cute mt-2">更新全站數據</button>
                 </form>
-
                 <div class="mt-8 pt-6 border-t border-slate-100">
-                    <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2 break-words">
-                        <i class="fa-solid fa-bullhorn text-amber-500 shrink-0"></i> 插播平台動態公告
-                    </h3>
+                    <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2"><i class="fa-solid fa-bullhorn text-amber-500"></i> 插播平台動態公告</h3>
                     <form id="adminAnnounceForm" class="space-y-3">
-                        <input type="text" id="adminAnnounceText" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors min-w-0" placeholder="輸入要推送到動態牆的內容" required>
-                        <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl py-3 transition-colors btn-cute break-words">發布公告</button>
+                        <input type="text" id="adminAnnounceText" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors" placeholder="輸入公告內容" required>
+                        <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl py-3 transition-colors btn-cute">發布公告</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- MycoNode Modal (Updated Spec) -->
     <div id="mycoNodeModal" class="fixed inset-0 z-[120] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto flex items-center justify-center p-4">
-        <div class="bg-slate-900 border-2 border-slate-800 rounded-[2.5rem] p-8 max-w-4xl w-full text-left relative overflow-hidden shadow-2xl">
-            <button id="closeMycoNodeBtn" class="absolute top-6 right-6 text-slate-400 hover:text-brand transition-colors w-10 h-10 flex items-center justify-center bg-slate-800 rounded-full shrink-0">
+        <div class="bg-slate-900 border-2 border-slate-800 rounded-[2.5rem] p-4 md:p-8 max-w-5xl w-full text-left relative overflow-hidden shadow-2xl">
+            <button id="closeMycoNodeBtn" class="absolute top-4 right-4 md:top-6 md:right-6 text-slate-400 hover:text-brand transition-colors w-10 h-10 flex items-center justify-center bg-slate-800 rounded-full shrink-0">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
-            <div class="grid lg:grid-cols-12 gap-8 items-center mt-4">
+            <div class="grid lg:grid-cols-12 gap-8 items-start mt-8 md:mt-4">
                 <div class="lg:col-span-5 space-y-6">
                     <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-xs font-black tracking-wider uppercase">
                         <i class="fa-solid fa-microchip text-xs"></i> Hardware Spec
                     </div>
-                    <h2 class="text-3xl font-black text-white leading-tight">MycoNode 監測模組</h2>
+                    <h2 class="text-3xl font-black text-white leading-tight">MycoNode 整合系統</h2>
                     <p class="text-slate-400 text-sm font-medium leading-relaxed">
-                        本計畫部署實體監測終端，將發酵槽溫濕度變化即時上傳，提供減碳科學實證。
+                        MycoNode 是一套整合硬體採集、雲端傳輸與終端介面的物聯網系統。我們導入具備防水防潮功能的 ESP32 智慧微型感測模組，即時採集發酵物理日誌，並串接至雲端資料庫。
                     </p>
                     <div class="border-t border-slate-800 pt-6 space-y-4">
                         <div class="flex items-start gap-4">
@@ -770,58 +709,68 @@
                                 <i class="fa-solid fa-temperature-half"></i>
                             </div>
                             <div>
-                                <h4 class="text-sm font-black text-slate-200">±0.5°C 高精度探頭</h4>
-                                <p class="text-xs text-slate-400 font-bold mt-1">DS18B20 不鏽鋼封裝探頭直達堆肥中心，驗證溫度維持在 55°C 至 65°C 殺菌區間。</p>
+                                <h4 class="text-sm font-black text-slate-200">溫濕度感測</h4>
+                                <p class="text-xs text-slate-400 font-bold mt-1">採用高可靠度探頭，確保數據精準採集，驗證溫度維持在殺菌區間。</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700 flex items-center justify-center text-blue-400 shrink-0">
-                                <i class="fa-solid fa-droplet"></i>
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
                             </div>
                             <div>
-                                <h4 class="text-sm font-black text-slate-200">防蝕水分監測</h4>
-                                <p class="text-xs text-slate-400 font-bold mt-1">電容式高抗污感測器，協助維持初始含水率 60% 好氧發酵。</p>
+                                <h4 class="text-sm font-black text-slate-200">雲端即時傳輸</h4>
+                                <p class="text-xs text-slate-400 font-bold mt-1">透過 Wi-Fi 將實體數據同步至 Firebase 資料庫，提供減碳科學實證。</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="lg:col-span-7 bg-slate-800/40 border border-slate-800 p-6 rounded-[2rem] space-y-6">
-                    <div class="flex flex-col sm:flex-row gap-6 items-center">
-                        <div class="w-full sm:w-1/2 flex justify-center bg-slate-900/60 p-4 rounded-2xl border border-slate-800">
-                            <table class="w-full text-xs text-left border-collapse text-slate-300 font-bold">
+
+                <div class="lg:col-span-7 bg-slate-800/40 border border-slate-800 p-5 md:p-6 rounded-[2rem] space-y-6 overflow-hidden">
+                    <div class="flex flex-col gap-6">
+                        <div class="w-full bg-slate-900/60 p-4 rounded-2xl border border-slate-800 overflow-x-auto hide-scrollbar">
+                            <table class="w-full text-xs text-left border-collapse text-slate-300 font-bold whitespace-nowrap md:whitespace-normal">
                                 <thead>
                                     <tr class="border-b border-slate-700 text-slate-400">
-                                        <th class="pb-2">材料</th>
-                                        <th class="pb-2">規格</th>
+                                        <th class="pb-2 px-1">項目名稱</th>
+                                        <th class="pb-2 px-1">規格描述</th>
+                                        <th class="pb-2 px-1 text-right">單件成本</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-700/50">
-                                    <tr><td class="py-2 text-emerald-400">ESP32晶片</td><td class="py-2">雙核 WiFi 及藍牙雙模</td></tr>
-                                    <tr><td class="py-2 text-emerald-400">IP65外殼</td><td class="py-2">工業級防水防塵接線盒</td></tr>
-                                    <tr><td class="py-2 text-emerald-400">防水探頭</td><td class="py-2">DS18B20不鏽鋼一體化</td></tr>
+                                    <tr class="bg-emerald-900/20">
+                                        <td class="py-3 px-1 text-emerald-400">ESP32 整合型感測模組</td>
+                                        <td class="py-3 px-1 whitespace-normal break-words">內建溫濕度感測、Wi-Fi 通訊，具備防水防潮功能</td>
+                                        <td class="py-3 px-1 text-right text-emerald-300 font-black text-sm">580元</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="w-full sm:w-1/2 space-y-3">
+                        <div class="w-full space-y-3">
                             <h3 class="text-sm font-black text-white flex items-center gap-2">
-                                <i class="fa-solid fa-screwdriver-wrench text-emerald-400"></i>
-                                物理封裝策略
+                                <i class="fa-solid fa-shield-halved text-amber-400"></i>
+                                硬體防護策略
                             </h3>
-                            <p class="text-xs text-slate-400 font-bold leading-relaxed">
-                                主控晶片完全封裝於外置 IP65 防水盒，訊號穿線孔以矽利康及熱熔膠進行雙層灌膠包覆，阻絕發酵槽高濕氣與酸鹼腐蝕。
-                            </p>
+                            <ul class="text-xs text-slate-400 font-bold leading-relaxed space-y-2 list-none">
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-emerald-500 mt-1 shrink-0"></i> 
+                                    <span>系統選用具備防水防潮設計的整合型感測模組，確保在發酵槽高溫高濕環境中維持穩定運作。</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <i class="fa-solid fa-check text-emerald-500 mt-1 shrink-0"></i> 
+                                    <span>無需額外複雜改裝，透過現成模組的高防護特性，降低硬體故障風險並提升擴充性。</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <div class="bg-slate-900/60 p-4 rounded-2xl border border-slate-800 space-y-3">
                         <h3 class="text-xs font-black text-slate-200 flex items-center gap-2">
-                            <i class="fa-solid fa-flask text-blue-400"></i>
-                            好氧分解化學反應式
+                            <i class="fa-solid fa-flask text-blue-400"></i> 好氧分解化學反應式
                         </h3>
-                        <div class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 text-center font-mono text-emerald-400 text-xs">
-                            有機物 + O2 ➔ 腐植質 + CO2 + H2O + 熱能
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-center font-mono text-emerald-400 text-xs md:text-sm font-black tracking-wide overflow-x-auto whitespace-nowrap hide-scrollbar">
+                            有機物質 + O<sub>2</sub> ➔ 腐植質 + CO<sub>2</sub> + H<sub>2</sub>O + 熱能
                         </div>
-                        <p class="text-[11px] text-slate-400 leading-relaxed font-bold">
-                            好氧分解產生之 CO2 屬生物性碳循環，不增加溫室氣體絕對量，並有效阻絕厭氧環境產生之甲烷（CH4）。
+                        <p class="text-[11px] text-slate-400 leading-relaxed font-bold text-justify">
+                            好氧分解轉化釋出二氧化碳屬於自然界生物性碳循環，不計入絕對總量，且此製程有效阻絕厭氧掩埋環境下產生高暖化潛勢甲烷。
                         </p>
                     </div>
                 </div>
@@ -829,15 +778,14 @@
         </div>
     </div>
 
+    <!-- Reward Modal -->
     <div id="rewardModal" class="fixed inset-0 z-[120] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
         <div class="bg-white rounded-[2rem] p-6 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
             <button id="closeRewardBtn" class="absolute top-4 right-4 text-slate-400 hover:text-brand transition-colors w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="text-center mt-2">
-                <div id="rewardIcon" class="w-16 h-16 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-3 shadow-inner flex items-center justify-center text-3xl">
-                    🏅
-                </div>
+                <div id="rewardIcon" class="w-16 h-16 mx-auto rounded-full overflow-hidden p-1 bg-brand-light mb-3 shadow-inner flex items-center justify-center text-3xl">🏅</div>
                 <h3 id="rewardTitle" class="text-xl font-black text-brand-dark font-cute">永續回饋進度</h3>
                 <p id="rewardProgressText" class="text-xs text-slate-500 font-bold mt-1 mb-4"></p>
                 <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-slate-600 font-bold text-xs leading-relaxed text-justify mb-4" id="rewardDetailText"></div>
@@ -859,10 +807,7 @@
             messagingSenderId: "351065970349",
             appId: "1:351065970349:web:c03d1b2a9ea0216e7d1824"
         };
-
-        const firebaseConfig = typeof __firebase_config !== 'undefined' && __firebase_config 
-            ? JSON.parse(__firebase_config) 
-            : fallbackConfig;
+        const firebaseConfig = typeof __firebase_config !== 'undefined' && __firebase_config ? JSON.parse(__firebase_config) : fallbackConfig;
             
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
@@ -881,9 +826,8 @@
             const labels = [];
             const today = new Date();
             for(let i=5; i>=0; i--) {
-                if(i === 0) {
-                    labels.push('今天');
-                } else {
+                if(i === 0) labels.push('今天');
+                else {
                     let d = new Date(today);
                     d.setDate(today.getDate() - i);
                     labels.push(`${d.getMonth()+1}/${d.getDate()}`);
@@ -896,7 +840,6 @@
         const gradient = ctx.createLinearGradient(0, 0, 0, 300);
         gradient.addColorStop(0, 'rgba(16, 185, 129, 0.4)');
         gradient.addColorStop(1, 'rgba(16, 185, 129, 0)');
-        let chartData = [0, 0, 0, 0, 0, 0];
         
         const impactChart = new Chart(ctx, {
             type: 'line',
@@ -904,7 +847,7 @@
                 labels: generateDateLabels(),
                 datasets: [{
                     label: '累積減碳貢獻 (kg CO2e)',
-                    data: chartData,
+                    data: [0, 0, 0, 0, 0, 0],
                     borderColor: '#10b981',
                     backgroundColor: gradient,
                     borderWidth: 4,
@@ -917,8 +860,7 @@
                 }]
             },
             options: {
-                responsive: true,
-                maintainAspectRatio: false,
+                responsive: true, maintainAspectRatio: false,
                 plugins: { legend: { labels: { font: { family: "'Noto Sans TC', sans-serif", weight: 'bold' }, color: '#64748b' } } },
                 scales: {
                     y: { grid: { color: '#f1f5f9', drawBorder: false }, ticks: { color: '#94a3b8', font: { weight: 'bold' } }, min: 0 },
@@ -927,19 +869,10 @@
             }
         });
 
-        const initAuth = async () => {
-            try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                }
-            } catch (err) {}
-        };
-
         const updateGlobalUI = () => {
             document.getElementById('display-waste-global').innerText = globalStats.totalWaste.toLocaleString();
             document.getElementById('display-participants').innerText = globalStats.participants;
-            const progress = Math.min((globalStats.totalWaste / 1000) * 100, 100);
-            document.getElementById('progress-bar').style.width = progress + '%';
+            document.getElementById('progress-bar').style.width = Math.min((globalStats.totalWaste / 1000) * 100, 100) + '%';
         };
 
         const updatePersonalUI = () => {
@@ -952,47 +885,31 @@
             impactChart.data.datasets[0].data[5] = parseFloat(personalStats.carbon.toFixed(1));
             impactChart.update();
 
-            const certBubbleInner = document.getElementById('certBubbleInner');
-            const certBubbleIcon = document.getElementById('certBubbleIcon');
-            const certBubbleLine1 = document.getElementById('certBubbleLine1');
-            const certBubbleLine2 = document.getElementById('certBubbleLine2');
-            const certBubbleArrow = document.getElementById('certBubbleArrow');
-            const certBubbleArrowBg = document.getElementById('certBubbleArrowBg');
+            const inner = document.getElementById('certBubbleInner');
+            const icon = document.getElementById('certBubbleIcon');
+            const line1 = document.getElementById('certBubbleLine1');
+            const line2 = document.getElementById('certBubbleLine2');
+            const arr = document.getElementById('certBubbleArrow');
+            const arrBg = document.getElementById('certBubbleArrowBg');
+            const dbCertBtn = document.getElementById('openCertBtn');
             
             if (currentUser && !currentUser.uid.startsWith('local-')) {
-                certBubbleLine1.innerText = '登入成功！數據已同步';
-                certBubbleLine1.className = 'text-[10px] md:text-xs text-amber-100 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
-                certBubbleLine2.innerText = '👉 點擊領取專屬憑證';
-                certBubbleLine2.className = 'text-sm md:text-base font-black text-white leading-none transition-colors duration-300 break-words';
-                
-                certBubbleInner.className = 'bg-brand hover:bg-brand-dark py-3 px-6 rounded-full shadow-2xl border-4 border-white flex items-center justify-between gap-3 transition-all duration-300 transform hover:scale-105 animate-bounce';
-                
-                certBubbleIcon.className = 'w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-inner transition-colors duration-300';
-                certBubbleIcon.innerHTML = '<i class="fa-solid fa-gift text-amber-500 text-xl"></i>';
-                
-                certBubbleArrow.className = 'fa-solid fa-chevron-right text-sm text-white transition-colors duration-300';
-                certBubbleArrowBg.className = 'w-8 h-8 rounded-full bg-transparent flex items-center justify-center shrink-0 md:bg-transparent';
-                
-                const dbCertBtn = document.getElementById('openCertBtn');
-                if(dbCertBtn) {
-                    dbCertBtn.classList.remove('hidden');
-                    dbCertBtn.classList.add('animate-pulse');
-                }
+                line1.innerText = '登入成功！數據已同步'; line1.className = 'text-[10px] md:text-xs text-amber-100 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
+                line2.innerText = '👉 點擊領取專屬憑證'; line2.className = 'text-sm md:text-base font-black text-white leading-none transition-colors duration-300 break-words';
+                inner.className = 'bg-brand hover:bg-brand-dark py-3 px-6 rounded-full shadow-2xl border-4 border-white flex items-center justify-between gap-3 transition-all duration-300 transform hover:scale-105 animate-bounce';
+                icon.className = 'w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-inner transition-colors duration-300';
+                icon.innerHTML = '<i class="fa-solid fa-gift text-amber-500 text-xl"></i>';
+                arr.className = 'fa-solid fa-chevron-right text-sm text-white transition-colors duration-300';
+                arrBg.className = 'w-8 h-8 rounded-full bg-transparent flex items-center justify-center shrink-0 md:bg-transparent';
+                if(dbCertBtn) { dbCertBtn.classList.remove('hidden'); dbCertBtn.classList.add('animate-pulse'); }
             } else {
-                certBubbleLine1.innerText = '登入累積數據';
-                certBubbleLine1.className = 'text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
-                certBubbleLine2.innerText = '解鎖永續憑證';
-                certBubbleLine2.className = 'text-sm font-black text-brand-dark leading-none transition-colors duration-300 break-words';
-                
-                certBubbleInner.className = 'bg-white hover:bg-brand-light/50 py-2.5 px-5 md:py-3 md:px-6 rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300';
-                
-                certBubbleIcon.className = 'w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300';
-                certBubbleIcon.innerHTML = '<i class="fa-solid fa-certificate text-amber-500 text-xl transition-all duration-300"></i>';
-                
-                certBubbleArrow.className = 'fa-solid fa-chevron-right text-sm text-brand transition-colors duration-300';
-                certBubbleArrowBg.className = 'w-8 h-8 rounded-full bg-slate-50 md:bg-transparent flex items-center justify-center shrink-0';
-                
-                const dbCertBtn = document.getElementById('openCertBtn');
+                line1.innerText = '登入累積數據'; line1.className = 'text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
+                line2.innerText = '解鎖永續憑證'; line2.className = 'text-sm font-black text-brand-dark leading-none transition-colors duration-300 break-words';
+                inner.className = 'bg-white hover:bg-brand-light/50 py-2.5 px-5 md:py-3 md:px-6 rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300';
+                icon.className = 'w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300';
+                icon.innerHTML = '<i class="fa-solid fa-certificate text-amber-500 text-xl transition-all duration-300"></i>';
+                arr.className = 'fa-solid fa-chevron-right text-sm text-brand transition-colors duration-300';
+                arrBg.className = 'w-8 h-8 rounded-full bg-slate-50 md:bg-transparent flex items-center justify-center shrink-0';
                 if(dbCertBtn) dbCertBtn.classList.add('hidden');
             }
         };
@@ -1000,36 +917,46 @@
         const triggerAnimation = () => {
             const avatar = document.getElementById('interactive-avatar');
             const heroAvatar = document.getElementById('hero-avatar');
-            
-            if(avatar) {
-                avatar.classList.remove('animate-bounce-cute');
-                void avatar.offsetWidth; 
-                avatar.classList.add('animate-bounce-cute');
-            }
-            if(heroAvatar) {
-                heroAvatar.classList.remove('animate-bounce-cute');
-                void heroAvatar.offsetWidth;
-                heroAvatar.classList.add('animate-bounce-cute');
-            }
+            if(avatar) { avatar.classList.remove('animate-bounce-cute'); void avatar.offsetWidth; avatar.classList.add('animate-bounce-cute'); }
+            if(heroAvatar) { heroAvatar.classList.remove('animate-bounce-cute'); void heroAvatar.offsetWidth; heroAvatar.classList.add('animate-bounce-cute'); }
         };
 
         const showError = (msg) => {
             const errDiv = document.getElementById('authError');
-            errDiv.innerText = msg;
-            errDiv.classList.remove('hidden');
+            errDiv.innerText = msg; errDiv.classList.remove('hidden');
             setTimeout(() => errDiv.classList.add('hidden'), 3000);
         };
 
-        const handleMockLogin = (emailStr) => {
-            currentUser = { uid: 'local-' + Date.now(), email: emailStr, isAnonymous: emailStr.includes('訪客') };
-            document.getElementById('navLoginBtn').classList.add('hidden');
-            document.getElementById('navUserPanel').classList.remove('hidden');
-            document.getElementById('navUserEmail').innerText = currentUser.email;
-            document.getElementById('loginModal').classList.add('hidden');
-            updatePersonalUI();
-        };
-
         const feedListContainer = document.getElementById('feedListContainer');
+
+        const renderSingleFeed = (data, prepend = false) => {
+            const div = document.createElement('div');
+            div.className = 'flex items-start gap-3 bg-slate-700/50 p-3 md:p-4 rounded-2xl border border-slate-600 hover:bg-slate-700 transition-colors';
+            
+            const imgHtml = data.img ? 
+                `<div class="w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden shrink-0 bg-slate-800 border border-slate-600 shadow-inner">
+                    <img src="${data.img}" class="w-full h-full object-cover">
+                 </div>` : 
+                `<div class="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-blue-400 flex items-center justify-center font-bold text-white shadow-inner shrink-0 text-lg border border-slate-600">
+                    ${data.name ? data.name.substring(0,1) : '熱'}
+                 </div>`;
+
+            div.innerHTML = `
+                ${imgHtml}
+                <div class="flex-1 min-w-0 flex flex-col justify-center">
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-brand-light line-clamp-1 break-words">${data.name || '熱心公民'}</span>
+                        <span class="text-[10px] text-slate-400 shrink-0 whitespace-nowrap ml-2">${data.timeStr}</span>
+                    </div>
+                    <p class="text-slate-300 text-xs md:text-sm font-bold break-words leading-relaxed">${data.action}</p>
+                    <div class="mt-1.5">
+                        <span class="text-[10px] md:text-xs text-brand-light bg-brand-dark/50 inline-block px-2 py-0.5 rounded border border-brand-dark font-bold break-words">${data.reward}</span>
+                    </div>
+                </div>
+            `;
+            if(prepend) feedListContainer.insertBefore(div, feedListContainer.firstChild);
+            else feedListContainer.appendChild(div);
+        };
 
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -1041,69 +968,37 @@
 
                 if(unsubPersonal) unsubPersonal();
                 try {
-                    const userRef = doc(db, 'artifacts', appIdStr, 'users', user.uid);
-                    unsubPersonal = onSnapshot(userRef, (snap) => {
+                    unsubPersonal = onSnapshot(doc(db, 'artifacts', appIdStr, 'users', user.uid), (snap) => {
                         if(snap.exists()){
                             const data = snap.data();
                             if(data.stats) personalStats = data.stats;
-                            if(data.role === 'admin') {
-                                document.getElementById('navAdminBtn').classList.remove('hidden');
-                            } else {
-                                document.getElementById('navAdminBtn').classList.add('hidden');
-                            }
+                            document.getElementById('navAdminBtn').classList.toggle('hidden', data.role !== 'admin');
                         } else {
-                            setDoc(userRef, { stats: personalStats, role: 'user', email: user.isAnonymous ? '訪客 (匿名)' : user.email }, { merge: true });
+                            setDoc(doc(db, 'artifacts', appIdStr, 'users', user.uid), { stats: personalStats, role: 'user', email: user.isAnonymous ? '訪客' : user.email }, { merge: true });
                         }
                         updatePersonalUI();
-                    }, (err) => {});
-                } catch(e) {
-                    updatePersonalUI();
-                }
+                    }, () => updatePersonalUI());
+                } catch(e) { updatePersonalUI(); }
 
                 if(!unsubGlobal) {
                     try {
-                        const publicRef = doc(db, 'artifacts', appIdStr, 'public', 'global');
-                        unsubGlobal = onSnapshot(publicRef, (snap) => {
-                            if(snap.exists() && snap.data().campaign) {
-                                globalStats = snap.data().campaign;
-                            } else {
-                                setDoc(publicRef, { campaign: globalStats }, { merge: true });
-                            }
+                        unsubGlobal = onSnapshot(doc(db, 'artifacts', appIdStr, 'public', 'global'), (snap) => {
+                            if(snap.exists() && snap.data().campaign) globalStats = snap.data().campaign;
+                            else setDoc(doc(db, 'artifacts', appIdStr, 'public', 'global'), { campaign: globalStats }, { merge: true });
                             updateGlobalUI();
-                        }, (err) => {});
-                    } catch(e) {
-                        updateGlobalUI();
-                    }
+                        }, () => updateGlobalUI());
+                    } catch(e) { updateGlobalUI(); }
                 }
 
                 if(!unsubFeeds) {
                     try {
-                        const qFeeds = query(collection(db, 'artifacts', appIdStr, 'feeds'), orderBy('timestamp', 'desc'), limit(15));
-                        unsubFeeds = onSnapshot(qFeeds, (snap) => {
+                        unsubFeeds = onSnapshot(query(collection(db, 'artifacts', appIdStr, 'feeds'), orderBy('timestamp', 'desc'), limit(15)), (snap) => {
                             feedListContainer.innerHTML = '';
-                            if(snap.empty) {
-                                feedListContainer.innerHTML = '<p class="text-slate-400 text-xs font-bold text-center mt-4 break-words">尚無社區動態</p>';
-                                return;
-                            }
-                            snap.forEach(docSnap => {
-                                const data = docSnap.data();
-                                const div = document.createElement('div');
-                                div.className = 'bg-slate-700/50 p-3 md:p-4 rounded-2xl border border-slate-600 text-xs md:text-sm hover:bg-slate-700 transition-colors';
-                                div.innerHTML = `
-                                    <div class="flex items-center gap-3 mb-2 min-w-0">
-                                        <div class="w-7 h-7 md:w-8 md:h-8 bg-blue-400 rounded-full flex items-center justify-center font-bold text-white shadow-inner shrink-0">${data.name ? data.name.substring(0,1) : '熱'}</div>
-                                        <span class="font-bold text-brand-light line-clamp-1 break-words">${data.name || '熱心公民'}</span>
-                                        <span class="text-[10px] text-slate-400 ml-auto shrink-0 whitespace-nowrap">${data.timeStr}</span>
-                                    </div>
-                                    <p class="text-slate-300 font-bold break-words">${data.action}</p>
-                                    <p class="text-[10px] md:text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded border border-brand-dark font-bold break-words">${data.reward}</p>
-                                `;
-                                feedListContainer.appendChild(div);
-                            });
-                        }, (err) => {});
+                            if(snap.empty) { feedListContainer.innerHTML = '<p class="text-slate-400 text-xs font-bold text-center mt-4">尚無社區動態</p>'; return; }
+                            snap.forEach(docSnap => renderSingleFeed(docSnap.data()));
+                        }, () => {});
                     } catch (e) {}
                 }
-
             } else {
                 if(!currentUser || !currentUser.uid.startsWith('local-')) {
                     document.getElementById('navLoginBtn').classList.remove('hidden');
@@ -1115,486 +1010,246 @@
             }
         });
 
-        document.getElementById('navLoginBtn').addEventListener('click', () => {
-            document.getElementById('loginModal').classList.remove('hidden');
-        });
-
-        document.getElementById('closeLoginBtn').addEventListener('click', () => {
-            document.getElementById('loginModal').classList.add('hidden');
-        });
-
+        document.getElementById('navLoginBtn').addEventListener('click', () => document.getElementById('loginModal').classList.remove('hidden'));
+        document.getElementById('closeLoginBtn').addEventListener('click', () => document.getElementById('loginModal').classList.add('hidden'));
         document.getElementById('logoutBtn').addEventListener('click', async () => {
-            if(currentUser && currentUser.uid.startsWith('local-')) {
-                currentUser = null;
-                document.getElementById('navLoginBtn').classList.remove('hidden');
-                document.getElementById('navUserPanel').classList.add('hidden');
-                document.getElementById('navAdminBtn').classList.add('hidden');
-                personalStats = { waste: 0, carbon: 0, soil: 0, exp: 0, level: 1 };
-                updatePersonalUI();
-            } else {
-                await signOut(auth);
-                await initAuth();
-            }
+            if(currentUser && currentUser.uid.startsWith('local-')) { currentUser = null; updatePersonalUI(); } 
+            else { await signOut(auth); }
         });
 
         let isAuthenticating = false;
-
         document.getElementById('authForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (isAuthenticating) return;
+            e.preventDefault(); if (isAuthenticating) return;
             isAuthenticating = true;
-            
-            const btn = document.getElementById('submitSignInBtn');
-            const originalText = btn.innerText;
-            btn.innerText = '登入中...';
-            btn.disabled = true;
-
-            const email = document.getElementById('emailInput').value;
-            const pwd = document.getElementById('passwordInput').value;
-            try {
-                await signInWithEmailAndPassword(auth, email, pwd);
-            } catch (err) {
-                showError('帳號或密碼錯誤');
-            } finally {
-                isAuthenticating = false;
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }
+            const btn = document.getElementById('submitSignInBtn'); const orig = btn.innerText; btn.innerText = '登入中...'; btn.disabled = true;
+            try { await signInWithEmailAndPassword(auth, document.getElementById('emailInput').value, document.getElementById('passwordInput').value); } 
+            catch (err) { showError('帳號或密碼錯誤'); } 
+            finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
 
         document.getElementById('submitSignUpBtn').addEventListener('click', async () => {
             if (isAuthenticating) return;
-            
-            const email = document.getElementById('emailInput').value;
-            const pwd = document.getElementById('passwordInput').value;
-            if(!email || !pwd) return showError('請輸入電子郵件與密碼');
-            if(pwd.length < 6) return showError('密碼至少需要 6 個字元');
-            
-            isAuthenticating = true;
-            const btn = document.getElementById('submitSignUpBtn');
-            const originalText = btn.innerText;
-            btn.innerText = '註冊中...';
-            btn.disabled = true;
-
+            const email = document.getElementById('emailInput').value, pwd = document.getElementById('passwordInput').value;
+            if(!email || !pwd) return showError('請輸入電子郵件與密碼'); if(pwd.length < 6) return showError('密碼至少 6 個字元');
+            isAuthenticating = true; const btn = document.getElementById('submitSignUpBtn'); const orig = btn.innerText; btn.innerText = '註冊中...'; btn.disabled = true;
             try {
-                const userCredential = await createUserWithEmailAndPassword(auth, email, pwd);
-                const userRef = doc(db, 'artifacts', appIdStr, 'users', userCredential.user.uid);
-                await setDoc(userRef, { stats: personalStats, email: email, role: 'user' }, { merge: true });
-            } catch (err) {
-                showError('註冊失敗，信箱可能已存在');
-            } finally {
-                isAuthenticating = false;
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }
+                const cred = await createUserWithEmailAndPassword(auth, email, pwd);
+                await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid), { stats: personalStats, email: email, role: 'user' }, { merge: true });
+            } catch (err) { showError('註冊失敗，信箱可能已存在'); } 
+            finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
         
         document.getElementById('anonLoginBtn').addEventListener('click', async () => {
-            if (isAuthenticating) return;
-            isAuthenticating = true;
-            
-            const btn = document.getElementById('anonLoginBtn');
-            const originalText = btn.innerText;
-            btn.innerText = '載入中...';
-            btn.disabled = true;
-
+            if (isAuthenticating) return; isAuthenticating = true;
+            const btn = document.getElementById('anonLoginBtn'); const orig = btn.innerText; btn.innerText = '載入中...'; btn.disabled = true;
             try {
-                const userCredential = await signInAnonymously(auth);
-                const userRef = doc(db, 'artifacts', appIdStr, 'users', userCredential.user.uid);
-                await setDoc(userRef, { stats: personalStats, email: '訪客 (匿名)', role: 'user' }, { merge: true });
-            } catch (err) {
-                showError('訪客登入失敗');
-            } finally {
-                isAuthenticating = false;
-                btn.innerText = originalText;
-                btn.disabled = false;
-            }
+                const cred = await signInAnonymously(auth);
+                await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid), { stats: personalStats, email: '訪客', role: 'user' }, { merge: true });
+            } catch (err) { showError('訪客登入失敗'); } 
+            finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
 
-        async function addFeed(action, reward) {
-            const name = currentUser ? (currentUser.isAnonymous ? '熱心訪客' : currentUser.email.split('@')[0]) : '熱心公民';
-            if (currentUser && !currentUser.uid.startsWith('local-')) {
-                try {
-                    await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), {
-                        name: name,
-                        action: action,
-                        reward: reward,
-                        timestamp: Date.now(),
-                        timeStr: '剛剛'
-                    });
-                } catch(e) {}
-            } else {
-                const div = document.createElement('div');
-                div.className = 'bg-slate-700/50 p-3 md:p-4 rounded-2xl border border-slate-600 text-xs md:text-sm hover:bg-slate-700 transition-colors';
-                div.innerHTML = `
-                    <div class="flex items-center gap-3 mb-2 min-w-0">
-                        <div class="w-7 h-7 md:w-8 md:h-8 bg-blue-400 rounded-full flex items-center justify-center font-bold text-white shadow-inner shrink-0">${name.substring(0,1)}</div>
-                        <span class="font-bold text-brand-light line-clamp-1 break-words">${name}</span>
-                        <span class="text-[10px] text-slate-400 ml-auto shrink-0 whitespace-nowrap">剛剛</span>
-                    </div>
-                    <p class="text-slate-300 font-bold break-words">${action}</p>
-                    <p class="text-[10px] md:text-xs text-brand-light mt-2 bg-brand-dark/50 inline-block px-2 py-1 rounded border border-brand-dark font-bold break-words">${reward}</p>
-                `;
-                feedListContainer.insertBefore(div, feedListContainer.firstChild);
-            }
-        }
+        // --- Upload Modal Logic ---
+        const uploadModal = document.getElementById('uploadModal');
+        const uploadForm = document.getElementById('uploadForm');
+        const uploadFileInput = document.getElementById('uploadFileInput');
+        const uploadPreview = document.getElementById('uploadPreview');
+        const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+        const uploadImgBase64 = document.getElementById('uploadImgBase64');
+        const uploadType = document.getElementById('uploadType');
+        const uploadWeight = document.getElementById('uploadWeight');
 
-        const handleResourceAction = async (wasteAmount, expAmount) => {
-            if(!currentUser) {
-                document.getElementById('loginModal').classList.remove('hidden');
-                return;
-            }
-            
-            personalStats.waste += wasteAmount;
-            personalStats.carbon += (wasteAmount * 0.56);
-            personalStats.soil += (wasteAmount * 0.7);
+        const openUploadModal = (type) => {
+            if(!currentUser) { document.getElementById('loginModal').classList.remove('hidden'); return; }
+            uploadType.value = type;
+            uploadWeight.value = type === 'coffee' ? 5 : 3;
+            document.getElementById('uploadModalTitle').innerText = type === 'coffee' ? '拍照貢獻咖啡渣' : '拍照貢獻落葉';
+            uploadPreview.src = ''; uploadPreview.classList.add('hidden');
+            uploadPlaceholder.classList.remove('hidden'); uploadImgBase64.value = '';
+            uploadModal.classList.remove('hidden');
+        };
+
+        document.getElementById('btnFeedCoffee').addEventListener('click', () => openUploadModal('coffee'));
+        document.getElementById('btnFeedLeaf').addEventListener('click', () => openUploadModal('leaf'));
+        document.getElementById('closeUploadBtn').addEventListener('click', () => uploadModal.classList.add('hidden'));
+
+        uploadFileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (ev) => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas'); const ctx = canvas.getContext('2d');
+                    const MAX_WIDTH = 600; let width = img.width, height = img.height;
+                    if (width > MAX_WIDTH) { height *= MAX_WIDTH / width; width = MAX_WIDTH; }
+                    canvas.width = width; canvas.height = height;
+                    ctx.drawImage(img, 0, 0, width, height);
+                    const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                    uploadImgBase64.value = dataUrl;
+                    uploadPreview.src = dataUrl;
+                    uploadPreview.classList.remove('hidden');
+                    uploadPlaceholder.classList.add('hidden');
+                };
+                img.src = ev.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const weight = parseFloat(uploadWeight.value);
+            const type = uploadType.value;
+            const base64 = uploadImgBase64.value;
+            const expAmount = Math.floor(weight * 10);
+
+            if(!base64) { alert('請上傳現場照片作為紀錄證明！'); return; }
+
+            const btn = document.getElementById('submitUploadBtn');
+            const origText = btn.innerText; btn.innerText = '上傳中...'; btn.disabled = true;
+
+            personalStats.waste += weight;
+            personalStats.carbon += (weight * 0.56);
+            personalStats.soil += (weight * 0.7);
             personalStats.exp += expAmount;
             personalStats.level = Math.floor(personalStats.exp / 200) + 1;
 
-            globalStats.totalWaste += wasteAmount;
+            globalStats.totalWaste += weight;
             globalStats.participants += 1;
 
-            triggerAnimation();
-            updatePersonalUI();
-            updateGlobalUI();
+            triggerAnimation(); updatePersonalUI(); updateGlobalUI();
 
-            let actionStr = wasteAmount === 5 ? `投入了 <span class="font-bold text-white">5 kg 咖啡渣</span>` : `回收了 <span class="font-bold text-white">3 kg 落葉碳源</span>`;
-            let rewardStr = `+${expAmount} EXP 經驗值`;
-            addFeed(actionStr, rewardStr);
+            let actionStr = type === 'coffee' ? `貢獻了 <span class="font-bold text-white">${weight} kg 咖啡渣</span>` : `回收了 <span class="font-bold text-white">${weight} kg 落葉</span>`;
+            let rewardStr = `+${expAmount} EXP`;
 
+            const name = currentUser ? (currentUser.isAnonymous ? '熱心訪客' : currentUser.email.split('@')[0]) : '熱心公民';
             if (currentUser && !currentUser.uid.startsWith('local-')) {
                 try {
-                    const userRef = doc(db, 'artifacts', appIdStr, 'users', currentUser.uid);
-                    const publicRef = doc(db, 'artifacts', appIdStr, 'public', 'global');
-                    await setDoc(userRef, { stats: personalStats }, {merge: true});
-                    await setDoc(publicRef, { campaign: globalStats }, {merge: true});
+                    await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name, action: actionStr, reward: rewardStr, img: base64, timestamp: Date.now(), timeStr: '剛剛' });
+                    await setDoc(doc(db, 'artifacts', appIdStr, 'users', currentUser.uid), { stats: personalStats }, {merge: true});
+                    await setDoc(doc(db, 'artifacts', appIdStr, 'public', 'global'), { campaign: globalStats }, {merge: true});
                 } catch(e) {}
+            } else {
+                renderSingleFeed({ name, action: actionStr, reward: rewardStr, img: base64, timeStr: '剛剛' }, true);
             }
-        };
+            
+            btn.innerText = origText; btn.disabled = false; uploadModal.classList.add('hidden');
+        });
 
-        document.getElementById('btnFeedCoffee').addEventListener('click', () => handleResourceAction(5, 50));
-        document.getElementById('btnFeedLeaf').addEventListener('click', () => handleResourceAction(3, 30));
+        // --- End Upload Logic ---
 
         const certModal = document.getElementById('certificateModal');
         const certBubble = document.getElementById('certBubble');
-        const closeCertBtn = document.getElementById('closeCertBtn');
-        const downloadCertBtn = document.getElementById('downloadCertBtn');
-        const dbCertBtn = document.getElementById('openCertBtn');
-
         const openCertModal = () => {
-            if(!currentUser) {
-                document.getElementById('loginModal').classList.remove('hidden');
-                return;
-            }
-            
-            const userStr = currentUser.isAnonymous ? "熱心在地訪客" : currentUser.email.split('@')[0];
-            document.getElementById('certUser').innerText = userStr;
+            if(!currentUser) { document.getElementById('loginModal').classList.remove('hidden'); return; }
+            document.getElementById('certUser').innerText = currentUser.isAnonymous ? "熱心在地訪客" : currentUser.email.split('@')[0];
             document.getElementById('certWaste').innerText = personalStats.waste.toFixed(1);
             document.getElementById('certCarbon').innerText = personalStats.carbon.toFixed(1);
             document.getElementById('certSoil').innerText = personalStats.soil.toFixed(1);
-
-            const d = new Date();
-            document.getElementById('certDate').innerText = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
-
-            const randomHash = currentUser.uid.substring(0, 6).toUpperCase() || Math.floor(Math.random()*1000000).toString().padStart(6,'0');
-            document.getElementById('certNo').innerText = `TJ2026-${randomHash}`;
-
+            const d = new Date(); document.getElementById('certDate').innerText = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+            document.getElementById('certNo').innerText = `TJ2026-${currentUser.uid.substring(0, 6).toUpperCase() || Math.floor(Math.random()*1000000).toString().padStart(6,'0')}`;
             certModal.classList.remove('hidden');
         };
 
         certBubble.addEventListener('click', openCertModal);
-        if(dbCertBtn) dbCertBtn.addEventListener('click', openCertModal);
+        if(document.getElementById('openCertBtn')) document.getElementById('openCertBtn').addEventListener('click', openCertModal);
+        document.getElementById('closeCertBtn').addEventListener('click', () => certModal.classList.add('hidden'));
 
-        closeCertBtn.addEventListener('click', () => {
-            certModal.classList.add('hidden');
-        });
-
-        downloadCertBtn.addEventListener('click', async () => {
-            const btn = document.getElementById('downloadCertBtn');
-            const originalHTML = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 正在為您生成憑證...';
-            btn.disabled = true;
-
+        document.getElementById('downloadCertBtn').addEventListener('click', async () => {
+            const btn = document.getElementById('downloadCertBtn'); const origHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 正在為您生成憑證...'; btn.disabled = true;
             try {
-                const element = document.getElementById('certificateNode');
-                const canvas = await html2canvas(element, { 
-                    scale: 2, 
-                    useCORS: true,
-                    backgroundColor: '#ffffff'
-                });
-                
-                const dataUrl = canvas.toDataURL('image/png');
-                const certNo = document.getElementById('certNo').innerText;
-                
-                const link = document.createElement('a');
-                link.download = `TanJi_Certificate_${certNo}.png`;
-                link.href = dataUrl;
-                link.click();
-            } catch (err) {
-                alert("生成憑證時發生錯誤，請稍後再試！");
-            } finally {
-                btn.innerHTML = originalHTML;
-                btn.disabled = false;
-            }
+                const canvas = await html2canvas(document.getElementById('certificateNode'), { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+                const link = document.createElement('a'); link.download = `TanJi_Certificate_${document.getElementById('certNo').innerText}.png`; link.href = canvas.toDataURL('image/png'); link.click();
+            } catch (err) { alert("生成憑證發生錯誤！"); } 
+            finally { btn.innerHTML = origHTML; btn.disabled = false; }
         });
 
-        const chatToggleBtn = document.getElementById('chatToggleBtn');
-        const chatModal = document.getElementById('chatModal');
-        const closeChatBtn = document.getElementById('closeChatBtn');
-        const chatInput = document.getElementById('chatInput');
-        const sendChatBtn = document.getElementById('sendChatBtn');
-        const chatMessages = document.getElementById('chatMessages');
+        document.getElementById('chatToggleBtn').addEventListener('click', () => { document.getElementById('chatModal').classList.toggle('hidden'); document.getElementById('chatToggleBtn').querySelector('span').classList.add('hidden'); });
+        document.getElementById('closeChatBtn').addEventListener('click', () => document.getElementById('chatModal').classList.add('hidden'));
 
-        chatToggleBtn.addEventListener('click', () => {
-            chatModal.classList.toggle('hidden');
-            chatToggleBtn.querySelector('span').classList.add('hidden');
-        });
-        
-        closeChatBtn.addEventListener('click', () => {
-            chatModal.classList.add('hidden');
-        });
-
-        function addMessage(text, isUser) {
-            const div = document.createElement('div');
-            if(isUser) {
-                div.className = 'self-end bg-brand text-white p-3 rounded-2xl rounded-tr-sm shadow-sm max-w-[85%] font-bold break-words';
-            } else {
-                div.className = 'self-start bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-bold leading-relaxed break-words';
-            }
-            div.innerText = text;
-            chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        async function fetchGeminiReply(message) {
-            const apiKey = ""; 
+        const handleChat = async () => {
+            const chatInput = document.getElementById('chatInput'); const text = chatInput.value.trim(); if(!text) return;
+            const msgs = document.getElementById('chatMessages');
+            msgs.innerHTML += `<div class="self-end bg-brand text-white p-3 rounded-2xl rounded-tr-sm shadow-sm max-w-[85%] font-bold break-words">${text}</div>`;
+            chatInput.value = ''; msgs.scrollTop = msgs.scrollHeight;
+            const loadId = 'load-' + Date.now();
+            msgs.innerHTML += `<div id="${loadId}" class="self-start bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-400 text-xs font-bold flex items-center shrink-0">寶寶思考中...</div>`;
+            msgs.scrollTop = msgs.scrollHeight;
             
-            if (!apiKey || apiKey === "填入您的_API_KEY" || apiKey === "") {
-                await new Promise(res => setTimeout(res, 600)); 
-                if(message.includes('O2O') || message.includes('打卡') || message.includes('掃碼')) {
-                    return "只要拿咖啡渣到合作發酵站，用手機掃描專屬 QR Code 就能即時累積經驗值並記錄您的永續循環履歷喔！🍃";
-                } else if(message.includes('發酵') || message.includes('黑金土') || message.includes('咖啡渣')) {
-                    return "回收的咖啡渣會和落葉混合，經過45天的高溫好氧發酵，就會變成營養的黑金土喔！🌱";
-                } else if(message.includes('回饋') || message.includes('獎勵') || message.includes('經驗') || message.includes('憑證')) {
-                    return "累積 100 EXP 解鎖數位徽章，300 EXP 換取香草植物， 800 EXP 就能兌換在地低碳咖啡券喔！累積數據還能產出數位憑證✨";
-                } else {
-                    return "寶寶目前在本地模式，但我可以回答關於「O2O打卡機制」、「發酵流程」或是「數位憑證」的問題喔！🍃";
-                }
-            }
-
-            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-            const payload = {
-                contents: [{ parts: [{ text: message }] }],
-                systemInstruction: { parts: [{ text: "你是碳吉寶寶，一個熱情可愛的循環經濟大使小精靈。請用活潑親切的語氣（經常使用如 🍃、✨、🌱 等符號）回答。你了解咖啡渣回收、好氧發酵與黑金土等知識。回答請簡短在50字以內。" }] }
-            };
-
-            for (let i = 0; i < 3; i++) {
-                try {
-                    const response = await fetch(url, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    if (!response.ok) throw new Error('API Request Failed');
-                    const result = await response.json();
-                    return result.candidates[0].content.parts[0].text;
-                } catch (e) {
-                    if (i === 2) {
-                        return "寶寶的連線有點不穩，請稍後再試，或問我關於「發酵流程」的問題喔！🍃";
-                    }
-                    await new Promise(res => setTimeout(res, 1000 * Math.pow(2, i)));
-                }
-            }
-        }
-
-        async function handleChat() {
-            const text = chatInput.value.trim();
-            if(!text) return;
-            addMessage(text, true);
-            chatInput.value = '';
+            let reply = "寶寶目前在本地模式，但我可以回答關於「發酵流程」或是「數位憑證」的問題喔！🍃";
+            if(text.includes('拍照') || text.includes('打卡') || text.includes('上傳')) reply = "現在只要點擊首頁按鈕，拍下您收集的咖啡渣或落葉上傳，系統就會自動發送經驗值給您喔！📸🍃";
+            else if(text.includes('發酵') || text.includes('黑金土') || text.includes('咖啡渣')) reply = "回收的咖啡渣會和落葉混合，經過45天的高溫好氧發酵，就會變成營養的黑金土喔！🌱";
             
-            const loadingId = 'loading-' + Date.now();
-            const loadingDiv = document.createElement('div');
-            loadingDiv.id = loadingId;
-            loadingDiv.className = 'self-start bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-400 text-xs font-bold flex items-center shrink-0';
-            loadingDiv.innerHTML = '<span class="w-1.5 h-1.5 bg-brand rounded-full animate-bounce mr-1"></span><span class="w-1.5 h-1.5 bg-brand rounded-full animate-bounce mr-1" style="animation-delay: 0.1s"></span><span class="w-1.5 h-1.5 bg-brand rounded-full animate-bounce mr-2" style="animation-delay: 0.2s"></span> 寶寶思考中...';
-            chatMessages.appendChild(loadingDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+            setTimeout(() => {
+                document.getElementById(loadId)?.remove();
+                msgs.innerHTML += `<div class="self-start bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-bold leading-relaxed break-words">${reply}</div>`;
+                msgs.scrollTop = msgs.scrollHeight;
+            }, 600);
+        };
+        document.getElementById('sendChatBtn').addEventListener('click', handleChat);
+        document.getElementById('chatInput').addEventListener('keypress', (e) => { if(e.key === 'Enter') handleChat(); });
 
-            const reply = await fetchGeminiReply(text);
-
-            const loadEl = document.getElementById(loadingId);
-            if(loadEl) loadEl.remove();
-
-            addMessage(reply, false);
-        }
-
-        sendChatBtn.addEventListener('click', handleChat);
-        chatInput.addEventListener('keypress', (e) => {
-            if(e.key === 'Enter') handleChat();
-        });
-
-        const navAdminBtn = document.getElementById('navAdminBtn');
-        const adminModal = document.getElementById('adminModal');
-        const closeAdminBtn = document.getElementById('closeAdminBtn');
-        
-        navAdminBtn.addEventListener('click', () => {
-            adminModal.classList.remove('hidden');
+        document.getElementById('navAdminBtn').addEventListener('click', () => {
+            document.getElementById('adminModal').classList.remove('hidden');
             document.getElementById('adminTotalWaste').value = globalStats.totalWaste;
             document.getElementById('adminParticipants').value = globalStats.participants;
         });
-
-        closeAdminBtn.addEventListener('click', () => {
-            adminModal.classList.add('hidden');
-        });
+        document.getElementById('closeAdminBtn').addEventListener('click', () => document.getElementById('adminModal').classList.add('hidden'));
 
         document.getElementById('adminForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const waste = parseFloat(document.getElementById('adminTotalWaste').value);
-            const parts = parseInt(document.getElementById('adminParticipants').value);
-            
             try {
-                const publicRef = doc(db, 'artifacts', appIdStr, 'public', 'global');
-                globalStats.totalWaste = waste;
-                globalStats.participants = parts;
-                await setDoc(publicRef, { campaign: globalStats }, { merge: true });
-                adminModal.classList.add('hidden');
-            } catch(err) {
-                alert("更新失敗");
-            }
+                await setDoc(doc(db, 'artifacts', appIdStr, 'public', 'global'), { campaign: { totalWaste: parseFloat(document.getElementById('adminTotalWaste').value), participants: parseInt(document.getElementById('adminParticipants').value) } }, { merge: true });
+                document.getElementById('adminModal').classList.add('hidden');
+            } catch(err) { alert("更新失敗"); }
         });
 
         document.getElementById('adminAnnounceForm').addEventListener('submit', async (e) => {
             e.preventDefault();
-            const msg = document.getElementById('adminAnnounceText').value;
             try {
-                await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), {
-                    name: '【平台公告】',
-                    action: msg,
-                    reward: '推播',
-                    timestamp: Date.now(),
-                    timeStr: '即時'
-                });
-                document.getElementById('adminAnnounceText').value = '';
-                adminModal.classList.add('hidden');
-            } catch(err) {
-                alert("發布失敗");
-            }
+                await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name: '【平台公告】', action: document.getElementById('adminAnnounceText').value, reward: '推播', timestamp: Date.now(), timeStr: '即時' });
+                document.getElementById('adminAnnounceText').value = ''; document.getElementById('adminModal').classList.add('hidden');
+            } catch(err) { alert("發布失敗"); }
         });
 
-        const mycoNodeModal = document.getElementById('mycoNodeModal');
-        const openMycoNodeBtn = document.getElementById('openMycoNodeBtn');
-        const closeMycoNodeBtn = document.getElementById('closeMycoNodeBtn');
-
-        openMycoNodeBtn.addEventListener('click', () => {
-            mycoNodeModal.classList.remove('hidden');
-        });
-
-        closeMycoNodeBtn.addEventListener('click', () => {
-            mycoNodeModal.classList.add('hidden');
-        });
+        document.getElementById('openMycoNodeBtn').addEventListener('click', () => document.getElementById('mycoNodeModal').classList.remove('hidden'));
+        document.getElementById('closeMycoNodeBtn').addEventListener('click', () => document.getElementById('mycoNodeModal').classList.add('hidden'));
 
         const rewardModal = document.getElementById('rewardModal');
-        const closeRewardBtn = document.getElementById('closeRewardBtn');
-        const rewardIcon = document.getElementById('rewardIcon');
-        const rewardTitle = document.getElementById('rewardTitle');
-        const rewardProgressText = document.getElementById('rewardProgressText');
-        const rewardDetailText = document.getElementById('rewardDetailText');
-        const rewardActionBtn = document.getElementById('rewardActionBtn');
-
-        const handleRewardCheck = (tier) => {
-            if(!currentUser) {
-                document.getElementById('loginModal').classList.remove('hidden');
-                return;
-            }
-            const currentExp = personalStats.exp;
-            rewardModal.classList.remove('hidden');
-            if (tier === 1) {
-                rewardIcon.innerText = "🏅";
-                rewardTitle.innerText = "永續新星";
-                if (currentExp >= 100) {
-                    rewardProgressText.innerText = "已解鎖！目前累積: " + currentExp + " / 100 EXP";
-                    rewardDetailText.innerText = "您已成功解鎖「淨零新星數位徽章」，此榮譽與數據已寫入您的永續數位憑證。您可以前往下載您的專屬認證，向社區展示您的氣候先鋒行動！";
-                    rewardActionBtn.innerText = "前往生成憑證";
-                    rewardActionBtn.onclick = () => {
-                        rewardModal.classList.add('hidden');
-                        openCertModal();
-                    };
-                } else {
-                    const diff = 100 - currentExp;
-                    rewardProgressText.innerText = "未解鎖。目前累積: " + currentExp + " / 100 EXP";
-                    rewardDetailText.innerText = "您距離解鎖「淨零新星數位徽章」還差 " + diff + " EXP。請繼續參與咖啡渣或落葉資材回收點收，累積每次物理感測真實數據，解鎖專屬頭像！";
-                    rewardActionBtn.innerText = "去貢獻資材";
-                    rewardActionBtn.onclick = () => {
-                        rewardModal.classList.add('hidden');
-                        document.getElementById('interactive').scrollIntoView();
-                    };
-                }
-            } else if (tier === 2) {
-                rewardIcon.innerText = "🌱";
-                rewardTitle.innerText = "低碳推手";
-                if (currentExp >= 300) {
-                    rewardProgressText.innerText = "已解鎖！目前累積: " + currentExp + " / 300 EXP";
-                    rewardDetailText.innerText = "恭喜達成！您已擁有兌換「社區自種香草植物盆栽」資格。此薄荷或迷迭香係由獲得免費黑金土的社區頂樓農園認養人，依 10% 互惠協議反向回饋。請攜手機至北大特區實體好氧發酵站，出示本畫面由站點人員核對後兌換！";
-                    rewardActionBtn.innerText = "確認實體兌換";
-                    rewardActionBtn.onclick = () => {
-                        rewardModal.classList.add('hidden');
-                    };
-                } else {
-                    const diff = 300 - currentExp;
-                    rewardProgressText.innerText = "未解鎖。目前累積: " + currentExp + " / 300 EXP";
-                    rewardDetailText.innerText = "您距離解鎖香草盆栽還差 " + diff + " EXP。多回收 1 公斤咖啡渣可獲 10 EXP、1 公斤落葉可獲 10 EXP（每次點收均有 MycoNode 感測數據保障數據可追溯性），讓我們一起落實零浪費生活！";
-                    rewardActionBtn.innerText = "去貢獻資材";
-                    rewardActionBtn.onclick = () => {
-                        rewardModal.classList.add('hidden');
-                        document.getElementById('interactive').scrollIntoView();
-                    };
-                }
-            } else if (tier === 3) {
-                rewardIcon.innerText = "☕";
-                rewardTitle.innerText = "循環見證人";
-                if (currentExp >= 800) {
-                    rewardProgressText.innerText = "已解鎖！目前累積: " + currentExp + " / 800 EXP";
-                    rewardDetailText.innerText = "卓越成就！您已獲得由三峽在地咖啡商家為推動 ESG 綠色行銷所贊助提供的「在地低碳咖啡兌換券」！請出示本核銷畫面至特區合作獨立咖啡店點，即可免費享用清溫低碳清運之永續精品咖啡。點擊按鈕確認後即由系統核銷。";
-                    rewardActionBtn.innerText = "現場向店家出示核銷";
-                    rewardActionBtn.onclick = () => {
-                        personalStats.exp -= 800;
-                        personalStats.level = Math.floor(personalStats.exp / 200) + 1;
-                        updatePersonalUI();
-                        rewardModal.classList.add('hidden');
-                        if (currentUser && !currentUser.uid.startsWith('local-')) {
-                            const userRef = doc(db, 'artifacts', appIdStr, 'users', currentUser.uid);
-                            setDoc(userRef, { stats: personalStats }, {merge: true}).then(() => {});
-                        }
-                        addFeed("兌換了 在地低碳咖啡券", "消耗 800 EXP 經驗值");
-                    };
-                } else {
-                    const diff = 800 - currentExp;
-                    rewardProgressText.innerText = "未解鎖。目前累積: " + currentExp + " / 800 EXP";
-                    rewardDetailText.innerText = "衝刺階段！您距離解鎖咖啡兌換券還差 " + diff + " EXP。本系統透過微型感測器維持好氧堆肥，成功阻絕垃圾無氧環境之溫室氣體甲烷產出。每一次回收都具備真實避碳影響力，繼續努力！";
-                    rewardActionBtn.innerText = "繼續累積資材";
-                    rewardActionBtn.onclick = () => {
-                        rewardModal.classList.add('hidden');
-                        document.getElementById('interactive').scrollIntoView();
-                    };
-                }
-            }
-        };
-
-        closeRewardBtn.addEventListener('click', () => {
-            rewardModal.classList.add('hidden');
-        });
+        document.getElementById('closeRewardBtn').addEventListener('click', () => rewardModal.classList.add('hidden'));
 
         document.querySelectorAll('.btn-reward-check').forEach(btn => {
             btn.addEventListener('click', () => {
+                if(!currentUser) return document.getElementById('loginModal').classList.remove('hidden');
                 const tier = parseInt(btn.getAttribute('data-tier'));
-                handleRewardCheck(tier);
+                const exp = personalStats.exp;
+                rewardModal.classList.remove('hidden');
+                const updateReward = (icon, title, reqExp, desc, actText, unlockCb) => {
+                    document.getElementById('rewardIcon').innerText = icon; document.getElementById('rewardTitle').innerText = title;
+                    if(exp >= reqExp) {
+                        document.getElementById('rewardProgressText').innerText = `已解鎖！目前累積: ${exp} / ${reqExp} EXP`;
+                        document.getElementById('rewardDetailText').innerText = desc.unlocked;
+                        const actionBtn = document.getElementById('rewardActionBtn'); actionBtn.innerText = actText.unlocked;
+                        actionBtn.onclick = () => { rewardModal.classList.add('hidden'); unlockCb(); };
+                    } else {
+                        document.getElementById('rewardProgressText').innerText = `未解鎖。目前累積: ${exp} / ${reqExp} EXP`;
+                        document.getElementById('rewardDetailText').innerText = desc.locked(reqExp - exp);
+                        const actionBtn = document.getElementById('rewardActionBtn'); actionBtn.innerText = actText.locked;
+                        actionBtn.onclick = () => { rewardModal.classList.add('hidden'); document.getElementById('interactive').scrollIntoView(); };
+                    }
+                };
+                if(tier === 1) updateReward("🏅", "永續新星", 100, { unlocked: "已成功解鎖數位徽章，此榮譽已寫入您的永續數位憑證！", locked: diff => `還差 ${diff} EXP。請上傳照片點收，解鎖專屬頭像！` }, { unlocked: "前往生成憑證", locked: "去拍照上傳" }, openCertModal);
+                else if(tier === 2) updateReward("🌱", "低碳推手", 300, { unlocked: "擁有兌換「社區自種香草盆栽」資格。請攜手機至發酵站出示兌換！", locked: diff => `還差 ${diff} EXP。每回收1公斤可獲10 EXP，讓我們一起落實零浪費！` }, { unlocked: "確認實體兌換", locked: "去拍照上傳" }, () => {});
+                else if(tier === 3) updateReward("☕", "循環見證人", 800, { unlocked: "獲得在地商家贊助「低碳咖啡兌換券」！出示本畫面至合作店點免費享用。", locked: diff => `還差 ${diff} EXP。每一次真實回收都有避碳影響力，繼續努力！` }, { unlocked: "現場向店家核銷", locked: "繼續拍照累積" }, async () => {
+                    personalStats.exp -= 800; personalStats.level = Math.floor(personalStats.exp/200)+1; updatePersonalUI();
+                    if(currentUser && !currentUser.uid.startsWith('local-')) await setDoc(doc(db, 'artifacts', appIdStr, 'users', currentUser.uid), {stats:personalStats}, {merge:true});
+                    if(currentUser && !currentUser.uid.startsWith('local-')) await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name: currentUser.email.split('@')[0], action: "兌換了 在地低碳咖啡券", reward: "消耗 800 EXP", timestamp: Date.now(), timeStr: '剛剛' });
+                });
             });
         });
 
-        initAuth();
-
+        (async () => { try { if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) await signInWithCustomToken(auth, __initial_auth_token); } catch(e){} })();
     </script>
 </body>
 </html>
