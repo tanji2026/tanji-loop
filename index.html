@@ -30,7 +30,8 @@
                     },
                     animation: {
                         'bounce-cute': 'bounceCute 0.5s cubic-bezier(0.28, 0.84, 0.42, 1)',
-                        'float': 'float 3s ease-in-out infinite'
+                        'float': 'float 3s ease-in-out infinite',
+                        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite'
                     },
                     keyframes: {
                         bounceCute: {
@@ -58,9 +59,12 @@
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
         @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        /* Tour highlight styles */
+        .tour-highlight { position: relative !important; z-index: 106 !important; background-color: white !important; border-radius: 2rem !important; box-shadow: 0 0 0 4px #10b981, 0 20px 25px -5px rgba(0, 0, 0, 0.2) !important; }
     </style>
 </head>
 <body class="text-brand-text antialiased relative">
+    
     <nav class="fixed w-full z-50 glass-card rounded-b-3xl mx-auto max-w-7xl left-0 right-0 top-0 flex flex-col justify-center">
         <div class="w-full px-4 md:px-6 h-16 md:h-20 flex items-center justify-between">
             <div class="flex items-center gap-3 cursor-pointer shrink-0" onclick="window.scrollTo(0,0)">
@@ -70,7 +74,7 @@
                 </div>
             </div>
             
-            <div class="flex-1 flex justify-start md:justify-center overflow-x-auto hide-scrollbar px-2 mx-2">
+            <div class="flex-1 flex justify-start md:justify-center overflow-x-auto hide-scrollbar px-2 mx-2" id="tour-step-1">
                 <div class="flex items-center gap-2 md:gap-4 text-xs md:text-sm font-bold text-slate-500 whitespace-nowrap">
                     <a href="#hero" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">專案介紹</a>
                     <a href="#knowledge" class="hover:text-brand px-3 py-1.5 bg-slate-100/50 rounded-full transition-colors">循環科學</a>
@@ -82,20 +86,28 @@
                 </div>
             </div>
 
-            <div class="flex items-center gap-4 shrink-0">
-                <div id="navUserPanel" class="hidden items-center gap-3 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
-                    <button id="navAdminBtn" class="hidden bg-red-100 text-red-600 px-3 py-1 rounded-full text-[10px] font-bold hover:bg-red-200 transition-colors shrink-0">管理員</button>
-                    <div class="flex flex-col text-right hidden sm:flex">
-                        <span id="navUserEmail" class="text-[10px] font-bold text-slate-500 break-words"></span>
-                        <span class="text-xs font-black text-brand font-cute whitespace-nowrap">Lv.<span id="navUserLevel">1</span></span>
+            <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                <a href="tanji_guide.html" target="_blank" class="text-xs font-bold text-amber-600 hover:bg-amber-100 transition-colors hidden sm:flex items-center gap-1.5 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200 shrink-0">
+                    <i class="fa-solid fa-book-open"></i> 新手懶人包
+                </a>
+                <button id="startTourBtn" class="text-xs font-bold text-slate-500 hover:text-brand transition-colors hidden md:flex items-center gap-1 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 shrink-0">
+                    <i class="fa-solid fa-circle-play text-brand"></i> 操作導覽
+                </button>
+                <div id="tour-step-2" class="flex items-center gap-2">
+                    <div id="navUserPanel" class="hidden items-center gap-3 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
+                        <button id="navAdminBtn" class="hidden bg-red-100 text-red-600 px-3 py-1 rounded-full text-[10px] font-bold hover:bg-red-200 transition-colors shrink-0">管理員</button>
+                        <div class="flex flex-col text-right hidden sm:flex">
+                            <span id="navUserEmail" class="text-[10px] font-bold text-slate-500 break-words"></span>
+                            <span class="text-xs font-black text-brand font-cute whitespace-nowrap">Lv.<span id="navUserLevel">1</span></span>
+                        </div>
+                        <button id="logoutBtn" class="w-8 h-8 bg-slate-200 text-slate-500 rounded-full hover:bg-red-100 hover:text-red-500 transition-colors flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-right-from-bracket text-xs"></i>
+                        </button>
                     </div>
-                    <button id="logoutBtn" class="w-8 h-8 bg-slate-200 text-slate-500 rounded-full hover:bg-red-100 hover:text-red-500 transition-colors flex items-center justify-center shrink-0">
-                        <i class="fa-solid fa-right-from-bracket text-xs"></i>
+                    <button id="navLoginBtn" class="bg-brand text-white px-4 md:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-base font-bold btn-cute hover:bg-brand-dark whitespace-nowrap">
+                        登入
                     </button>
                 </div>
-                <button id="navLoginBtn" class="bg-brand text-white px-4 md:px-6 py-1.5 md:py-2 rounded-full text-sm md:text-base font-bold btn-cute hover:bg-brand-dark whitespace-nowrap">
-                    登入
-                </button>
             </div>
         </div>
     </nav>
@@ -114,7 +126,7 @@
                     我們正在募集 1,000 公斤的有機廢棄物資源，於在地建置首座「智慧發酵站」。您的每一次回收分類，都能幫助咖啡渣免於進入焚化爐，轉化為滋養社區農園的有機黑金土。
                 </p>
                 
-                <div class="glass-card rounded-3xl p-6 space-y-4 text-left">
+                <div class="glass-card rounded-3xl p-6 space-y-4 text-left" id="tour-step-3">
                     <div class="flex justify-between items-end gap-2">
                         <div class="min-w-0">
                             <p class="text-xs md:text-sm text-slate-500 font-bold mb-1 break-words">已攔截有機廢棄物</p>
@@ -229,50 +241,52 @@
         </section>
 
         <section id="interactive" class="glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 text-center relative overflow-hidden border-t-8 border-t-brand">
-            <h2 class="text-xl md:text-2xl font-black mb-2 break-words">專屬永續履歷：養育碳吉寶寶</h2>
-            <p class="text-slate-500 text-sm md:text-base font-bold mb-10 break-words">現在就點擊按鈕，拍照登錄您的回收行動，觀察寶寶成長與數據累積！</p>
-            
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
-                <div class="space-y-3 w-full md:w-1/3">
-                    <button id="btnFeedCoffee" class="w-full bg-slate-700 text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3 break-words">
-                        <i class="fa-solid fa-mug-hot text-amber-400 text-xl md:text-2xl shrink-0"></i>
-                        拍照貢獻咖啡渣
-                    </button>
-                    <p class="text-xs text-slate-400 font-bold break-words">登錄回收，提供發酵所需氮源</p>
-                </div>
-
-                <div class="relative shrink-0">
-                    <div class="w-40 h-40 md:w-48 md:h-48 bg-white rounded-full mx-auto shadow-xl flex justify-center items-center border-8 border-brand-light relative z-10 overflow-hidden p-2">
-                        <img id="interactive-avatar" src="assets/tanjibaby9.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full" onerror="this.src='assets/tanjibaby.png'">
+            <div class="relative">
+                <h2 class="text-xl md:text-2xl font-black mb-2 break-words">專屬永續履歷：養育碳吉寶寶</h2>
+                <p class="text-slate-500 text-sm md:text-base font-bold mb-10 break-words">現在就點擊按鈕，拍照登錄您的回收行動，觀察寶寶成長與數據累積！</p>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+                    <div class="space-y-3 w-full md:w-1/3">
+                        <button id="btnFeedCoffee" class="w-full bg-slate-700 text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3 break-words">
+                            <i class="fa-solid fa-mug-hot text-amber-400 text-xl md:text-2xl shrink-0"></i>
+                            拍照貢獻咖啡渣
+                        </button>
+                        <p class="text-xs text-slate-400 font-bold break-words">登錄回收，提供發酵所需氮源</p>
                     </div>
-                    <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-6 bg-black/10 rounded-[100%] filter blur-sm"></div>
-                </div>
 
-                <div class="space-y-3 w-full md:w-1/3">
-                    <button id="btnFeedLeaf" class="w-full bg-brand text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3 break-words">
-                        <i class="fa-solid fa-leaf text-emerald-300 text-xl md:text-2xl shrink-0"></i>
-                        拍照貢獻落葉
-                    </button>
-                    <p class="text-xs text-slate-400 font-bold break-words">參與社區行動，調節碳氮比例</p>
+                    <div class="relative shrink-0">
+                        <div class="w-40 h-40 md:w-48 md:h-48 bg-white rounded-full mx-auto shadow-xl flex justify-center items-center border-8 border-brand-light relative z-10 overflow-hidden p-2">
+                            <img id="interactive-avatar" src="assets/tanjibaby9.png" alt="碳吉寶寶" class="w-full h-full object-cover rounded-full" onerror="this.src='assets/tanjibaby.png'">
+                        </div>
+                        <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 md:w-32 h-6 bg-black/10 rounded-[100%] filter blur-sm"></div>
+                    </div>
+
+                    <div class="space-y-3 w-full md:w-1/3">
+                        <button id="btnFeedLeaf" class="w-full bg-brand text-white rounded-2xl p-4 font-bold text-base md:text-lg btn-cute flex items-center justify-center gap-3 break-words">
+                            <i class="fa-solid fa-leaf text-emerald-300 text-xl md:text-2xl shrink-0"></i>
+                            拍照貢獻落葉
+                        </button>
+                        <p class="text-xs text-slate-400 font-bold break-words">參與社區行動，調節碳氮比例</p>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12 bg-slate-50 rounded-2xl p-4 md:p-6 border-2 border-slate-100">
-                <div class="p-2">
-                    <p class="text-slate-500 text-xs md:text-sm font-bold break-words">我的累積回收</p>
-                    <p class="text-xl md:text-2xl font-black text-amber-600 break-words"><span id="stat-waste">0</span> <span class="text-base">kg</span></p>
-                </div>
-                <div class="p-2 border-l border-slate-200 md:border-none">
-                    <p class="text-slate-500 text-xs md:text-sm font-bold break-words">我的迴避碳排</p>
-                    <p class="text-xl md:text-2xl font-black text-blue-500 break-words"><span id="stat-carbon">0</span> <span class="text-sm md:text-base">kg CO2e</span></p>
-                </div>
-                <div class="p-2 border-t border-slate-200 md:border-none">
-                    <p class="text-slate-500 text-xs md:text-sm font-bold break-words">預期產出黑金土</p>
-                    <p class="text-xl md:text-2xl font-black text-brand-dark break-words"><span id="stat-soil">0</span> <span class="text-base">kg</span></p>
-                </div>
-                <div class="p-2 border-t border-l border-slate-200 md:border-none">
-                    <p class="text-slate-500 text-xs md:text-sm font-bold break-words">寶寶經驗值</p>
-                    <p class="text-xl md:text-2xl font-black text-purple-500 break-words">Lv. <span id="stat-level">1</span></p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-12 bg-slate-50 rounded-2xl p-4 md:p-6 border-2 border-slate-100">
+                    <div class="p-2">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold break-words">我的累積回收</p>
+                        <p class="text-xl md:text-2xl font-black text-amber-600 break-words"><span id="stat-waste">0</span> <span class="text-base">kg</span></p>
+                    </div>
+                    <div class="p-2 border-l border-slate-200 md:border-none">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold break-words">我的迴避碳排</p>
+                        <p class="text-xl md:text-2xl font-black text-blue-500 break-words"><span id="stat-carbon">0</span> <span class="text-sm md:text-base">kg CO2e</span></p>
+                    </div>
+                    <div class="p-2 border-t border-slate-200 md:border-none">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold break-words">預期產出黑金土</p>
+                        <p class="text-xl md:text-2xl font-black text-brand-dark break-words"><span id="stat-soil">0</span> <span class="text-base">kg</span></p>
+                    </div>
+                    <div class="p-2 border-t border-l border-slate-200 md:border-none">
+                        <p class="text-slate-500 text-xs md:text-sm font-bold break-words">寶寶經驗值</p>
+                        <p class="text-xl md:text-2xl font-black text-purple-500 break-words">Lv. <span id="stat-level">1</span></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -328,73 +342,75 @@
         </section>
 
         <section id="rewards" class="bg-white/60 backdrop-blur-md rounded-[3rem] p-8 md:p-12 border-2 border-white shadow-sm">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <h2 class="text-2xl md:text-3xl font-black text-slate-800 break-words">階梯式永續回饋</h2>
-                <p class="text-slate-500 text-sm md:text-base font-bold mt-3 break-words">您的回收行動將轉化為經驗值 (EXP)，解鎖在地生態與數位獎勵</p>
-            </div>
-            
-            <div class="grid lg:grid-cols-3 gap-6 md:gap-8">
-                <div class="lg:col-span-1 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 h-full flex flex-col justify-center">
-                    <h4 class="font-black text-slate-700 mb-6 flex items-center gap-2 text-lg md:text-xl break-words">
-                        <i class="fa-solid fa-chart-pie text-brand shrink-0"></i> 資源應用明細
-                    </h4>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2 gap-2">
-                                <span class="break-words">發酵設備與耗材</span><span class="text-brand shrink-0">50%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-brand h-3 rounded-full shadow-inner" style="width: 50%"></div></div>
-                            <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-bold break-words">智慧發酵箱採購與感測器安裝</p>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2 gap-2">
-                                <span class="break-words">農園植栽與維運</span><span class="text-blue-500 shrink-0">30%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-blue-400 h-3 rounded-full shadow-inner" style="width: 30%"></div></div>
-                            <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-bold break-words">頂樓農園土壤改良與香草種子</p>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2 gap-2">
-                                <span class="break-words">系統與回饋品維護</span><span class="text-amber-500 shrink-0">20%</span>
-                            </div>
-                            <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-amber-400 h-3 rounded-full shadow-inner" style="width: 20%"></div></div>
-                            <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-bold break-words">平台系統營運與實體回饋品製作</p>
-                        </div>
-                    </div>
+            <div class="relative">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-800 break-words">階梯式永續回饋</h2>
+                    <p class="text-slate-500 text-sm md:text-base font-bold mt-3 break-words">您的回收行動將轉化為經驗值 (EXP)，解鎖在地生態與數位獎勵</p>
                 </div>
-
-                <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4 md:gap-6">
-                    <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm flex flex-col">
-                        <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100 shrink-0">🏅</div>
-                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1 break-words">永續新星</h4>
-                        <p class="text-brand font-black mb-3 text-sm md:text-base break-words">累積 100 EXP</p>
-                        <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-bold break-words">解鎖「淨零新星數位徽章」，於平台上永久展示您的專屬循環履歷，彰顯行動力。</p>
-                        <button class="btn-reward-check w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base break-words" data-tier="1">查看進度</button>
-                    </div>
-                    
-                    <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm flex flex-col">
-                        <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100 shrink-0">🌱</div>
-                        <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1 break-words">低碳推手</h4>
-                        <p class="text-brand font-black mb-3 text-sm md:text-base break-words">累積 300 EXP</p>
-                        <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-bold break-words">解鎖「社區自種香草盆栽」。由領取免費黑金土的農園認養人，回饋收成給系統。</p>
-                        <button class="btn-reward-check w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base break-words" data-tier="2">查看進度</button>
-                    </div>
-                    
-                    <div class="bg-brand-light border-2 border-brand rounded-3xl p-6 shadow-md sm:col-span-2 flex flex-col sm:flex-row items-center gap-4 md:gap-6 text-center sm:text-left">
-                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm shrink-0">☕</div>
-                        <div class="flex-1 w-full min-w-0">
-                            <h4 class="text-lg md:text-xl font-black text-brand-dark mb-1 break-words">循環見證人</h4>
-                            <p class="text-brand-dark font-black mb-2 text-sm md:text-base break-words">累積 800 EXP</p>
-                            <p class="text-xs md:text-sm text-brand-dark/90 mb-0 font-bold break-words">解鎖「在地低碳咖啡兌換券」。由商家為推動 ESG 綠色行銷贊助提供。</p>
+                
+                <div class="grid lg:grid-cols-3 gap-6 md:gap-8">
+                    <div class="lg:col-span-1 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 h-full flex flex-col justify-center">
+                        <h4 class="font-black text-slate-700 mb-6 flex items-center gap-2 text-lg md:text-xl break-words">
+                            <i class="fa-solid fa-chart-pie text-brand shrink-0"></i> 資源應用明細
+                        </h4>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2 gap-2">
+                                    <span class="break-words">發酵設備與耗材</span><span class="text-brand shrink-0">50%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-brand h-3 rounded-full shadow-inner" style="width: 50%"></div></div>
+                                <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-bold break-words">智慧發酵箱採購與感測器安裝</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2 gap-2">
+                                    <span class="break-words">農園植栽與維運</span><span class="text-blue-500 shrink-0">30%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-blue-400 h-3 rounded-full shadow-inner" style="width: 30%"></div></div>
+                                <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-bold break-words">頂樓農園土壤改良與香草種子</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs md:text-sm font-bold text-slate-600 mb-2 gap-2">
+                                    <span class="break-words">系統與回饋品維護</span><span class="text-amber-500 shrink-0">20%</span>
+                                </div>
+                                <div class="w-full bg-slate-100 rounded-full h-3"><div class="bg-amber-400 h-3 rounded-full shadow-inner" style="width: 20%"></div></div>
+                                <p class="text-[10px] md:text-xs text-slate-400 mt-1 font-bold break-words">平台系統營運與實體回饋品製作</p>
+                            </div>
                         </div>
-                        <button class="btn-reward-check w-full sm:w-auto px-6 py-3 bg-brand text-white font-bold rounded-xl btn-cute hover:bg-brand-dark text-sm md:text-base shrink-0 break-words" data-tier="3">目標衝刺中</button>
+                    </div>
+
+                    <div class="lg:col-span-2 grid sm:grid-cols-2 gap-4 md:gap-6">
+                        <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm flex flex-col">
+                            <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100 shrink-0">🏅</div>
+                            <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1 break-words">永續新星</h4>
+                            <p class="text-brand font-black mb-3 text-sm md:text-base break-words">累積 100 EXP</p>
+                            <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-bold break-words">解鎖「淨零新星數位徽章」，於平台上永久展示您的專屬循環履歷，彰顯行動力。</p>
+                            <button class="btn-reward-check w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base break-words" data-tier="1">查看進度</button>
+                        </div>
+                        
+                        <div class="bg-white border-2 border-slate-100 rounded-3xl p-6 hover:border-brand-light transition-colors shadow-sm flex flex-col">
+                            <div class="w-12 h-12 bg-slate-50 rounded-full flex items-center justify-center text-2xl mb-4 border border-slate-100 shrink-0">🌱</div>
+                            <h4 class="text-lg md:text-xl font-black text-slate-800 mb-1 break-words">低碳推手</h4>
+                            <p class="text-brand font-black mb-3 text-sm md:text-base break-words">累積 300 EXP</p>
+                            <p class="text-xs md:text-sm text-slate-500 mb-6 flex-1 font-bold break-words">解鎖「社區自種香草盆栽」。由領取免費黑金土的農園認養人，回饋收成給系統。</p>
+                            <button class="btn-reward-check w-full py-2.5 md:py-3 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-brand hover:text-white transition-colors text-sm md:text-base break-words" data-tier="2">查看進度</button>
+                        </div>
+                        
+                        <div class="bg-brand-light border-2 border-brand rounded-3xl p-6 shadow-md sm:col-span-2 flex flex-col sm:flex-row items-center gap-4 md:gap-6 text-center sm:text-left">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm shrink-0">☕</div>
+                            <div class="flex-1 w-full min-w-0">
+                                <h4 class="text-lg md:text-xl font-black text-brand-dark mb-1 break-words">循環見證人</h4>
+                                <p class="text-brand-dark font-black mb-2 text-sm md:text-base break-words">累積 800 EXP</p>
+                                <p class="text-xs md:text-sm text-brand-dark/90 mb-0 font-bold break-words">解鎖「在地低碳咖啡兌換券」。由商家為推動 ESG 綠色行銷贊助提供。</p>
+                            </div>
+                            <button class="btn-reward-check w-full sm:w-auto px-6 py-3 bg-brand text-white font-bold rounded-xl btn-cute hover:bg-brand-dark text-sm md:text-base shrink-0 break-words" data-tier="3">目標衝刺中</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="dashboard" class="grid lg:grid-cols-3 gap-6 md:gap-8">
-            <div class="lg:col-span-2 glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 relative flex flex-col">
+            <div class="lg:col-span-2 glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 relative flex flex-col" id="tour-step-6">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
                     <div class="min-w-0">
                         <h2 class="text-xl md:text-2xl font-black mb-1 text-slate-800 break-words">個人減碳軌跡</h2>
@@ -432,7 +448,7 @@
                 </div>
             </div>
             
-            <div class="bg-slate-800 rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 text-white flex flex-col border border-slate-700 min-h-[350px] max-h-[450px]">
+            <div class="bg-slate-800 rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 text-white flex flex-col border border-slate-700 min-h-[350px] max-h-[450px]" id="tour-step-7">
                 <h3 class="text-lg md:text-xl font-black mb-4 md:mb-6 flex items-center gap-3 border-b border-slate-700 pb-4 break-words">
                     <span class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-sm shrink-0"><i class="fa-solid fa-bolt"></i></span>
                     社區即時動態牆
@@ -448,7 +464,7 @@
         <section id="faq" class="bg-white/60 backdrop-blur-md rounded-[3rem] p-8 md:p-12 border-2 border-white shadow-sm">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-10">
-                    <h2 class="text-2xl md:text-3xl font-black text-slate-800 break-words">常見問題 FAQ</h2>
+                    <h2 class="text-2xl md:text-3xl font-black text-slate-800 break-words">常見問題</h2>
                     <p class="text-slate-500 font-bold mt-3 text-sm md:text-base break-words">針對平台營運與資源回收的常見疑問為您解答</p>
                 </div>
                 
@@ -490,6 +506,73 @@
             </div>
         </div>
     </footer>
+
+    <button id="openFeedbackBtn" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-amber-500 hover:bg-amber-600 text-white rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl transition-all transform hover:-translate-y-1.5 flex items-center justify-center z-50 group" title="意見回饋">
+        <span class="absolute top-0 right-0 md:top-1 md:right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
+        <i class="fa-solid fa-comment-dots text-2xl md:text-3xl group-hover:animate-ping-slow"></i>
+    </button>
+
+    <div id="feedbackModal" class="fixed inset-0 z-[120] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen px-4 flex items-center justify-center py-4">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-md w-full mx-auto shadow-2xl relative border-4 border-amber-100 text-left">
+                <button id="closeFeedbackBtn" class="absolute top-4 right-4 text-slate-400 hover:text-amber-500 bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-amber-50 text-amber-500 text-2xl flex items-center justify-center mb-3 shadow-inner">
+                        <i class="fa-solid fa-comment-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-800 font-cute">意見回饋與回報</h3>
+                    <p class="text-xs text-slate-500 font-bold mt-1">讓我們把碳吉圈圈變得更好！</p>
+                </div>
+                
+                <div id="feedbackSuccess" class="hidden text-center py-4">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="font-black text-slate-800 mb-2">已收到您的回饋！</h4>
+                    <p class="text-sm text-slate-500 font-bold">感謝您協助平台成長。</p>
+                </div>
+
+                <form id="feedbackForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">回饋類型</label>
+                        <select id="feedbackFeature" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors">
+                            <option value="操作問題">操作問題</option>
+                            <option value="功能建議">功能建議</option>
+                            <option value="錯誤回報">錯誤回報</option>
+                            <option value="其他想法">其他想法</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">詳細內容 <span class="text-red-500">*</span></label>
+                        <textarea id="feedbackText" rows="4" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors resize-none" placeholder="請描述您遇到的狀況或建議..." required></textarea>
+                    </div>
+                    <button type="submit" id="submitFeedbackBtn" class="w-full bg-amber-500 text-white rounded-xl py-3.5 font-bold text-base btn-cute hover:bg-amber-600 transition-colors mt-2">送出回饋</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="tour-overlay" class="fixed inset-0 bg-slate-900/60 z-[105] hidden backdrop-blur-sm transition-opacity"></div>
+    <div id="tour-popover" class="absolute z-[110] bg-white rounded-2xl shadow-2xl border-2 border-brand w-72 p-5 hidden transition-all duration-300">
+        <div id="tour-arrow" class="absolute w-4 h-4 bg-white border-t-2 border-l-2 border-brand transform rotate-45"></div>
+        <div class="relative z-10">
+            <div class="flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-circle-info text-brand"></i>
+                <h4 id="tour-title" class="font-black text-slate-800 text-lg">導覽標題</h4>
+            </div>
+            <p id="tour-content" class="text-sm font-bold text-slate-500 mb-4 leading-relaxed">導覽內容</p>
+            <div class="flex justify-between items-center mt-4">
+                <span id="tour-step-counter" class="text-xs font-black text-slate-400 bg-slate-100 px-2 py-1 rounded-md">1/7</span>
+                <div class="flex gap-2">
+                    <button id="tour-prev" class="text-xs font-bold text-slate-500 hover:text-brand transition-colors px-2">上一步</button>
+                    <button id="tour-next" class="text-xs font-bold bg-brand text-white px-4 py-1.5 rounded-lg hover:bg-brand-dark transition-colors shadow-sm">下一步</button>
+                </div>
+            </div>
+            <button id="tour-skip" class="absolute -top-2 -right-2 text-slate-400 hover:text-red-500 transition-colors bg-white rounded-full w-6 h-6 flex items-center justify-center border border-slate-100 shadow-sm"><i class="fa-solid fa-xmark text-xs"></i></button>
+        </div>
+    </div>
 
     <!-- Cert Modal -->
     <div id="certificateModal" class="fixed inset-0 z-[110] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto hide-scrollbar">
@@ -598,33 +681,6 @@
         </div>
     </div>
 
-    <!-- Chatbot Toggle & Modal -->
-    <div class="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end">
-        <div id="chatModal" class="hidden bg-white w-[calc(100vw-2rem)] max-w-80 rounded-3xl shadow-2xl border border-slate-100 mb-4 flex flex-col overflow-hidden transform transition-all max-h-[70vh] h-[400px]">
-            <div class="bg-brand p-4 text-white flex justify-between items-center shadow-md shrink-0">
-                <div class="flex items-center gap-3 min-w-0">
-                    <div class="w-8 h-8 bg-white rounded-full overflow-hidden p-0.5 border border-white shrink-0"><img src="assets/tanjibaby2.png" class="w-full h-full object-cover rounded-full" onerror="this.src='assets/tanjibaby.png'"></div>
-                    <div class="min-w-0">
-                        <h4 class="font-extrabold text-xs tracking-wide">碳吉寶寶智能助手</h4>
-                        <div class="flex items-center mt-0.5"><span class="w-2 h-2 bg-green-300 rounded-full animate-pulse mr-1.5 shrink-0"></span><p class="text-[10px] font-bold text-green-100">線上服務中</p></div>
-                    </div>
-                </div>
-                <button id="closeChatBtn" class="text-white/80 hover:text-white p-1 shrink-0 ml-2"><i class="fa-solid fa-xmark text-lg"></i></button>
-            </div>
-            <div id="chatMessages" class="flex-1 bg-slate-50 p-4 md:p-5 overflow-y-auto flex flex-col gap-4 text-sm">
-                <div class="self-start bg-white p-3 md:p-4 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-bold leading-relaxed">嗨！我是碳吉寶寶 🍃<br>您可以問我關於「碳氮比」、「發酵流程」或是「打卡上傳」的問題喔！</div>
-            </div>
-            <div class="px-5 py-4 bg-white border-t border-slate-100 flex items-center gap-3 relative z-10 shadow-[0_-5px_15px_rgba(0,0,0,0.05)] shrink-0">
-                <input type="text" id="chatInput" placeholder="輸入問題..." class="flex-1 bg-slate-100 rounded-full px-5 py-2.5 text-xs font-bold min-w-0 outline-none focus:ring-2 focus:ring-brand">
-                <button id="sendChatBtn" class="bg-brand text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-brand-dark transition-colors shrink-0 shadow-md"><i class="fa-solid fa-paper-plane text-sm"></i></button>
-            </div>
-        </div>
-        <button id="chatToggleBtn" class="bg-brand hover:bg-brand-dark text-white rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl transition-all transform hover:-translate-y-1.5 flex items-center justify-center relative group">
-            <span class="absolute top-0 right-0 md:top-1 md:right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
-            <i class="fa-solid fa-comment-dots text-2xl md:text-3xl"></i>
-        </button>
-    </div>
-
     <!-- Login Modal -->
     <div id="loginModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
         <div class="min-h-screen px-4 flex items-center justify-center py-4">
@@ -688,7 +744,7 @@
         </div>
     </div>
 
-    <!-- MycoNode Modal (Updated Spec) -->
+    <!-- MycoNode Modal -->
     <div id="mycoNodeModal" class="fixed inset-0 z-[120] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto flex items-center justify-center p-4">
         <div class="bg-slate-900 border-2 border-slate-800 rounded-[2.5rem] p-4 md:p-8 max-w-5xl w-full text-left relative overflow-hidden shadow-2xl">
             <button id="closeMycoNodeBtn" class="absolute top-4 right-4 md:top-6 md:right-6 text-slate-400 hover:text-brand transition-colors w-10 h-10 flex items-center justify-center bg-slate-800 rounded-full shrink-0">
@@ -799,6 +855,7 @@
         import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, onSnapshot, collection, addDoc, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
+        // Initialize Firebase
         const fallbackConfig = {
             apiKey: "AIzaSyADGIhwy0QtBz1riQPoR--JGldSJ_sw5jM",
             authDomain: "tanji-loop.firebaseapp.com",
@@ -814,14 +871,15 @@
         const db = getFirestore(app);
         const appIdStr = typeof __app_id !== 'undefined' ? __app_id : 'tanji-loop-2026';
 
+        // State variables
         let currentUser = null;
         let unsubPersonal = null;
         let unsubGlobal = null;
         let unsubFeeds = null;
-
         let personalStats = { waste: 0, carbon: 0, soil: 0, exp: 0, level: 1 };
         let globalStats = { totalWaste: 250, participants: 125 };
 
+        // --- Chart Configuration ---
         const generateDateLabels = () => {
             const labels = [];
             const today = new Date();
@@ -869,6 +927,7 @@
             }
         });
 
+        // --- UI Updates ---
         const updateGlobalUI = () => {
             document.getElementById('display-waste-global').innerText = globalStats.totalWaste.toLocaleString();
             document.getElementById('display-participants').innerText = globalStats.participants;
@@ -927,6 +986,7 @@
             setTimeout(() => errDiv.classList.add('hidden'), 3000);
         };
 
+        // --- Feed Logic ---
         const feedListContainer = document.getElementById('feedListContainer');
 
         const renderSingleFeed = (data, prepend = false) => {
@@ -958,6 +1018,7 @@
             else feedListContainer.appendChild(div);
         };
 
+        // --- Firebase Auth & Setup ---
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 currentUser = user;
@@ -1010,6 +1071,7 @@
             }
         });
 
+        // --- Event Listeners: Auth ---
         document.getElementById('navLoginBtn').addEventListener('click', () => document.getElementById('loginModal').classList.remove('hidden'));
         document.getElementById('closeLoginBtn').addEventListener('click', () => document.getElementById('loginModal').classList.add('hidden'));
         document.getElementById('logoutBtn').addEventListener('click', async () => {
@@ -1049,7 +1111,7 @@
             finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
 
-        // --- Upload Modal Logic ---
+        // --- Event Listeners: Upload Logic ---
         const uploadModal = document.getElementById('uploadModal');
         const uploadForm = document.getElementById('uploadForm');
         const uploadFileInput = document.getElementById('uploadFileInput');
@@ -1136,8 +1198,7 @@
             btn.innerText = origText; btn.disabled = false; uploadModal.classList.add('hidden');
         });
 
-        // --- End Upload Logic ---
-
+        // --- Event Listeners: Certificates ---
         const certModal = document.getElementById('certificateModal');
         const certBubble = document.getElementById('certBubble');
         const openCertModal = () => {
@@ -1165,31 +1226,145 @@
             finally { btn.innerHTML = origHTML; btn.disabled = false; }
         });
 
-        document.getElementById('chatToggleBtn').addEventListener('click', () => { document.getElementById('chatModal').classList.toggle('hidden'); document.getElementById('chatToggleBtn').querySelector('span').classList.add('hidden'); });
-        document.getElementById('closeChatBtn').addEventListener('click', () => document.getElementById('chatModal').classList.add('hidden'));
+        // --- Custom Guided Tour Logic ---
+        const tourSteps = [
+            { id: 'tour-step-1', title: '全站導覽列', text: '快速跳轉至「循環科學」、「實境打卡」與「數據儀表板」等區域。', pos: 'bottom' },
+            { id: 'tour-step-2', title: '建立您的永續帳號', text: '點擊此處登入或註冊，我們也提供「訪客體驗模式」讓您快速瀏覽完整功能！', pos: 'bottom' },
+            { id: 'tour-step-3', title: '社區共同目標', text: '這裡會顯示整個社區累積攔截的咖啡渣與落葉總重量，大家一起朝 1000kg 邁進！', pos: 'top' },
+            { id: 'interactive', title: '互動打卡區', text: '將收集到的資源拍照上傳。您的行動會轉化為經驗值 (EXP) 幫助碳吉寶寶升級。', pos: 'top' },
+            { id: 'rewards', title: '階梯式實體回饋', text: '累積足夠的經驗值，就能解鎖數位徽章，甚至能兌換香草盆栽與低碳咖啡！', pos: 'top' },
+            { id: 'tour-step-6', title: '個人減碳儀表板', text: '追蹤您的專屬減碳軌跡。點擊「實體感測儀表板」還能查看發酵站最新溫濕度數據喔！', pos: 'top' },
+            { id: 'tour-step-7', title: '即時動態牆', text: '在這裡可以看到社區鄰居們最新的打卡動態，一起見證城市的永續魔法！', pos: 'top' }
+        ];
 
-        const handleChat = async () => {
-            const chatInput = document.getElementById('chatInput'); const text = chatInput.value.trim(); if(!text) return;
-            const msgs = document.getElementById('chatMessages');
-            msgs.innerHTML += `<div class="self-end bg-brand text-white p-3 rounded-2xl rounded-tr-sm shadow-sm max-w-[85%] font-bold break-words">${text}</div>`;
-            chatInput.value = ''; msgs.scrollTop = msgs.scrollHeight;
-            const loadId = 'load-' + Date.now();
-            msgs.innerHTML += `<div id="${loadId}" class="self-start bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-400 text-xs font-bold flex items-center shrink-0">寶寶思考中...</div>`;
-            msgs.scrollTop = msgs.scrollHeight;
+        let currentTourIndex = 0;
+        const tourOverlay = document.getElementById('tour-overlay');
+        const tourPopover = document.getElementById('tour-popover');
+        const startTourBtn = document.getElementById('startTourBtn');
+
+        const showTourStep = (index) => {
+            if (index >= tourSteps.length) { endTour(); return; }
+
+            if (currentTourIndex >= 0 && currentTourIndex < tourSteps.length) {
+                const prevEl = document.getElementById(tourSteps[currentTourIndex].id);
+                if (prevEl) {
+                    prevEl.classList.remove('ring-4', 'ring-brand', 'ring-offset-4', 'relative', 'bg-white');
+                    prevEl.style.zIndex = '';
+                }
+            }
+
+            const step = tourSteps[index];
+            const el = document.getElementById(step.id);
+            if (!el) { showTourStep(index + 1); return; }
+
+            currentTourIndex = index;
             
-            let reply = "寶寶目前在本地模式，但我可以回答關於「發酵流程」或是「數位憑證」的問題喔！🍃";
-            if(text.includes('拍照') || text.includes('打卡') || text.includes('上傳')) reply = "現在只要點擊首頁按鈕，拍下您收集的咖啡渣或落葉上傳，系統就會自動發送經驗值給您喔！📸🍃";
-            else if(text.includes('發酵') || text.includes('黑金土') || text.includes('咖啡渣')) reply = "回收的咖啡渣會和落葉混合，經過45天的高溫好氧發酵，就會變成營養的黑金土喔！🌱";
-            
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
             setTimeout(() => {
-                document.getElementById(loadId)?.remove();
-                msgs.innerHTML += `<div class="self-start bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-slate-100 max-w-[85%] text-slate-700 font-bold leading-relaxed break-words">${reply}</div>`;
-                msgs.scrollTop = msgs.scrollHeight;
-            }, 600);
-        };
-        document.getElementById('sendChatBtn').addEventListener('click', handleChat);
-        document.getElementById('chatInput').addEventListener('keypress', (e) => { if(e.key === 'Enter') handleChat(); });
+                el.classList.add('ring-4', 'ring-brand', 'ring-offset-4', 'relative');
+                el.style.zIndex = '106';
+                if(el.tagName !== 'BUTTON' && el.tagName !== 'A') el.classList.add('bg-white');
 
+                tourPopover.classList.remove('hidden');
+                document.getElementById('tour-title').innerText = step.title;
+                document.getElementById('tour-content').innerText = step.text;
+                document.getElementById('tour-step-counter').innerText = `${index + 1}/${tourSteps.length}`;
+
+                tourPopover.style.position = 'fixed';
+                tourPopover.style.top = 'auto';
+                tourPopover.style.bottom = '24px';
+                tourPopover.style.left = '50%';
+                tourPopover.style.transform = 'translateX(-50%)';
+                tourPopover.style.width = '90%';
+                tourPopover.style.maxWidth = '360px';
+                tourPopover.style.zIndex = '120';
+                
+                const arrow = document.getElementById('tour-arrow');
+                if(arrow) arrow.style.display = 'none';
+
+                document.getElementById('tour-prev').classList.toggle('hidden', index === 0);
+                document.getElementById('tour-next').innerText = index === tourSteps.length - 1 ? '完成導覽' : '下一步';
+            }, 400); 
+        };
+
+        const endTour = () => {
+            tourOverlay.classList.add('hidden');
+            tourPopover.classList.add('hidden');
+            if (currentTourIndex < tourSteps.length) {
+                const el = document.getElementById(tourSteps[currentTourIndex].id);
+                if (el) el.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'bg-white', 'relative', 'z-[106]');
+            }
+            document.body.style.overflow = '';
+        };
+
+        if(startTourBtn) {
+            startTourBtn.addEventListener('click', () => {
+                document.getElementById('loginModal').classList.add('hidden');
+                tourOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                currentTourIndex = 0;
+                showTourStep(0);
+            });
+        }
+
+        document.getElementById('tour-next').addEventListener('click', () => showTourStep(currentTourIndex + 1));
+        document.getElementById('tour-prev').addEventListener('click', () => showTourStep(currentTourIndex - 1));
+        document.getElementById('tour-skip').addEventListener('click', endTour);
+
+        const feedbackModal = document.getElementById('feedbackModal');
+        const openFeedbackBtn = document.getElementById('openFeedbackBtn');
+        const closeFeedbackBtn = document.getElementById('closeFeedbackBtn');
+        const feedbackForm = document.getElementById('feedbackForm');
+        const feedbackSuccess = document.getElementById('feedbackSuccess');
+
+        if(openFeedbackBtn) {
+            openFeedbackBtn.addEventListener('click', () => {
+                feedbackModal.classList.remove('hidden');
+                feedbackForm.classList.remove('hidden');
+                feedbackSuccess.classList.add('hidden');
+                feedbackForm.reset();
+            });
+        }
+
+        if(closeFeedbackBtn) {
+            closeFeedbackBtn.addEventListener('click', () => {
+                feedbackModal.classList.add('hidden');
+            });
+        }
+
+        if(feedbackForm) {
+            feedbackForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = document.getElementById('submitFeedbackBtn');
+                const origText = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 送出中...';
+                btn.disabled = true;
+
+                const feature = document.getElementById('feedbackFeature').value;
+                const text = document.getElementById('feedbackText').value;
+                const userEmail = currentUser ? (currentUser.isAnonymous ? '訪客' : currentUser.email) : '未登入使用者';
+
+                try {
+                    await addDoc(collection(db, 'artifacts', appIdStr, 'feedbacks'), {
+                        user: userEmail,
+                        feature: feature,
+                        content: text,
+                        timestamp: Date.now()
+                    });
+                    
+                    feedbackForm.classList.add('hidden');
+                    feedbackSuccess.classList.remove('hidden');
+                } catch (err) {
+                    alert("回饋送出失敗，請稍後再試！");
+                } finally {
+                    btn.innerHTML = origText;
+                    btn.disabled = false;
+                }
+            });
+        }
+
+        // --- Event Listeners: Admin ---
         document.getElementById('navAdminBtn').addEventListener('click', () => {
             document.getElementById('adminModal').classList.remove('hidden');
             document.getElementById('adminTotalWaste').value = globalStats.totalWaste;
@@ -1213,6 +1388,7 @@
             } catch(err) { alert("發布失敗"); }
         });
 
+        // --- Event Listeners: MycoNode & Rewards ---
         document.getElementById('openMycoNodeBtn').addEventListener('click', () => document.getElementById('mycoNodeModal').classList.remove('hidden'));
         document.getElementById('closeMycoNodeBtn').addEventListener('click', () => document.getElementById('mycoNodeModal').classList.add('hidden'));
 
@@ -1249,6 +1425,7 @@
             });
         });
 
+        // Initialize Authentication flow
         (async () => { try { if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) await signInWithCustomToken(auth, __initial_auth_token); } catch(e){} })();
     </script>
 </body>
