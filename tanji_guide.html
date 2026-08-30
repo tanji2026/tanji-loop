@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>碳吉圈圈 - 新手操作懶人包</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        cute: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#d1fae5',
+                            DEFAULT: '#10b981',
+                            dark: '#047857',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f8fafc; font-family: 'Noto Sans TC', sans-serif; }
+        .slide { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; }
+        @media print {
+            .no-print { display: none !important; }
+            .slide { min-height: 297mm; page-break-after: always; padding: 20mm; justify-content: flex-start; }
+            body { background-color: white; }
+        }
+        .blob { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; animation: morph 8s ease-in-out infinite; }
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased overflow-x-hidden">
 
+    <!-- Print / Download Button -->
+    <div class="fixed top-6 right-6 z-50 no-print">
+        <button onclick="window.print()" class="bg-slate-800 text-white px-6 py-3 rounded-full font-bold shadow-xl hover:bg-slate-700 transition-transform hover:-translate-y-1 flex items-center gap-2">
+            <i class="fa-solid fa-print"></i> 儲存為 PDF
+        </button>
+    </div>
+
+    <!-- Slide 1: Cover -->
+    <section class="slide bg-white relative overflow-hidden px-6 py-20 border-b-8 border-brand">
+        <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-brand-light blob opacity-50"></div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-72 h-72 bg-amber-100 blob opacity-50 animation-delay-2000"></div>
+        
+        <div class="max-w-4xl mx-auto w-full relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-light text-brand-dark rounded-full text-sm font-bold mb-6">
+                <i class="fa-solid fa-leaf"></i> 新北青年氣候行動專案
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-slate-800 mb-6 tracking-tight leading-tight">
+                碳吉圈圈 <br><span class="text-brand font-cute">TanJi Loop</span>
+            </h1>
+            <p class="text-2xl md:text-3xl font-bold text-slate-600 mb-12">新手操作懶人包：3 分鐘看懂永續魔法</p>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-left mt-16">
+                <div class="bg-slate-50 p-8 rounded-3xl border-2 border-slate-100">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-mug-hot"></i></div>
+                    <h3 class="text-xl font-black mb-2">攔截浪費</h3>
+                    <p class="text-slate-500 font-bold text-sm leading-relaxed">收集日常產生的咖啡渣與落葉，避免進入焚化爐產生溫室氣體。</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border-2 border-slate-100">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3 class="text-xl font-black mb-2">數位打卡</h3>
+                    <p class="text-slate-500 font-bold text-sm leading-relaxed">透過手機拍照上傳系統，建立專屬於您的綠色循環履歷。</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border-2 border-slate-100">
+                    <div class="w-14 h-14 bg-brand-light text-brand-dark rounded-2xl flex items-center justify-center text-2xl mb-4"><i class="fa-solid fa-seedling"></i></div>
+                    <h3 class="text-xl font-black mb-2">好氧發酵</h3>
+                    <p class="text-slate-500 font-bold text-sm leading-relaxed">資源送入社區智慧發酵站，45天轉化為滋養植物的黑金土。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 2: Step by Step -->
+    <section class="slide bg-slate-50 relative px-6 py-20">
+        <div class="max-w-4xl mx-auto w-full">
+            <div class="text-center mb-16">
+                <span class="text-brand font-black tracking-widest text-sm mb-2 block uppercase">How to Use</span>
+                <h2 class="text-4xl font-black text-slate-800">平台操作 4 步驟</h2>
+            </div>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-brand before:via-amber-400 before:to-blue-500">
+                
+                <!-- Step 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand text-white font-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-3xl shadow-sm border-2 border-slate-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fa-solid fa-user-plus text-brand text-2xl"></i>
+                            <h3 class="text-xl font-black text-slate-800">登入與註冊</h3>
+                        </div>
+                        <p class="text-slate-500 font-bold text-sm">點擊網站右上角「登入」。您可以使用信箱註冊專屬帳號，或是點擊「以訪客身分體驗」快速進入系統。</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-500 text-white font-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-3xl shadow-sm border-2 border-slate-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fa-solid fa-camera text-amber-500 text-2xl"></i>
+                            <h3 class="text-xl font-black text-slate-800">拍照貢獻資源</h3>
+                        </div>
+                        <p class="text-slate-500 font-bold text-sm">找到「專屬永續履歷」區塊。選擇您手邊收集好的「咖啡渣」或「落葉」，點擊按鈕開啟相機拍照，並輸入預估重量。</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-500 text-white font-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-3xl shadow-sm border-2 border-slate-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fa-solid fa-chart-line text-blue-500 text-2xl"></i>
+                            <h3 class="text-xl font-black text-slate-800">累積減碳數據</h3>
+                        </div>
+                        <p class="text-slate-500 font-bold text-sm">上傳成功後，系統會自動換算您的「迴避碳排量」並繪製成圖表。您的行動還能讓畫面中的「碳吉寶寶」獲得 EXP 經驗值升級！</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-purple-500 text-white font-black shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-white p-6 rounded-3xl shadow-sm border-2 border-slate-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fa-solid fa-gift text-purple-500 text-2xl"></i>
+                            <h3 class="text-xl font-black text-slate-800">領取永續回饋</h3>
+                        </div>
+                        <p class="text-slate-500 font-bold text-sm">滑動至「階梯式永續回饋」區塊，當累積滿指定 EXP，即可一鍵產出精美的數位憑證，或是前往合作商家兌換咖啡與盆栽！</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 3: Dashboard & Community -->
+    <section class="slide bg-white relative px-6 py-20 border-t border-slate-100">
+        <div class="max-w-5xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-amber-500 font-black tracking-widest text-sm mb-2 block uppercase">Features</span>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-800 mb-6">看見影響力：儀表板與動態牆</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0 text-slate-600 text-xl"><i class="fa-solid fa-microchip"></i></div>
+                        <div>
+                            <h4 class="text-lg font-black text-slate-800">MycoNode 實體感測</h4>
+                            <p class="text-sm font-bold text-slate-500 mt-1">您可以點擊「實體感測儀表板」按鈕，查看位於社區發酵站內的硬體規格與運作原理。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0 text-slate-600 text-xl"><i class="fa-solid fa-certificate"></i></div>
+                        <div>
+                            <h4 class="text-lg font-black text-slate-800">專屬減碳憑證</h4>
+                            <p class="text-sm font-bold text-slate-500 mt-1">系統依據科學碳氮比為您計算貢獻，生成的憑證可下載做為學生的學習歷程或企業的 ESG 紀錄。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center shrink-0 text-slate-600 text-xl"><i class="fa-solid fa-bolt"></i></div>
+                        <div>
+                            <h4 class="text-lg font-black text-slate-800">社區即時動態牆</h4>
+                            <p class="text-sm font-bold text-slate-500 mt-1">每次打卡的照片與紀錄，都會即時推播到網站的動態牆上，與社區鄰居互相激勵！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-800 p-8 rounded-[3rem] shadow-2xl relative text-white border-8 border-slate-700 transform rotate-2">
+                <div class="absolute -top-4 -right-4 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-xl shadow-lg animate-bounce"><i class="fa-solid fa-star text-white"></i></div>
+                <h3 class="text-xl font-black mb-6 border-b border-slate-600 pb-4"><i class="fa-solid fa-circle-check text-brand mr-2"></i>開始您的永續旅程</h3>
+                <p class="font-bold text-slate-300 leading-relaxed text-sm mb-6">現在就回到碳吉圈圈 Web App 首頁，點擊右上角的「登入」，拍下您的第一張回收紀錄照片吧！</p>
+                <div class="bg-slate-900 rounded-2xl p-4 border border-slate-700">
+                    <p class="text-xs font-bold text-slate-400 mb-2">遇到問題嗎？</p>
+                    <p class="text-sm font-bold text-slate-300">點擊網站右下角的 <span class="bg-amber-500 text-white px-2 py-0.5 rounded text-xs mx-1"><i class="fa-solid fa-comment-medical"></i> 意見回饋</span> 按鈕，隨時讓我們知道您的想法！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
