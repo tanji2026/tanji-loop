@@ -47,54 +47,21 @@
         }
     </script>
     <style>
-        body {
-            background-color: #f0fdf4;
-            background-image: radial-gradient(#10b981 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
-            background-attachment: fixed;
-            scroll-padding-top: 8rem;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
-        }
-        .btn-cute {
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 0 0 rgba(0,0,0,0.1);
-        }
-        .btn-cute:active {
-            transform: translateY(4px);
-            box-shadow: 0 0 0 0 rgba(0,0,0,0.1);
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .cert-font {
-            font-family: "Times New Roman", "標楷體", serif;
-        }
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary ~ * {
-            animation: slideDown 0.3s ease-in-out;
-        }
-        @keyframes slideDown {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        body { background-color: #f0fdf4; background-image: radial-gradient(#10b981 0.5px, transparent 0.5px); background-size: 20px 20px; background-attachment: fixed; scroll-padding-top: 8rem; }
+        .glass-card { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); border: 2px solid rgba(255, 255, 255, 0.8); box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1); }
+        .btn-cute { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 4px 0 0 rgba(0,0,0,0.1); }
+        .btn-cute:active { transform: translateY(4px); box-shadow: 0 0 0 0 rgba(0,0,0,0.1); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .cert-font { font-family: "Times New Roman", "標楷體", serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body class="text-brand-text antialiased relative">
-    <nav class="fixed w-full z-50 glass-card rounded-b-3xl mx-auto max-w-7xl left-0 right-0 top-0 flex flex-col justify-center">
+    <nav class="fixed w-full z-50 glass-card rounded-b-3xl mx-auto max-w-7xl left-0 right-0 top-0 flex flex-col justify-center transition-all duration-300">
         <div class="w-full px-4 md:px-6 h-16 md:h-20 flex items-center justify-between relative z-50 bg-white/90 rounded-b-3xl">
             <div class="flex items-center gap-3 cursor-pointer shrink-0" onclick="window.scrollTo(0,0)">
                 <div class="flex flex-col justify-center pl-2">
@@ -107,6 +74,7 @@
                 <a href="#hero" class="hover:text-brand px-3 py-1.5 font-bold text-slate-500 transition-colors">專案介紹</a>
                 <a href="#knowledge" class="hover:text-brand px-3 py-1.5 font-bold text-slate-500 transition-colors">循環科學</a>
                 <a href="#mechanism" class="hover:text-brand px-3 py-1.5 font-bold text-slate-500 transition-colors">運作機制</a>
+                <a href="#blueprint" class="hover:text-brand px-3 py-1.5 font-bold text-slate-500 transition-colors">升級藍圖</a>
                 <a href="#rewards" class="hover:text-brand px-3 py-1.5 font-bold text-slate-500 transition-colors">永續回饋</a>
                 <a href="#dashboard" class="hover:text-brand px-3 py-1.5 font-bold text-slate-500 transition-colors">減碳軌跡</a>
             </div>
@@ -146,8 +114,10 @@
                 <a href="#hero" class="mobile-link text-center bg-slate-50 py-3 rounded-xl hover:bg-brand hover:text-white transition-colors">專案介紹</a>
                 <a href="#knowledge" class="mobile-link text-center bg-slate-50 py-3 rounded-xl hover:bg-brand hover:text-white transition-colors">循環科學</a>
                 <a href="#mechanism" class="mobile-link text-center bg-slate-50 py-3 rounded-xl hover:bg-brand hover:text-white transition-colors">運作機制</a>
+                <a href="#blueprint" class="mobile-link text-center bg-slate-50 py-3 rounded-xl hover:bg-brand hover:text-white transition-colors">升級藍圖</a>
                 <a href="#rewards" class="mobile-link text-center bg-slate-50 py-3 rounded-xl hover:bg-brand hover:text-white transition-colors">永續回饋</a>
-                <a href="#dashboard" class="mobile-link text-center bg-slate-50 py-3 rounded-xl col-span-2 hover:bg-brand hover:text-white transition-colors">減碳軌跡</a>
+                <a href="#dashboard" class="mobile-link text-center bg-slate-50 py-3 rounded-xl hover:bg-brand hover:text-white transition-colors">減碳軌跡</a>
+                <a href="#faq" class="mobile-link text-center bg-slate-50 py-3 rounded-xl col-span-2 hover:bg-brand hover:text-white transition-colors">常見問題</a>
             </div>
             <div class="w-full h-px bg-slate-200"></div>
             <div class="flex gap-3">
@@ -540,15 +510,25 @@
 
     <footer class="bg-slate-800 text-white pt-12 md:pt-16 pb-8 rounded-t-[3rem] md:rounded-t-[4rem] border-t-8 border-brand">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-3">
-                <div class="flex flex-col justify-center text-center md:text-left">
-                    <span class="font-black text-xl md:text-2xl tracking-wide font-cute leading-none break-words">碳吉圈圈</span>
-                    <span class="font-bold text-[10px] md:text-xs tracking-widest text-brand-light opacity-80 uppercase mt-1 break-words">TanJi Loop</span>
+            <div class="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
+                <div class="flex items-center gap-3">
+                    <div class="flex flex-col justify-center text-center md:text-left">
+                        <span class="font-black text-xl md:text-2xl tracking-wide font-cute leading-none break-words">碳吉圈圈</span>
+                        <span class="font-bold text-[10px] md:text-xs tracking-widest text-brand-light opacity-80 uppercase mt-1 break-words">TanJi Loop</span>
+                    </div>
+                </div>
+                <div class="font-bold text-[10px] md:text-sm text-center md:text-left text-slate-400 leading-relaxed min-w-0 md:ml-4 md:pl-4 md:border-l border-slate-700">
+                    <p class="text-slate-300 mb-1 break-words">2026 新北市青年氣候行動徵件提案作品</p>
+                    <p class="break-words">聯絡信箱：tanji2026@gmail.com</p>
                 </div>
             </div>
-            <div class="font-bold text-[10px] md:text-sm text-center md:text-right text-slate-400 leading-relaxed min-w-0">
-                <p class="text-slate-300 mb-1 break-words">2026 新北市青年氣候行動徵件提案作品｜受著作權法保護，未經授權請勿複製轉載</p>
-                <p class="break-words">聯絡信箱：tanji2026@gmail.com</p>
+            
+            <div class="mt-6 md:mt-0 flex flex-col items-center md:items-end w-full md:w-auto shrink-0">
+                <div class="flex gap-2 w-full sm:w-auto">
+                    <input type="email" id="newsletterEmail" placeholder="輸入 Email 訂閱電子報" class="w-full sm:w-64 bg-slate-700 text-white placeholder-slate-400 px-4 py-2.5 rounded-full text-xs font-bold outline-none focus:ring-2 focus:ring-brand border border-slate-600 transition-all">
+                    <button id="subscribeBtn" class="bg-brand hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-xs font-bold transition-colors shadow-lg shrink-0">訂閱</button>
+                </div>
+                <div id="subscribeMsg" class="hidden text-brand-light text-[10px] font-bold mt-2"></div>
             </div>
         </div>
     </footer>
@@ -709,9 +689,7 @@
                         <input type="file" id="uploadFileInput" accept="image/*" class="hidden" required>
                         <input type="hidden" id="uploadImgBase64" required>
                     </div>
-                    <button type="submit" id="submitUploadBtn" class="w-full bg-brand text-white rounded-xl py-3.5 font-bold text-base btn-cute hover:bg-brand-dark transition-colors mt-2">
-                        上傳紀錄並獲取 EXP
-                    </button>
+                    <button type="submit" id="submitUploadBtn" class="w-full bg-brand text-white rounded-xl py-3.5 font-bold text-base btn-cute hover:bg-brand-dark transition-colors mt-2">上傳紀錄並獲取 EXP</button>
                 </form>
             </div>
         </div>
@@ -732,6 +710,7 @@
                 </div>
                 <div id="authError" class="hidden bg-red-50 text-red-500 text-xs font-bold p-3 rounded-xl mb-4 text-center border border-red-100"></div>
                 <form id="authForm" class="space-y-3">
+                    <input type="text" id="nameInput" placeholder="暱稱 (註冊時填寫)" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-brand focus:outline-none transition-colors">
                     <input type="email" id="emailInput" placeholder="電子郵件" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-brand focus:outline-none transition-colors" required>
                     <input type="password" id="passwordInput" placeholder="密碼" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-brand focus:outline-none transition-colors" required>
                     <button type="submit" id="submitSignInBtn" class="w-full bg-brand text-white rounded-xl py-3 font-bold text-base btn-cute hover:bg-brand-dark transition-colors mt-2">登入</button>
@@ -753,12 +732,9 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-500 text-lg">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
+                    <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-500 text-lg"><i class="fa-solid fa-shield-halved"></i></div>
                     <h2 class="text-xl font-black text-slate-800">管理員主控台</h2>
                 </div>
-                
                 <form id="adminForm" class="space-y-4">
                     <div>
                         <label class="block text-sm font-bold text-slate-700 mb-1">修改總攔截廢棄物 (kg)</label>
@@ -768,10 +744,20 @@
                         <label class="block text-sm font-bold text-slate-700 mb-1">修改參與總人數</label>
                         <input type="number" id="adminParticipants" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-red-400 outline-none transition-colors" required>
                     </div>
-                    <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl py-3 transition-colors btn-cute mt-2">
-                        更新全站數據
-                    </button>
+                    <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl py-3 transition-colors btn-cute mt-2">更新全站數據</button>
                 </form>
+                
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-emerald-500"></i> 電子報訂閱名單
+                    </h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span id="adminSubCount" class="text-xs font-bold text-slate-500">載入中...</span>
+                        <button id="adminExportSubBtn" class="bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-emerald-100 transition-colors hidden">複製名單</button>
+                    </div>
+                    <div id="adminSubList" class="max-h-32 overflow-y-auto bg-slate-50 p-3 rounded-xl border border-slate-200 hide-scrollbar text-xs font-mono text-slate-600 space-y-1">
+                    </div>
+                </div>
 
                 <div class="mt-8 pt-6 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
@@ -779,12 +765,10 @@
                     </h3>
                     <form id="adminAnnounceForm" class="space-y-3">
                         <input type="text" id="adminAnnounceText" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors" placeholder="輸入公告內容" required>
-                        <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl py-3 transition-colors btn-cute">
-                            發布公告
-                        </button>
+                        <button type="submit" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl py-3 transition-colors btn-cute">發布公告</button>
                     </form>
                 </div>
-
+                
                 <div class="mt-8 pt-6 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
                         <i class="fa-solid fa-comments text-blue-500"></i> 用戶回饋管理
@@ -913,19 +897,13 @@
             <h3 id="tour-title" class="font-black text-slate-800 text-lg"></h3>
         </div>
         <p id="tour-content" class="text-sm text-slate-600 font-bold leading-relaxed mb-4"></p>
-        
         <div class="flex justify-between items-center border-t border-slate-100 pt-3">
             <span id="tour-step-counter" class="text-xs text-slate-400 font-bold">1/7</span>
             <div class="flex gap-2">
-                <button id="tour-prev" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-500 bg-slate-100 hover:bg-slate-200 transition-colors hidden">
-                    上一步
-                </button>
-                <button id="tour-next" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-brand hover:bg-brand-dark transition-colors">
-                    下一步
-                </button>
+                <button id="tour-prev" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-500 bg-slate-100 hover:bg-slate-200 transition-colors hidden">上一步</button>
+                <button id="tour-next" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-brand hover:bg-brand-dark transition-colors">下一步</button>
             </div>
         </div>
-        <div id="tour-arrow" class="absolute hidden w-4 h-4 bg-white transform rotate-45 border-r-4 border-b-4 border-brand-light"></div>
     </div>
 
     <script type="module">
@@ -960,9 +938,8 @@
             const labels = [];
             const today = new Date();
             for(let i=5; i>=0; i--) {
-                if(i === 0) {
-                    labels.push('今天');
-                } else {
+                if(i === 0) labels.push('今天');
+                else {
                     let d = new Date(today);
                     d.setDate(today.getDate() - i);
                     labels.push(`${d.getMonth()+1}/${d.getDate()}`);
@@ -995,13 +972,8 @@
                 }]
             },
             options: {
-                responsive: true, 
-                maintainAspectRatio: false,
-                plugins: { 
-                    legend: { 
-                        labels: { font: { family: "'Noto Sans TC', sans-serif", weight: 'bold' }, color: '#64748b' } 
-                    } 
-                },
+                responsive: true, maintainAspectRatio: false,
+                plugins: { legend: { labels: { font: { family: "'Noto Sans TC', sans-serif", weight: 'bold' }, color: '#64748b' } } },
                 scales: {
                     y: { grid: { color: '#f1f5f9', drawBorder: false }, ticks: { color: '#94a3b8', font: { weight: 'bold' } }, min: 0 },
                     x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { weight: 'bold' } } }
@@ -1034,24 +1006,17 @@
             const dbCertBtn = document.getElementById('openCertBtn');
             
             if (currentUser && !currentUser.uid.startsWith('local-')) {
-                line1.innerText = '登入成功！數據已同步'; 
-                line1.className = 'text-[10px] md:text-xs text-amber-100 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
-                line2.innerText = '👉 點擊領取專屬憑證'; 
-                line2.className = 'text-sm md:text-base font-black text-white leading-none transition-colors duration-300 break-words';
+                line1.innerText = '登入成功！數據已同步'; line1.className = 'text-[10px] md:text-xs text-amber-100 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
+                line2.innerText = '👉 點擊領取專屬憑證'; line2.className = 'text-sm md:text-base font-black text-white leading-none transition-colors duration-300 break-words';
                 inner.className = 'bg-brand hover:bg-brand-dark py-3 px-6 rounded-full shadow-2xl border-4 border-white flex items-center justify-between gap-3 transition-all duration-300 transform hover:scale-105 animate-bounce';
                 icon.className = 'w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-inner transition-colors duration-300';
                 icon.innerHTML = '<i class="fa-solid fa-gift text-amber-500 text-xl"></i>';
                 arr.className = 'fa-solid fa-chevron-right text-sm text-white transition-colors duration-300';
                 arrBg.className = 'w-8 h-8 rounded-full bg-transparent flex items-center justify-center shrink-0 md:bg-transparent';
-                if(dbCertBtn) { 
-                    dbCertBtn.classList.remove('hidden'); 
-                    dbCertBtn.classList.add('animate-pulse'); 
-                }
+                if(dbCertBtn) { dbCertBtn.classList.remove('hidden'); dbCertBtn.classList.add('animate-pulse'); }
             } else {
-                line1.innerText = '登入累積數據'; 
-                line1.className = 'text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
-                line2.innerText = '解鎖永續憑證'; 
-                line2.className = 'text-sm font-black text-brand-dark leading-none transition-colors duration-300 break-words';
+                line1.innerText = '登入累積數據'; line1.className = 'text-[10px] md:text-xs text-slate-500 font-bold leading-none mb-1.5 transition-colors duration-300 break-words';
+                line2.innerText = '解鎖永續憑證'; line2.className = 'text-sm font-black text-brand-dark leading-none transition-colors duration-300 break-words';
                 inner.className = 'bg-white hover:bg-brand-light/50 py-2.5 px-5 md:py-3 md:px-6 rounded-full shadow-xl border-4 border-brand-light flex items-center justify-between gap-3 transition-all duration-300';
                 icon.className = 'w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center shrink-0 transition-colors duration-300';
                 icon.innerHTML = '<i class="fa-solid fa-certificate text-amber-500 text-xl transition-all duration-300"></i>';
@@ -1064,22 +1029,13 @@
         const triggerAnimation = () => {
             const avatar = document.getElementById('interactive-avatar');
             const heroAvatar = document.getElementById('hero-avatar');
-            if(avatar) { 
-                avatar.classList.remove('animate-bounce-cute'); 
-                void avatar.offsetWidth; 
-                avatar.classList.add('animate-bounce-cute'); 
-            }
-            if(heroAvatar) { 
-                heroAvatar.classList.remove('animate-bounce-cute'); 
-                void heroAvatar.offsetWidth; 
-                heroAvatar.classList.add('animate-bounce-cute'); 
-            }
+            if(avatar) { avatar.classList.remove('animate-bounce-cute'); void avatar.offsetWidth; avatar.classList.add('animate-bounce-cute'); }
+            if(heroAvatar) { heroAvatar.classList.remove('animate-bounce-cute'); void heroAvatar.offsetWidth; heroAvatar.classList.add('animate-bounce-cute'); }
         };
 
         const showError = (msg) => {
             const errDiv = document.getElementById('authError');
-            errDiv.innerText = msg; 
-            errDiv.classList.remove('hidden');
+            errDiv.innerText = msg; errDiv.classList.remove('hidden');
             setTimeout(() => errDiv.classList.add('hidden'), 3000);
         };
 
@@ -1118,7 +1074,6 @@
                 currentUser = user;
                 document.getElementById('navLoginBtn').classList.add('hidden');
                 document.getElementById('navUserPanel').classList.remove('hidden');
-                document.getElementById('navUserEmail').innerText = user.isAnonymous ? "訪客體驗中" : user.email.split('@')[0];
                 document.getElementById('loginModal').classList.add('hidden');
 
                 if(unsubPersonal) unsubPersonal();
@@ -1127,13 +1082,12 @@
                         if(snap.exists()){
                             const data = snap.data();
                             if(data.stats) personalStats = data.stats;
-                            document.getElementById('navAdminBtn').classList.toggle('hidden', data.role === 'admin');
+                            document.getElementById('navAdminBtn').classList.toggle('hidden', data.role !== 'admin');
+                            document.getElementById('navUserEmail').innerText = data.name || (user.isAnonymous ? "訪客" : user.email.split('@')[0]);
                         } else {
-                            setDoc(doc(db, 'artifacts', appIdStr, 'users', user.uid), { 
-                                stats: personalStats, 
-                                role: 'user', 
-                                email: user.isAnonymous ? '訪客' : user.email 
-                            }, { merge: true });
+                            const defaultName = user.isAnonymous ? '訪客' : user.email.split('@')[0];
+                            document.getElementById('navUserEmail').innerText = defaultName;
+                            setDoc(doc(db, 'artifacts', appIdStr, 'users', user.uid), { stats: personalStats, role: 'user', email: user.isAnonymous ? '訪客' : user.email, name: defaultName }, { merge: true });
                         }
                         updatePersonalUI();
                     }, () => updatePersonalUI());
@@ -1153,10 +1107,7 @@
                     try {
                         unsubFeeds = onSnapshot(query(collection(db, 'artifacts', appIdStr, 'feeds'), orderBy('timestamp', 'desc'), limit(15)), (snap) => {
                             feedListContainer.innerHTML = '';
-                            if(snap.empty) { 
-                                feedListContainer.innerHTML = '<p class="text-slate-400 text-xs font-bold text-center mt-4">尚無社區動態</p>'; 
-                                return; 
-                            }
+                            if(snap.empty) { feedListContainer.innerHTML = '<p class="text-slate-400 text-xs font-bold text-center mt-4">尚無社區動態</p>'; return; }
                             snap.forEach(docSnap => renderSingleFeed(docSnap.data()));
                         }, () => {});
                     } catch (e) {}
@@ -1178,82 +1129,44 @@
         });
         document.getElementById('closeLoginBtn').addEventListener('click', () => document.getElementById('loginModal').classList.add('hidden'));
         document.getElementById('logoutBtn').addEventListener('click', async () => {
-            if(currentUser && currentUser.uid.startsWith('local-')) { 
-                currentUser = null; 
-                updatePersonalUI(); 
-            } else { 
-                await signOut(auth); 
-            }
+            if(currentUser && currentUser.uid.startsWith('local-')) { currentUser = null; updatePersonalUI(); } 
+            else { await signOut(auth); }
         });
 
         let isAuthenticating = false;
         document.getElementById('authForm').addEventListener('submit', async (e) => {
-            e.preventDefault(); 
-            if (isAuthenticating) return;
+            e.preventDefault(); if (isAuthenticating) return;
             isAuthenticating = true;
-            const btn = document.getElementById('submitSignInBtn'); 
-            const orig = btn.innerText; 
-            btn.innerText = '登入中...'; 
-            btn.disabled = true;
-            try { 
-                await signInWithEmailAndPassword(auth, document.getElementById('emailInput').value, document.getElementById('passwordInput').value); 
-            } catch (err) { 
-                showError('帳號或密碼錯誤'); 
-            } finally { 
-                isAuthenticating = false; 
-                btn.innerText = orig; 
-                btn.disabled = false; 
-            }
+            const btn = document.getElementById('submitSignInBtn'); const orig = btn.innerText; btn.innerText = '登入中...'; btn.disabled = true;
+            try { await signInWithEmailAndPassword(auth, document.getElementById('emailInput').value, document.getElementById('passwordInput').value); } 
+            catch (err) { showError('帳號或密碼錯誤'); } 
+            finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
 
         document.getElementById('submitSignUpBtn').addEventListener('click', async () => {
             if (isAuthenticating) return;
+            const name = document.getElementById('nameInput').value.trim();
             const email = document.getElementById('emailInput').value;
             const pwd = document.getElementById('passwordInput').value;
-            if(!email || !pwd) return showError('請輸入電子郵件與密碼'); 
+            if(!name) return showError('註冊請填寫暱稱');
+            if(!email || !pwd) return showError('請填寫電子郵件與密碼'); 
             if(pwd.length < 6) return showError('密碼至少 6 個字元');
-            isAuthenticating = true; 
-            const btn = document.getElementById('submitSignUpBtn'); 
-            const orig = btn.innerText; 
-            btn.innerText = '註冊中...'; 
-            btn.disabled = true;
+            isAuthenticating = true; const btn = document.getElementById('submitSignUpBtn'); const orig = btn.innerText; btn.innerText = '註冊中...'; btn.disabled = true;
             try {
                 const cred = await createUserWithEmailAndPassword(auth, email, pwd);
-                await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid), { 
-                    stats: personalStats, 
-                    email: email, 
-                    role: 'user' 
-                }, { merge: true });
-            } catch (err) { 
-                showError('註冊失敗，信箱可能已存在'); 
-            } finally { 
-                isAuthenticating = false; 
-                btn.innerText = orig; 
-                btn.disabled = false; 
-            }
+                await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid), { stats: personalStats, email: email, name: name, role: 'user' }, { merge: true });
+            } catch (err) { showError('註冊失敗，信箱可能已存在'); } 
+            finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
         
         document.getElementById('anonLoginBtn').addEventListener('click', async () => {
-            if (isAuthenticating) return; 
-            isAuthenticating = true;
-            const btn = document.getElementById('anonLoginBtn'); 
-            const orig = btn.innerText; 
-            btn.innerText = '載入中...'; 
-            btn.disabled = true;
+            if (isAuthenticating) return; isAuthenticating = true;
+            const btn = document.getElementById('anonLoginBtn'); const orig = btn.innerText; btn.innerText = '載入中...'; btn.disabled = true;
             try {
                 const cred = await signInAnonymously(auth);
-                await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid), { 
-                    stats: personalStats, 
-                    email: '訪客', 
-                    role: 'user' 
-                }, { merge: true });
-            } catch (err) { 
-                showError('訪客登入失敗'); 
-            } finally { 
-                isAuthenticating = false; 
-                btn.innerText = orig; 
-                btn.disabled = false; 
-            }
+                await setDoc(doc(db, 'artifacts', appIdStr, 'users', cred.user.uid), { stats: personalStats, email: '訪客', name: '訪客', role: 'user' }, { merge: true });
+            } catch (err) { showError('訪客登入失敗'); } 
+            finally { isAuthenticating = false; btn.innerText = orig; btn.disabled = false; }
         });
 
         const uploadModal = document.getElementById('uploadModal');
@@ -1266,17 +1179,12 @@
         const uploadWeight = document.getElementById('uploadWeight');
 
         const openUploadModal = (type) => {
-            if(!currentUser) { 
-                document.getElementById('loginModal').classList.remove('hidden'); 
-                return; 
-            }
+            if(!currentUser) { document.getElementById('loginModal').classList.remove('hidden'); return; }
             uploadType.value = type;
             uploadWeight.value = type === 'coffee' ? 5 : 3;
             document.getElementById('uploadModalTitle').innerText = type === 'coffee' ? '拍照貢獻咖啡渣' : '拍照貢獻落葉';
-            uploadPreview.src = ''; 
-            uploadPreview.classList.add('hidden');
-            uploadPlaceholder.classList.remove('hidden'); 
-            uploadImgBase64.value = '';
+            uploadPreview.src = ''; uploadPreview.classList.add('hidden');
+            uploadPlaceholder.classList.remove('hidden'); uploadImgBase64.value = '';
             uploadModal.classList.remove('hidden');
         };
 
@@ -1291,17 +1199,10 @@
             reader.onload = (ev) => {
                 const img = new Image();
                 img.onload = () => {
-                    const canvas = document.createElement('canvas'); 
-                    const ctx = canvas.getContext('2d');
-                    const MAX_WIDTH = 600; 
-                    let width = img.width;
-                    let height = img.height;
-                    if (width > MAX_WIDTH) { 
-                        height *= MAX_WIDTH / width; 
-                        width = MAX_WIDTH; 
-                    }
-                    canvas.width = width; 
-                    canvas.height = height;
+                    const canvas = document.createElement('canvas'); const ctx = canvas.getContext('2d');
+                    const MAX_WIDTH = 600; let width = img.width, height = img.height;
+                    if (width > MAX_WIDTH) { height *= MAX_WIDTH / width; width = MAX_WIDTH; }
+                    canvas.width = width; canvas.height = height;
                     ctx.drawImage(img, 0, 0, width, height);
                     const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
                     uploadImgBase64.value = dataUrl;
@@ -1321,15 +1222,10 @@
             const base64 = uploadImgBase64.value;
             const expAmount = Math.floor(weight * 10);
 
-            if(!base64) { 
-                alert('請上傳現場照片作為紀錄證明！'); 
-                return; 
-            }
+            if(!base64) { alert('請上傳現場照片作為紀錄證明！'); return; }
 
             const btn = document.getElementById('submitUploadBtn');
-            const origText = btn.innerText; 
-            btn.innerText = '上傳中...'; 
-            btn.disabled = true;
+            const origText = btn.innerText; btn.innerText = '上傳中...'; btn.disabled = true;
 
             personalStats.waste += weight;
             personalStats.carbon += (weight * 0.56);
@@ -1340,86 +1236,50 @@
             globalStats.totalWaste += weight;
             globalStats.participants += 1;
 
-            triggerAnimation(); 
-            updatePersonalUI(); 
-            updateGlobalUI();
+            triggerAnimation(); updatePersonalUI(); updateGlobalUI();
 
             let actionStr = type === 'coffee' ? `貢獻了 <span class="font-bold text-white">${weight} kg 咖啡渣</span>` : `回收了 <span class="font-bold text-white">${weight} kg 落葉</span>`;
             let rewardStr = `+${expAmount} EXP`;
 
-            const name = currentUser ? (currentUser.isAnonymous ? '熱心訪客' : currentUser.email.split('@')[0]) : '熱心公民';
+            const name = document.getElementById('navUserEmail').innerText;
             if (currentUser && !currentUser.uid.startsWith('local-')) {
                 try {
-                    await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { 
-                        name, 
-                        action: actionStr, 
-                        reward: rewardStr, 
-                        img: base64, 
-                        timestamp: Date.now(), 
-                        timeStr: '剛剛' 
-                    });
+                    await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name, action: actionStr, reward: rewardStr, img: base64, timestamp: Date.now(), timeStr: '剛剛' });
                     await setDoc(doc(db, 'artifacts', appIdStr, 'users', currentUser.uid), { stats: personalStats }, {merge: true});
                     await setDoc(doc(db, 'artifacts', appIdStr, 'public', 'global'), { campaign: globalStats }, {merge: true});
                 } catch(e) {}
             } else {
-                renderSingleFeed({ 
-                    name, 
-                    action: actionStr, 
-                    reward: rewardStr, 
-                    img: base64, 
-                    timeStr: '剛剛' 
-                }, true);
+                renderSingleFeed({ name, action: actionStr, reward: rewardStr, img: base64, timeStr: '剛剛' }, true);
             }
             
-            btn.innerText = origText; 
-            btn.disabled = false; 
-            uploadModal.classList.add('hidden');
+            btn.innerText = origText; btn.disabled = false; uploadModal.classList.add('hidden');
         });
 
         const certModal = document.getElementById('certificateModal');
         const certBubble = document.getElementById('certBubble');
         const openCertModal = () => {
-            if(!currentUser) { 
-                document.getElementById('loginModal').classList.remove('hidden'); 
-                return; 
-            }
-            document.getElementById('certUser').innerText = currentUser.isAnonymous ? "熱心在地訪客" : currentUser.email.split('@')[0];
+            if(!currentUser) { document.getElementById('loginModal').classList.remove('hidden'); return; }
+            document.getElementById('certUser').innerText = document.getElementById('navUserEmail').innerText;
             document.getElementById('certWaste').innerText = personalStats.waste.toFixed(1);
             document.getElementById('certCarbon').innerText = personalStats.carbon.toFixed(1);
             document.getElementById('certSoil').innerText = personalStats.soil.toFixed(1);
-            const d = new Date(); 
-            document.getElementById('certDate').innerText = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+            const d = new Date(); document.getElementById('certDate').innerText = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
             document.getElementById('certNo').innerText = `TJ2026-${currentUser.uid.substring(0, 6).toUpperCase() || Math.floor(Math.random()*1000000).toString().padStart(6,'0')}`;
             certModal.classList.remove('hidden');
         };
 
         certBubble.addEventListener('click', openCertModal);
-        if(document.getElementById('openCertBtn')) {
-            document.getElementById('openCertBtn').addEventListener('click', openCertModal);
-        }
+        if(document.getElementById('openCertBtn')) document.getElementById('openCertBtn').addEventListener('click', openCertModal);
         document.getElementById('closeCertBtn').addEventListener('click', () => certModal.classList.add('hidden'));
 
         document.getElementById('downloadCertBtn').addEventListener('click', async () => {
-            const btn = document.getElementById('downloadCertBtn'); 
-            const origHTML = btn.innerHTML;
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 正在為您生成憑證...'; 
-            btn.disabled = true;
+            const btn = document.getElementById('downloadCertBtn'); const origHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 正在為您生成憑證...'; btn.disabled = true;
             try {
-                const canvas = await html2canvas(document.getElementById('certificateNode'), { 
-                    scale: 2, 
-                    useCORS: true, 
-                    backgroundColor: '#ffffff' 
-                });
-                const link = document.createElement('a'); 
-                link.download = `TanJi_Certificate_${document.getElementById('certNo').innerText}.png`; 
-                link.href = canvas.toDataURL('image/png'); 
-                link.click();
-            } catch (err) { 
-                alert("生成憑證發生錯誤！"); 
-            } finally { 
-                btn.innerHTML = origHTML; 
-                btn.disabled = false; 
-            }
+                const canvas = await html2canvas(document.getElementById('certificateNode'), { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+                const link = document.createElement('a'); link.download = `TanJi_Certificate_${document.getElementById('certNo').innerText}.png`; link.href = canvas.toDataURL('image/png'); link.click();
+            } catch (err) {} 
+            finally { btn.innerHTML = origHTML; btn.disabled = false; }
         });
 
         const feedbackModal = document.getElementById('feedbackModal');
@@ -1442,27 +1302,17 @@
                 feedbackForm.reset();
             });
         }
-        if(closeFeedbackBtn) {
-            closeFeedbackBtn.addEventListener('click', () => feedbackModal.classList.add('hidden'));
-        }
+        if(closeFeedbackBtn) closeFeedbackBtn.addEventListener('click', () => feedbackModal.classList.add('hidden'));
 
         const loadFeedbackHistory = async () => {
-            if (!currentUser) {
-                feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-slate-400 font-bold py-4">請先登入才能查看紀錄</p>';
-                return;
-            }
+            if (!currentUser) { feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-slate-400 font-bold py-4">請先登入才能查看紀錄</p>'; return; }
             feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-slate-400 font-bold py-4"><i class="fa-solid fa-spinner fa-spin"></i> 載入中...</p>';
             try {
                 const q = query(collection(db, 'artifacts', appIdStr, 'feedbacks'), where("uid", "==", currentUser.uid));
                 const snap = await getDocs(q);
-                if (snap.empty) {
-                    feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-slate-400 font-bold py-4">尚無回饋紀錄</p>';
-                    return;
-                }
-                const docs = [];
-                snap.forEach(d => docs.push({id: d.id, ...d.data()}));
+                if (snap.empty) { feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-slate-400 font-bold py-4">尚無回饋紀錄</p>'; return; }
+                const docs = []; snap.forEach(d => docs.push({id: d.id, ...d.data()}));
                 docs.sort((a, b) => b.timestamp - a.timestamp);
-                
                 let html = '';
                 docs.forEach(d => {
                     const date = new Date(d.timestamp).toLocaleDateString();
@@ -1480,26 +1330,19 @@
                     `;
                 });
                 feedbackHistoryContainer.innerHTML = html;
-            } catch (e) {
-                feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-red-400 font-bold py-4">讀取失敗，請確認權限</p>';
-            }
+            } catch (e) { feedbackHistoryContainer.innerHTML = '<p class="text-xs text-center text-red-400 font-bold py-4">讀取失敗，請確認權限</p>'; }
         };
 
         if(tabSubmitFeedback && tabFeedbackHistory) {
             tabSubmitFeedback.addEventListener('click', () => {
                 tabSubmitFeedback.className = "flex-1 pb-2 text-sm font-bold text-amber-500 border-b-2 border-amber-500 transition-colors";
                 tabFeedbackHistory.className = "flex-1 pb-2 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 transition-colors";
-                feedbackForm.classList.remove('hidden');
-                feedbackHistoryContainer.classList.add('hidden');
-                feedbackSuccess.classList.add('hidden');
+                feedbackForm.classList.remove('hidden'); feedbackHistoryContainer.classList.add('hidden'); feedbackSuccess.classList.add('hidden');
             });
-            
             tabFeedbackHistory.addEventListener('click', () => {
                 tabFeedbackHistory.className = "flex-1 pb-2 text-sm font-bold text-amber-500 border-b-2 border-amber-500 transition-colors";
                 tabSubmitFeedback.className = "flex-1 pb-2 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 transition-colors";
-                feedbackForm.classList.add('hidden');
-                feedbackHistoryContainer.classList.remove('hidden');
-                feedbackSuccess.classList.add('hidden');
+                feedbackForm.classList.add('hidden'); feedbackHistoryContainer.classList.remove('hidden'); feedbackSuccess.classList.add('hidden');
                 loadFeedbackHistory();
             });
         }
@@ -1507,53 +1350,42 @@
         if(feedbackForm) {
             feedbackForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                if(!currentUser) {
-                    alert("請先登入或以訪客身分繼續，才能送出回饋喔！");
-                    return;
-                }
+                if(!currentUser) { alert("請先登入或以訪客身分繼續，才能送出回饋喔！"); return; }
                 const btn = document.getElementById('submitFeedbackBtn');
-                const origText = btn.innerHTML;
-                btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 送出中...';
-                btn.disabled = true;
-
+                const origText = btn.innerHTML; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 送出中...'; btn.disabled = true;
                 const feature = document.getElementById('feedbackFeature').value;
                 const text = document.getElementById('feedbackText').value;
-                const userEmail = currentUser.isAnonymous ? '訪客' : currentUser.email;
-
+                const userName = document.getElementById('navUserEmail').innerText;
                 try {
-                    await addDoc(collection(db, 'artifacts', appIdStr, 'feedbacks'), {
-                        uid: currentUser.uid,
-                        user: userEmail,
-                        feature: feature,
-                        content: text,
-                        timestamp: Date.now(),
-                        status: '待處理',
-                        reply: ''
-                    });
-                    feedbackForm.classList.add('hidden');
-                    feedbackSuccess.classList.remove('hidden');
-                } catch (err) {
-                    alert("回饋送出失敗，請確認是否登入並稍後再試！");
-                } finally {
-                    btn.innerHTML = origText;
-                    btn.disabled = false;
-                }
+                    await addDoc(collection(db, 'artifacts', appIdStr, 'feedbacks'), { uid: currentUser.uid, user: userName, feature: feature, content: text, timestamp: Date.now(), status: '待處理', reply: '' });
+                    feedbackForm.classList.add('hidden'); feedbackSuccess.classList.remove('hidden');
+                } catch (err) { alert("回饋送出失敗，請確認是否登入並稍後再試！"); } 
+                finally { btn.innerHTML = origText; btn.disabled = false; }
             });
         }
+
+        document.getElementById('subscribeBtn').addEventListener('click', async () => {
+            const emailInput = document.getElementById('newsletterEmail');
+            const msg = document.getElementById('subscribeMsg');
+            const email = emailInput.value.trim();
+            if(!email || !email.includes('@')) {
+                msg.innerText = '請輸入有效的 Email'; msg.classList.remove('hidden'); msg.className = 'text-amber-400 text-[10px] font-bold mt-2 absolute -bottom-6 left-0'; return;
+            }
+            const btn = document.getElementById('subscribeBtn'); btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+            try {
+                await addDoc(collection(db, 'artifacts', appIdStr, 'newsletters'), { email: email, timestamp: Date.now() });
+                msg.innerText = '✅ 訂閱成功！'; msg.className = 'text-brand-light text-[10px] font-bold mt-2 absolute -bottom-6 left-0'; msg.classList.remove('hidden'); emailInput.value = '';
+            } catch(e) { msg.innerText = '訂閱失敗'; msg.className = 'text-red-400 text-[10px] font-bold mt-2 absolute -bottom-6 left-0'; msg.classList.remove('hidden'); } 
+            finally { btn.disabled = false; btn.innerText = '訂閱'; setTimeout(() => msg.classList.add('hidden'), 3000); }
+        });
 
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
         
         if (hamburgerBtn && mobileMenu) {
-            hamburgerBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
+            hamburgerBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
         }
 
         document.getElementById('navAdminBtn').addEventListener('click', () => {
@@ -1562,8 +1394,29 @@
             document.getElementById('adminTotalWaste').value = globalStats.totalWaste;
             document.getElementById('adminParticipants').value = globalStats.participants;
             loadAdminFeedbacks();
+            loadSubscribers();
         });
         document.getElementById('closeAdminBtn').addEventListener('click', () => document.getElementById('adminModal').classList.add('hidden'));
+
+        const loadSubscribers = async () => {
+            const container = document.getElementById('adminSubList');
+            const countSpan = document.getElementById('adminSubCount');
+            const exportBtn = document.getElementById('adminExportSubBtn');
+            container.innerHTML = '載入中...';
+            try {
+                const q = query(collection(db, 'artifacts', appIdStr, 'newsletters'), orderBy('timestamp', 'desc'));
+                const snap = await getDocs(q);
+                let html = ''; let emails = [];
+                if(snap.empty) { container.innerHTML = '尚無訂閱'; countSpan.innerText = '共 0 人'; exportBtn.classList.add('hidden'); return; }
+                snap.forEach(d => { emails.push(d.data().email); html += `<div>${d.data().email}</div>`; });
+                container.innerHTML = html; countSpan.innerText = `共 ${emails.length} 人`; exportBtn.classList.remove('hidden');
+                exportBtn.onclick = () => {
+                    const textToCopy = emails.join('\n'); const tempInput = document.createElement('textarea'); tempInput.value = textToCopy;
+                    document.body.appendChild(tempInput); tempInput.select(); document.execCommand('copy'); document.body.removeChild(tempInput);
+                    exportBtn.innerText = '已複製！'; setTimeout(() => exportBtn.innerText = '複製名單', 2000);
+                };
+            } catch(e) { container.innerHTML = '讀取失敗'; }
+        };
 
         const loadAdminFeedbacks = async () => {
             const container = document.getElementById('adminFeedbackList');
@@ -1571,14 +1424,9 @@
             try {
                 const q = query(collection(db, 'artifacts', appIdStr, 'feedbacks'));
                 const snap = await getDocs(q);
-                if (snap.empty) {
-                    container.innerHTML = '<p class="text-xs font-bold text-center text-slate-400 py-4">目前尚無用戶回饋</p>';
-                    return;
-                }
-                const docs = [];
-                snap.forEach(d => docs.push({id: d.id, ...d.data()}));
+                if (snap.empty) { container.innerHTML = '<p class="text-xs font-bold text-center text-slate-400 py-4">目前尚無用戶回饋</p>'; return; }
+                const docs = []; snap.forEach(d => docs.push({id: d.id, ...d.data()}));
                 docs.sort((a, b) => b.timestamp - a.timestamp);
-                
                 let html = '';
                 docs.forEach(d => {
                     const date = new Date(d.timestamp).toLocaleDateString();
@@ -1600,64 +1448,32 @@
                     `;
                 });
                 container.innerHTML = html;
-            } catch (e) {
-                container.innerHTML = '<p class="text-xs text-center font-bold text-red-400 py-4">讀取失敗</p>';
-            }
+            } catch (e) { container.innerHTML = '<p class="text-xs text-center font-bold text-red-400 py-4">讀取失敗</p>'; }
         };
 
         window.submitReply = async (docId) => {
             const input = document.getElementById(`replyInput-${docId}`);
             const replyText = input.value.trim();
-            if(!replyText) {
-                alert("回覆內容不能為空");
-                return;
-            }
-            const btn = input.nextElementSibling;
-            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
-            btn.disabled = true;
-            try {
-                await updateDoc(doc(db, 'artifacts', appIdStr, 'feedbacks', docId), {
-                    status: '已回覆',
-                    reply: replyText
-                });
-                loadAdminFeedbacks();
-            } catch(e) {
-                alert('回覆失敗，請確認權限');
-                btn.innerText = '回覆';
-                btn.disabled = false;
-            }
+            if(!replyText) return alert("回覆內容不能為空");
+            const btn = input.nextElementSibling; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>'; btn.disabled = true;
+            try { await updateDoc(doc(db, 'artifacts', appIdStr, 'feedbacks', docId), { status: '已回覆', reply: replyText }); loadAdminFeedbacks(); } 
+            catch(e) { alert('回覆失敗，請確認權限'); btn.innerText = '回覆'; btn.disabled = false; }
         };
 
         document.getElementById('adminForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             try {
-                await setDoc(doc(db, 'artifacts', appIdStr, 'public', 'global'), { 
-                    campaign: { 
-                        totalWaste: parseFloat(document.getElementById('adminTotalWaste').value), 
-                        participants: parseInt(document.getElementById('adminParticipants').value) 
-                    } 
-                }, { merge: true });
+                await setDoc(doc(db, 'artifacts', appIdStr, 'public', 'global'), { campaign: { totalWaste: parseFloat(document.getElementById('adminTotalWaste').value), participants: parseInt(document.getElementById('adminParticipants').value) } }, { merge: true });
                 document.getElementById('adminModal').classList.add('hidden');
-            } catch(err) { 
-                alert("更新失敗"); 
-            }
+            } catch(err) { alert("更新失敗"); }
         });
 
         document.getElementById('adminAnnounceForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             try {
-                await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { 
-                    name: '【平台公告】', 
-                    action: document.getElementById('adminAnnounceText').value, 
-                    reward: '推播', 
-                    timestamp: Date.now(), 
-                    timeStr: '即時' 
-                });
-                document.getElementById('adminAnnounceText').value = ''; 
-                document.getElementById('adminModal').classList.add('hidden');
-            } catch(err) { 
-                alert("發布失敗"); 
-            }
+                await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name: '【平台公告】', action: document.getElementById('adminAnnounceText').value, reward: '推播', timestamp: Date.now(), timeStr: '即時' });
+                document.getElementById('adminAnnounceText').value = ''; document.getElementById('adminModal').classList.add('hidden');
+            } catch(err) { alert("發布失敗"); }
         });
 
         document.getElementById('openMycoNodeBtn').addEventListener('click', () => document.getElementById('mycoNodeModal').classList.remove('hidden'));
@@ -1668,60 +1484,30 @@
 
         document.querySelectorAll('.btn-reward-check').forEach(btn => {
             btn.addEventListener('click', () => {
-                if(!currentUser) {
-                    document.getElementById('loginModal').classList.remove('hidden');
-                    return;
-                }
-                const tier = parseInt(btn.getAttribute('data-tier'));
-                const exp = personalStats.exp;
-                rewardModal.classList.remove('hidden');
+                if(!currentUser) return document.getElementById('loginModal').classList.remove('hidden');
+                const tier = parseInt(btn.getAttribute('data-tier')); const exp = personalStats.exp; rewardModal.classList.remove('hidden');
                 
                 const updateReward = (icon, title, reqExp, desc, actText, unlockCb) => {
-                    document.getElementById('rewardIcon').innerText = icon; 
-                    document.getElementById('rewardTitle').innerText = title;
+                    document.getElementById('rewardIcon').innerText = icon; document.getElementById('rewardTitle').innerText = title;
                     if(exp >= reqExp) {
                         document.getElementById('rewardProgressText').innerText = `已解鎖！目前累積: ${exp} / ${reqExp} EXP`;
                         document.getElementById('rewardDetailText').innerText = desc.unlocked;
-                        const actionBtn = document.getElementById('rewardActionBtn'); 
-                        actionBtn.innerText = actText.unlocked;
-                        actionBtn.onclick = () => { 
-                            rewardModal.classList.add('hidden'); 
-                            unlockCb(); 
-                        };
+                        const actionBtn = document.getElementById('rewardActionBtn'); actionBtn.innerText = actText.unlocked; actionBtn.onclick = () => { rewardModal.classList.add('hidden'); unlockCb(); };
                     } else {
                         document.getElementById('rewardProgressText').innerText = `未解鎖。目前累積: ${exp} / ${reqExp} EXP`;
                         document.getElementById('rewardDetailText').innerText = desc.locked(reqExp - exp);
-                        const actionBtn = document.getElementById('rewardActionBtn'); 
-                        actionBtn.innerText = actText.locked;
-                        actionBtn.onclick = () => { 
-                            rewardModal.classList.add('hidden'); 
-                            document.getElementById('interactive').scrollIntoView(); 
-                        };
+                        const actionBtn = document.getElementById('rewardActionBtn'); actionBtn.innerText = actText.locked; actionBtn.onclick = () => { rewardModal.classList.add('hidden'); document.getElementById('interactive').scrollIntoView(); };
                     }
                 };
-                
-                if(tier === 1) {
-                    updateReward("🏅", "永續新星", 100, { unlocked: "已成功解鎖數位徽章，此榮譽已寫入您的永續數位憑證！", locked: diff => `還差 ${diff} EXP。請上傳照片點收，解鎖專屬頭像！` }, { unlocked: "前往生成憑證", locked: "去拍照上傳" }, openCertModal);
-                } else if(tier === 2) {
-                    updateReward("🌱", "低碳推手", 300, { unlocked: "擁有兌換「社區自種香草盆栽」資格。請攜手機至發酵站出示兌換！", locked: diff => `還差 ${diff} EXP。每回收1公斤可獲10 EXP，讓我們一起落實零浪費！` }, { unlocked: "確認實體兌換", locked: "去拍照上傳" }, () => {});
-                } else if(tier === 3) {
-                    updateReward("☕", "循環見證人", 800, { unlocked: "獲得在地商家贊助「低碳咖啡兌換券」！出示本畫面至合作店點免費享用。", locked: diff => `還差 ${diff} EXP。每一次真實回收都有避碳影響力，繼續努力！` }, { unlocked: "現場向店家核銷", locked: "繼續拍照累積" }, async () => {
-                        personalStats.exp -= 800; 
-                        personalStats.level = Math.floor(personalStats.exp/200)+1; 
-                        updatePersonalUI();
-                        if(currentUser && !currentUser.uid.startsWith('local-')) {
-                            await setDoc(doc(db, 'artifacts', appIdStr, 'users', currentUser.uid), {stats:personalStats}, {merge:true});
-                            await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name: currentUser.email.split('@')[0], action: "兌換了 在地低碳咖啡券", reward: "消耗 800 EXP", timestamp: Date.now(), timeStr: '剛剛' });
-                        }
-                    });
-                }
+                if(tier === 1) updateReward("🏅", "永續新星", 100, { unlocked: "已成功解鎖數位徽章，此榮譽已寫入您的永續數位憑證！", locked: diff => `還差 ${diff} EXP。請上傳照片點收，解鎖專屬頭像！` }, { unlocked: "前往生成憑證", locked: "去拍照上傳" }, openCertModal);
+                else if(tier === 2) updateReward("🌱", "低碳推手", 300, { unlocked: "擁有兌換「社區自種香草盆栽」資格。請攜手機至發酵站出示兌換！", locked: diff => `還差 ${diff} EXP。每回收1公斤可獲10 EXP，讓我們一起落實零浪費！` }, { unlocked: "確認實體兌換", locked: "去拍照上傳" }, () => {});
+                else if(tier === 3) updateReward("☕", "循環見證人", 800, { unlocked: "獲得在地商家贊助「低碳咖啡兌換券」！出示本畫面至合作店點免費享用。", locked: diff => `還差 ${diff} EXP。每一次真實回收都有避碳影響力，繼續努力！` }, { unlocked: "現場向店家核銷", locked: "繼續拍照累積" }, async () => {
+                    personalStats.exp -= 800; personalStats.level = Math.floor(personalStats.exp/200)+1; updatePersonalUI();
+                    if(currentUser && !currentUser.uid.startsWith('local-')) await setDoc(doc(db, 'artifacts', appIdStr, 'users', currentUser.uid), {stats:personalStats}, {merge:true});
+                    if(currentUser && !currentUser.uid.startsWith('local-')) await addDoc(collection(db, 'artifacts', appIdStr, 'feeds'), { name: document.getElementById('navUserEmail').innerText, action: "兌換了 在地低碳咖啡券", reward: "消耗 800 EXP", timestamp: Date.now(), timeStr: '剛剛' });
+                });
             });
         });
-
-        const getTourStepId = (desktopId, mobileId) => {
-            const el = document.getElementById(desktopId);
-            return (el && el.offsetParent !== null) ? desktopId : mobileId;
-        };
 
         const tourSteps = [
             { id: 'tour-step-1', mobileId: 'hamburgerBtn', title: '全站導覽列', text: '快速跳轉至「循環科學」、「實境打卡」與「數據儀表板」等區域。', pos: 'bottom' },
@@ -1738,62 +1524,34 @@
         const tourPopover = document.getElementById('tour-popover');
         
         const showTourStep = (index) => {
-            if (index >= tourSteps.length) { 
-                endTour(); 
-                return; 
-            }
-            
+            if (index >= tourSteps.length) { endTour(); return; }
             if (currentTourIndex >= 0 && currentTourIndex < tourSteps.length) {
                 const prevStep = tourSteps[currentTourIndex];
-                const prevTargetId = window.innerWidth < 768 ? prevStep.mobileId : prevStep.id;
-                const prevEl = document.getElementById(prevTargetId);
-                if (prevEl) { 
-                    prevEl.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'relative', 'bg-white', 'rounded-2xl', 'p-1'); 
-                    prevEl.style.zIndex = ''; 
-                }
+                const prevEl = document.getElementById(window.innerWidth < 768 ? prevStep.mobileId : prevStep.id);
+                if (prevEl) { prevEl.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'bg-white', 'rounded-2xl', 'p-1', 'relative', 'z-[106]'); }
             }
             
             const step = tourSteps[index];
             const targetId = window.innerWidth < 768 ? step.mobileId : step.id;
             const el = document.getElementById(targetId);
             
-            if (!el) { 
-                showTourStep(index + 1); 
-                return; 
-            }
-            
-            currentTourIndex = index; 
-            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (!el) { showTourStep(index + 1); return; }
+            currentTourIndex = index; el.scrollIntoView({ behavior: 'smooth', block: 'center' });
             
             const nav = document.querySelector('nav');
-            if (nav.contains(el)) {
-                nav.style.zIndex = '106'; 
-            } else {
-                nav.style.zIndex = ''; 
-            }
+            if (nav.contains(el)) nav.style.zIndex = '106'; else nav.style.zIndex = '50';
             
             setTimeout(() => {
-                el.classList.add('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'relative');
-                if (nav.contains(el)) {
-                    el.classList.add('rounded-2xl', 'p-1');
-                } else if(el.tagName !== 'BUTTON' && el.tagName !== 'A' && el.tagName !== 'SECTION') {
-                    el.classList.add('bg-white');
-                }
-                el.style.zIndex = '106'; 
+                el.classList.add('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'relative', 'z-[106]');
+                if (nav.contains(el)) el.classList.add('bg-white', 'rounded-2xl', 'p-1');
                 
                 tourPopover.classList.remove('hidden'); 
                 document.getElementById('tour-title').innerText = step.title; 
                 document.getElementById('tour-content').innerText = step.text; 
                 document.getElementById('tour-step-counter').innerText = `${index + 1}/${tourSteps.length}`;
                 
-                tourPopover.style.position = 'fixed'; 
-                tourPopover.style.top = 'auto'; 
-                tourPopover.style.bottom = '24px'; 
-                tourPopover.style.left = '50%'; 
-                tourPopover.style.transform = 'translateX(-50%)'; 
-                tourPopover.style.width = '90%'; 
-                tourPopover.style.maxWidth = '360px'; 
-                tourPopover.style.zIndex = '120';
+                tourPopover.style.position = 'fixed'; tourPopover.style.top = 'auto'; tourPopover.style.bottom = '24px'; 
+                tourPopover.style.left = '50%'; tourPopover.style.transform = 'translateX(-50%)'; tourPopover.style.zIndex = '120';
                 
                 document.getElementById('tour-prev').classList.toggle('hidden', index === 0); 
                 document.getElementById('tour-next').innerText = index === tourSteps.length - 1 ? '完成導覽' : '下一步';
@@ -1801,47 +1559,28 @@
         };
 
         const endTour = () => { 
-            tourOverlay.classList.add('hidden'); 
-            tourPopover.classList.add('hidden'); 
-            document.querySelector('nav').style.zIndex = ''; 
+            tourOverlay.classList.add('hidden'); tourPopover.classList.add('hidden'); document.querySelector('nav').style.zIndex = '50'; 
             if (currentTourIndex < tourSteps.length) { 
-                const step = tourSteps[currentTourIndex];
-                const targetId = window.innerWidth < 768 ? step.mobileId : step.id;
-                const el = document.getElementById(targetId);
-                if (el) { 
-                    el.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'bg-white', 'relative', 'z-[106]', 'rounded-2xl', 'p-1'); 
-                    el.style.zIndex = ''; 
-                } 
+                const el = document.getElementById(window.innerWidth < 768 ? tourSteps[currentTourIndex].mobileId : tourSteps[currentTourIndex].id);
+                if (el) el.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'bg-white', 'relative', 'z-[106]', 'rounded-2xl', 'p-1'); 
             } 
             document.body.style.overflow = ''; 
         };
 
         const startTourLogic = () => {
-            document.getElementById('loginModal').classList.add('hidden'); 
-            if (mobileMenu) mobileMenu.classList.add('hidden');
-            tourOverlay.classList.remove('hidden'); 
-            document.body.style.overflow = 'hidden'; 
-            currentTourIndex = 0; 
-            showTourStep(0); 
+            document.getElementById('loginModal').classList.add('hidden'); if (mobileMenu) mobileMenu.classList.add('hidden');
+            tourOverlay.classList.remove('hidden'); document.body.style.overflow = 'hidden'; currentTourIndex = 0; showTourStep(0); 
         };
 
         const startTourBtn = document.getElementById('startTourBtn');
         const startTourBtnMobile = document.getElementById('startTourBtnMobile');
-
         if(startTourBtn) startTourBtn.addEventListener('click', startTourLogic);
         if(startTourBtnMobile) startTourBtnMobile.addEventListener('click', startTourLogic);
-
         document.getElementById('tour-next').addEventListener('click', () => showTourStep(currentTourIndex + 1));
         document.getElementById('tour-prev').addEventListener('click', () => showTourStep(currentTourIndex - 1));
         document.getElementById('tour-skip').addEventListener('click', endTour);
 
-        (async () => { 
-            try { 
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token); 
-                }
-            } catch(e){} 
-        })();
+        (async () => { try { if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) await signInWithCustomToken(auth, __initial_auth_token); } catch(e){} })();
     </script>
 </body>
 </html>
