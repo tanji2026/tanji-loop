@@ -1248,7 +1248,7 @@
             if (currentTourIndex >= 0 && currentTourIndex < tourSteps.length) {
                 const prevEl = document.getElementById(tourSteps[currentTourIndex].id);
                 if (prevEl) {
-                    prevEl.classList.remove('ring-4', 'ring-brand', 'ring-offset-4', 'relative', 'bg-white');
+                    prevEl.classList.remove('ring-4', 'ring-brand', 'ring-offset-4', 'relative', 'bg-white', 'rounded-2xl', 'p-1');
                     prevEl.style.zIndex = '';
                 }
             }
@@ -1261,8 +1261,17 @@
             
             el.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
+            // 解決 Navbar 內部元素的層級問題 (Stacking Context)
+            const nav = document.querySelector('nav');
+            if (nav.contains(el)) {
+                nav.style.zIndex = '106';
+            } else {
+                nav.style.zIndex = ''; 
+            }
+
             setTimeout(() => {
                 el.classList.add('ring-4', 'ring-brand', 'ring-offset-4', 'relative');
+                if (nav.contains(el)) el.classList.add('rounded-2xl', 'p-1');
                 el.style.zIndex = '106';
                 if(el.tagName !== 'BUTTON' && el.tagName !== 'A') el.classList.add('bg-white');
 
@@ -1291,9 +1300,13 @@
         const endTour = () => {
             tourOverlay.classList.add('hidden');
             tourPopover.classList.add('hidden');
+            document.querySelector('nav').style.zIndex = '';
             if (currentTourIndex < tourSteps.length) {
                 const el = document.getElementById(tourSteps[currentTourIndex].id);
-                if (el) el.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'bg-white', 'relative', 'z-[106]');
+                if (el) {
+                    el.classList.remove('tour-highlight', 'ring-4', 'ring-brand', 'ring-offset-4', 'bg-white', 'relative', 'z-[106]', 'rounded-2xl', 'p-1');
+                    el.style.zIndex = '';
+                }
             }
             document.body.style.overflow = '';
         };
