@@ -508,21 +508,18 @@
         </section>
     </main>
 
-    <footer class="bg-slate-800 text-white pt-12 md:pt-16 pb-8 rounded-t-[3rem] md:rounded-t-[4rem] border-t-8 border-brand">
+    <footer class="bg-slate-800 text-white pt-12 md:pt-16 pb-24 md:pb-8 rounded-t-[3rem] md:rounded-t-[4rem] border-t-8 border-brand">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
-                <div class="flex items-center gap-3">
-                    <div class="flex flex-col justify-center text-center md:text-left">
-                        <span class="font-black text-xl md:text-2xl tracking-wide font-cute leading-none break-words">碳吉圈圈</span>
-                        <span class="font-bold text-[10px] md:text-xs tracking-widest text-brand-light opacity-80 uppercase mt-1 break-words">TanJi Loop</span>
-                    </div>
-                </div>
-                <div class="font-bold text-[10px] md:text-sm text-center md:text-left text-slate-400 leading-relaxed min-w-0 md:ml-4 md:pl-4 md:border-l border-slate-700">
-                    <p class="text-slate-300 mb-1 break-words">2026 新北市青年氣候行動徵件提案作品</p>
-                    <p class="break-words">聯絡信箱：tanji2026@gmail.com</p>
+            <div class="flex items-center gap-3">
+                <div class="flex flex-col justify-center text-center md:text-left">
+                    <span class="font-black text-xl md:text-2xl tracking-wide font-cute leading-none break-words">碳吉圈圈</span>
+                    <span class="font-bold text-[10px] md:text-xs tracking-widest text-brand-light opacity-80 uppercase mt-1 break-words">TanJi Loop</span>
                 </div>
             </div>
-            
+            <div class="font-bold text-[10px] md:text-sm text-center md:text-right text-slate-400 leading-relaxed min-w-0">
+                <p class="text-slate-300 mb-1 break-words">2026 新北市青年氣候行動徵件提案作品｜受著作權法保護，未經授權請勿複製轉載</p>
+                <p class="break-words">聯絡信箱：tanji2026@gmail.com</p>
+            </div>
             <div class="mt-6 md:mt-0 flex flex-col items-center md:items-end w-full md:w-auto shrink-0">
                 <div class="flex gap-2 w-full sm:w-auto">
                     <input type="email" id="newsletterEmail" placeholder="輸入 Email 訂閱電子報" class="w-full sm:w-64 bg-slate-700 text-white placeholder-slate-400 px-4 py-2.5 rounded-full text-xs font-bold outline-none focus:ring-2 focus:ring-brand border border-slate-600 transition-all">
@@ -533,63 +530,7 @@
         </div>
     </footer>
 
-    <button id="openFeedbackBtn" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-amber-500 hover:bg-amber-600 text-white rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl transition-all transform hover:-translate-y-1.5 flex items-center justify-center z-50 group" title="意見回饋與問題回報">
-        <span class="absolute top-0 right-0 md:top-1 md:right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
-        <i class="fa-solid fa-comment-dots text-2xl md:text-3xl group-hover:animate-ping"></i>
-    </button>
-
-    <div id="feedbackModal" class="fixed inset-0 z-[120] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
-        <div class="min-h-screen px-4 flex items-center justify-center py-4">
-            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-md w-full mx-auto shadow-2xl relative border-4 border-amber-100 text-left">
-                <button id="closeFeedbackBtn" class="absolute top-4 right-4 text-slate-400 hover:text-amber-500 bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-                <div class="text-center mb-6">
-                    <div class="w-16 h-16 mx-auto rounded-full bg-amber-50 text-amber-500 text-2xl flex items-center justify-center mb-3 shadow-inner">
-                        <i class="fa-solid fa-comment-medical"></i>
-                    </div>
-                    <h3 class="text-xl font-black text-slate-800 font-cute">意見回饋與問題回報</h3>
-                    <p class="text-xs text-slate-500 font-bold mt-1">讓我們把碳吉圈圈變得更好！</p>
-                </div>
-                
-                <div class="flex border-b border-slate-200 mb-4">
-                    <button id="tabSubmitFeedback" class="flex-1 pb-2 text-sm font-bold text-amber-500 border-b-2 border-amber-500 transition-colors">填寫回饋</button>
-                    <button id="tabFeedbackHistory" class="flex-1 pb-2 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 transition-colors">我的紀錄</button>
-                </div>
-
-                <div id="feedbackSuccess" class="hidden text-center py-4">
-                    <div class="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    <h4 class="font-black text-slate-800 mb-2">已收到您的回饋！</h4>
-                    <p class="text-sm text-slate-500 font-bold">感謝您協助平台成長。</p>
-                </div>
-
-                <form id="feedbackForm" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-1">回饋類型</label>
-                        <select id="feedbackFeature" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors">
-                            <option value="操作問題">操作問題</option>
-                            <option value="功能建議">功能建議</option>
-                            <option value="錯誤回報">錯誤回報</option>
-                            <option value="其他想法">其他想法</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold text-slate-700 mb-1">詳細內容 <span class="text-red-500">*</span></label>
-                        <textarea id="feedbackText" rows="4" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors resize-none" placeholder="請描述您遇到的狀況或建議..." required></textarea>
-                    </div>
-                    <button type="submit" id="submitFeedbackBtn" class="w-full bg-amber-500 text-white rounded-xl py-3.5 font-bold text-base btn-cute hover:bg-amber-600 transition-colors mt-2">
-                        送出回饋
-                    </button>
-                </form>
-
-                <div id="feedbackHistoryContainer" class="hidden space-y-3 max-h-60 overflow-y-auto pr-1 hide-scrollbar">
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Cert Modal -->
     <div id="certificateModal" class="fixed inset-0 z-[110] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto hide-scrollbar">
         <div class="min-h-screen px-4 flex flex-col items-center justify-center py-10 sm:py-20">
             <div class="w-full max-w-3xl relative text-left flex flex-col">
@@ -658,6 +599,7 @@
         </div>
     </div>
 
+    <!-- Upload Image Modal -->
     <div id="uploadModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
         <div class="min-h-screen px-4 flex items-center justify-center py-4">
             <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
@@ -695,6 +637,7 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
     <div id="loginModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
         <div class="min-h-screen px-4 flex items-center justify-center py-4">
             <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
@@ -725,6 +668,7 @@
         </div>
     </div>
 
+    <!-- Admin Modal -->
     <div id="adminModal" class="fixed inset-0 z-[100] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
         <div class="min-h-screen px-4 flex items-center justify-center py-10">
             <div class="bg-white rounded-3xl p-6 sm:p-8 w-full max-w-md relative border-4 border-red-100">
@@ -746,6 +690,16 @@
                     </div>
                     <button type="submit" class="w-full bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl py-3 transition-colors btn-cute mt-2">更新全站數據</button>
                 </form>
+                
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-file-export text-indigo-500"></i> 匯出營運數據
+                    </h3>
+                    <p class="text-xs text-slate-500 font-bold mb-3">下載 CSV 格式試算表，包含所有用戶的資材打卡紀錄與減碳數據。</p>
+                    <button id="adminExportDataBtn" type="button" class="w-full bg-indigo-50 text-indigo-600 hover:bg-indigo-100 font-bold rounded-xl py-3 transition-colors text-sm flex items-center justify-center gap-2 btn-cute">
+                        <i class="fa-solid fa-download"></i> 匯出打卡紀錄 (CSV)
+                    </button>
+                </div>
                 
                 <div class="mt-8 pt-6 border-t border-slate-100">
                     <h3 class="font-bold text-slate-800 mb-3 text-sm flex items-center gap-2">
@@ -781,6 +735,7 @@
         </div>
     </div>
 
+    <!-- MycoNode Modal (Updated Spec) -->
     <div id="mycoNodeModal" class="fixed inset-0 z-[120] hidden bg-slate-900/90 backdrop-blur-md overflow-y-auto flex items-center justify-center p-4">
         <div class="bg-slate-900 border-2 border-slate-800 rounded-[2.5rem] p-4 md:p-8 max-w-5xl w-full text-left relative overflow-hidden shadow-2xl">
             <button id="closeMycoNodeBtn" class="absolute top-4 right-4 md:top-6 md:right-6 text-slate-400 hover:text-brand transition-colors w-10 h-10 flex items-center justify-center bg-slate-800 rounded-full shrink-0">
@@ -870,6 +825,7 @@
         </div>
     </div>
 
+    <!-- Reward Modal -->
     <div id="rewardModal" class="fixed inset-0 z-[120] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
         <div class="bg-white rounded-[2rem] p-6 max-w-sm w-full mx-auto shadow-2xl relative border-4 border-brand-light text-left">
             <button id="closeRewardBtn" class="absolute top-4 right-4 text-slate-400 hover:text-brand transition-colors w-8 h-8 flex items-center justify-center bg-slate-100 rounded-full">
@@ -902,6 +858,63 @@
             <div class="flex gap-2">
                 <button id="tour-prev" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-500 bg-slate-100 hover:bg-slate-200 transition-colors hidden">上一步</button>
                 <button id="tour-next" class="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-brand hover:bg-brand-dark transition-colors">下一步</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="openFeedbackBtn" class="fixed bottom-4 right-4 md:bottom-6 md:right-6 bg-amber-500 hover:bg-amber-600 text-white rounded-full w-14 h-14 md:w-16 md:h-16 shadow-2xl transition-all transform hover:-translate-y-1.5 flex items-center justify-center z-50 group" title="意見回饋與問題回報">
+        <span class="absolute top-0 right-0 md:top-1 md:right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-white animate-bounce"></span>
+        <i class="fa-solid fa-comment-dots text-2xl md:text-3xl group-hover:animate-ping"></i>
+    </button>
+
+    <div id="feedbackModal" class="fixed inset-0 z-[120] hidden bg-slate-900/80 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen px-4 flex items-center justify-center py-4">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-8 max-w-md w-full mx-auto shadow-2xl relative border-4 border-amber-100 text-left">
+                <button id="closeFeedbackBtn" class="absolute top-4 right-4 text-slate-400 hover:text-amber-500 bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="text-center mb-6">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-amber-50 text-amber-500 text-2xl flex items-center justify-center mb-3 shadow-inner">
+                        <i class="fa-solid fa-comment-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-black text-slate-800 font-cute">意見回饋與問題回報</h3>
+                    <p class="text-xs text-slate-500 font-bold mt-1">讓我們把碳吉圈圈變得更好！</p>
+                </div>
+                
+                <div class="flex border-b border-slate-200 mb-4">
+                    <button id="tabSubmitFeedback" class="flex-1 pb-2 text-sm font-bold text-amber-500 border-b-2 border-amber-500 transition-colors">填寫回饋</button>
+                    <button id="tabFeedbackHistory" class="flex-1 pb-2 text-sm font-bold text-slate-400 border-b-2 border-transparent hover:text-slate-600 transition-colors">我的紀錄</button>
+                </div>
+
+                <div id="feedbackSuccess" class="hidden text-center py-4">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="font-black text-slate-800 mb-2">已收到您的回饋！</h4>
+                    <p class="text-sm text-slate-500 font-bold">感謝您協助平台成長。</p>
+                </div>
+
+                <form id="feedbackForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">回饋類型</label>
+                        <select id="feedbackFeature" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors">
+                            <option value="操作問題">操作問題</option>
+                            <option value="功能建議">功能建議</option>
+                            <option value="錯誤回報">錯誤回報</option>
+                            <option value="其他想法">其他想法</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">詳細內容 <span class="text-red-500">*</span></label>
+                        <textarea id="feedbackText" rows="4" class="w-full bg-slate-50 border-2 border-slate-100 rounded-xl px-4 py-2.5 text-sm font-bold focus:border-amber-400 outline-none transition-colors resize-none" placeholder="請描述您遇到的狀況或建議..." required></textarea>
+                    </div>
+                    <button type="submit" id="submitFeedbackBtn" class="w-full bg-amber-500 text-white rounded-xl py-3.5 font-bold text-base btn-cute hover:bg-amber-600 transition-colors mt-2">
+                        送出回饋
+                    </button>
+                </form>
+
+                <div id="feedbackHistoryContainer" class="hidden space-y-3 max-h-60 overflow-y-auto pr-1 hide-scrollbar">
+                </div>
             </div>
         </div>
     </div>
@@ -1397,6 +1410,48 @@
             loadSubscribers();
         });
         document.getElementById('closeAdminBtn').addEventListener('click', () => document.getElementById('adminModal').classList.add('hidden'));
+
+        document.getElementById('adminExportDataBtn').addEventListener('click', async () => {
+            const btn = document.getElementById('adminExportDataBtn');
+            const origText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> 匯出中...';
+            btn.disabled = true;
+            try {
+                const q = query(collection(db, 'artifacts', appIdStr, 'feeds'), orderBy('timestamp', 'desc'));
+                const snap = await getDocs(q);
+                if(snap.empty) { alert('尚無資料可匯出'); return; }
+                
+                let csvContent = '\uFEFF';
+                csvContent += "時間,用戶名稱,動作,獎勵\n";
+                
+                snap.forEach(doc => {
+                    const data = doc.data();
+                    const dateStr = new Date(data.timestamp).toLocaleString('zh-TW', { hour12: false });
+                    const name = data.name || '熱心公民';
+                    const actionNode = document.createElement('div');
+                    actionNode.innerHTML = data.action;
+                    const actionText = actionNode.textContent || actionNode.innerText || "";
+                    const reward = data.reward || '';
+                    
+                    const row = [dateStr, name, actionText, reward].map(field => `"${String(field).replace(/"/g, '""')}"`).join(',');
+                    csvContent += row + "\n";
+                });
+                
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+                link.setAttribute("href", url);
+                link.setAttribute("download", `碳吉圈圈_打卡紀錄_${new Date().toLocaleDateString('zh-TW').replace(/\//g, '')}.csv`);
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } catch(e) {
+                alert("匯出失敗，請稍後再試或確認權限。");
+            } finally {
+                btn.innerHTML = origText;
+                btn.disabled = false;
+            }
+        });
 
         const loadSubscribers = async () => {
             const container = document.getElementById('adminSubList');
