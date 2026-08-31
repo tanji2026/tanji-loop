@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow">
     <title>微型資源循環實作指引</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -27,11 +26,18 @@
         .slide { padding: 4rem 1.5rem; position: relative; border-bottom: 2px dashed #e2e8f0; }
         .step-card { background: white; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); border: 2px solid #f1f5f9; }
         
+        /* 注音模式切換 CSS */
+        rt { display: none; font-size: 0.6em; color: #64748b; font-weight: normal; user-select: none; }
+        .zhuyin-mode rt { display: block; }
+        ruby { ruby-align: center; margin: 0 0.1em; }
+        
         @media print {
             .no-print { display: none !important; }
             body { background-color: white; }
             .slide { page-break-after: always; border-bottom: none; padding: 2rem; min-height: 297mm; }
             .step-card { box-shadow: none; border: 2px solid #cbd5e1; page-break-inside: avoid; }
+            /* 列印時強制顯示注音（若使用者有開啟） */
+            .zhuyin-mode rt { display: block !important; }
         }
         
         .blob { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
@@ -39,8 +45,11 @@
 </head>
 <body class="text-slate-800 antialiased">
 
-    <!-- 下載按鈕與提示框 -->
-    <div class="fixed top-4 right-4 md:top-6 md:right-6 z-50 no-print flex flex-col items-end">
+    <!-- 懸浮按鈕區 -->
+    <div class="fixed top-4 right-4 md:top-6 md:right-6 z-50 no-print flex flex-col items-end gap-3">
+        <button id="toggleZhuyinBtn" class="bg-amber-100 text-amber-700 px-4 py-2.5 rounded-full text-sm md:text-base font-bold shadow-md border border-amber-200 hover:bg-amber-200 transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-child"></i> <span>開啟親子注音</span>
+        </button>
         <button id="saveBtn" class="bg-slate-800 text-white px-5 py-3 rounded-full text-lg font-bold shadow-2xl hover:bg-slate-700 transition-transform hover:-translate-y-1 flex items-center gap-2">
             <i class="fa-solid fa-cloud-arrow-down"></i> 儲存指引電子檔
         </button>
@@ -72,10 +81,11 @@
                 <i class="fa-solid fa-users"></i> 適用對象：學校・社區・里民辦公室
             </div>
             <h1 class="text-5xl md:text-7xl font-black text-slate-800 mb-8 leading-tight">
-                微型資源循環<br>實作指引
+                <ruby>微<rt>ㄨㄟˊ</rt>型<rt>ㄒㄧㄥˊ</rt>資<rt>ㄗ</rt>源<rt>ㄩㄢˊ</rt>循<rt>ㄒㄩㄣˊ</rt>環<rt>ㄏㄨㄢˊ</rt></ruby><br>
+                <ruby>實<rt>ㄕˊ</rt>作<rt>ㄗㄨㄛˋ</rt>指<rt>ㄓˇ</rt>引<rt>ㄧㄣˇ</rt></ruby>
             </h1>
             <p class="text-2xl md:text-3xl font-bold text-slate-600 mb-12">
-                把不要的咖啡渣與落葉，變成種花種菜的黑金土
+                把不要的咖啡渣與落葉，變成種花種菜的<ruby>黑<rt>ㄏㄟ</rt>金<rt>ㄐㄧㄣ</rt>土<rt>ㄊㄨˇ</rt></ruby>
             </p>
             <div class="bg-amber-50 border-l-8 border-amber-500 p-6 text-left rounded-r-2xl inline-block">
                 <p class="text-xl font-bold text-amber-800 m-0 leading-relaxed">
@@ -91,7 +101,9 @@
         <div class="max-w-4xl mx-auto">
             <div class="flex items-center gap-4 mb-10">
                 <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-3xl font-black shadow-md shrink-0">1</div>
-                <h2 class="text-3xl md:text-4xl font-black text-slate-800">第一步：出門收集材料</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-800">
+                    <ruby>第<rt>ㄉㄧˋ</rt>一<rt>ㄧ</rt>步<rt>ㄅㄨˋ</rt></ruby>：出門收集材料
+                </h2>
             </div>
             
             <p class="text-xl text-slate-600 font-bold mb-8">做堆肥就像煮湯，我們需要準備兩樣主要食材。這些材料在我們的生活周遭就能免費拿到，請準備好乾淨的塑膠桶或大袋子。</p>
@@ -103,7 +115,7 @@
                         <i class="fa-solid fa-mug-hot"></i>
                     </div>
                     <div class="flex-1 relative z-10">
-                        <h3 class="text-2xl font-black text-slate-800 mb-3">食材 A：生咖啡渣（提供氮源）</h3>
+                        <h3 class="text-2xl font-black text-slate-800 mb-3">食材 A：生咖啡渣（提供<ruby>氮<rt>ㄉㄢˋ</rt>源<rt>ㄩㄢˊ</rt></ruby>）</h3>
                         <p class="text-lg text-slate-600 font-bold mb-4">
                             家裡泡咖啡剩下的渣太少。請帶著桶子，前往附近的<span class="text-amber-600 font-black">連鎖咖啡店或是超商</span>免費索取。
                         </p>
@@ -131,9 +143,9 @@
                         <i class="fa-solid fa-leaf"></i>
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-2xl font-black text-slate-800 mb-3">食材 B：乾燥落葉（提供碳源）</h3>
+                        <h3 class="text-2xl font-black text-slate-800 mb-3">食材 B：乾燥落葉（提供<ruby>碳<rt>ㄊㄢˋ</rt>源<rt>ㄩㄢˊ</rt></ruby>）</h3>
                         <p class="text-lg text-slate-600 font-bold mb-4">
-                            只有咖啡渣是不行的，單獨放會發臭。請到社區中庭、公園或學校打掃時，收集地上的落葉。
+                            只有咖啡渣是不行的，單獨放會產生難聞的氣味。請到社區中庭、公園或學校打掃時，收集地上的落葉。
                         </p>
                         <div class="bg-slate-100 p-4 rounded-xl border border-slate-200">
                             <h4 class="font-bold text-slate-700 mb-2"><i class="fa-solid fa-thumbtack text-emerald-500 mr-2"></i>注意事項：</h4>
@@ -154,10 +166,12 @@
         <div class="max-w-4xl mx-auto">
             <div class="flex items-center gap-4 mb-10">
                 <div class="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white text-3xl font-black shadow-md shrink-0">2</div>
-                <h2 class="text-3xl md:text-4xl font-black text-slate-800">第二步：動手把材料放進發酵箱</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-slate-800">
+                    <ruby>第<rt>ㄉㄧˋ</rt>二<rt>ㄦˋ</rt>步<rt>ㄅㄨˋ</rt></ruby>：動手把材料放進發酵箱
+                </h2>
             </div>
             
-            <p class="text-xl text-slate-600 font-bold mb-8">材料找齊後，我們要把它們裝進社區的「發酵箱」裡。比例抓對了，才不會產生臭味。</p>
+            <p class="text-xl text-slate-600 font-bold mb-8">材料找齊後，我們要把它們裝進社區的「發酵箱」裡。調配出完美的<ruby>碳<rt>ㄊㄢˋ</rt>氮<rt>ㄉㄢˋ</rt>比<rt>ㄅㄧˇ</rt></ruby>，才不會產生臭味。</p>
 
             <div class="grid md:grid-cols-2 gap-6">
                 <!-- 動作 1 -->
@@ -169,7 +183,7 @@
                     <p class="text-lg text-slate-600 font-bold text-left leading-relaxed">
                         請準備一個作為測量標準的容器（例如家用小水桶）。<br><br>
                         裝滿<span class="text-amber-700 font-black">一桶咖啡渣</span>，就要配上<span class="text-emerald-700 font-black">一桶乾燥落葉</span>。<br><br>
-                        把這兩桶一起倒進大的發酵箱裡面。這就是最好的分解比例，能防止臭酸味。
+                        把這兩桶一起倒進大的發酵箱裡面。這就是最好的分解比例，能防止酸臭味產生。
                     </p>
                 </div>
 
@@ -201,7 +215,7 @@
                             <div class="text-slate-400 mt-1"><i class="fa-solid fa-xmark text-xl"></i></div>
                             <div>
                                 <p class="text-lg font-black text-slate-700">捏不出水，手一放開就散掉（像沙子）：</p>
-                                <p class="text-lg text-slate-600 font-bold">太乾了！裡面的益生菌會渴死。請用灑水器噴一點點水，然後再攪拌一下。</p>
+                                <p class="text-lg text-slate-600 font-bold">太乾了！裡面的<ruby>微<rt>ㄨㄟˊ</rt>生<rt>ㄕㄥ</rt>物<rt>ㄨˋ</rt></ruby>會渴死無法工作。請用灑水器噴一點點水，然後再攪拌一下。</p>
                             </div>
                         </div>
 
@@ -209,7 +223,7 @@
                             <div class="text-red-500 mt-1"><i class="fa-solid fa-triangle-exclamation text-xl"></i></div>
                             <div>
                                 <p class="text-lg font-black text-red-700">水會滴滴答答從指縫流下來：</p>
-                                <p class="text-lg text-red-600 font-bold">太濕了！這樣一定會發出臭水溝味！請趕快再多加一點乾落葉進去吸水攪拌。</p>
+                                <p class="text-lg text-red-600 font-bold">太濕了！這樣一定會發出難聞的酸臭味！請趕快再多加一點乾落葉進去吸水攪拌。</p>
                             </div>
                         </div>
 
@@ -217,7 +231,7 @@
                             <div class="text-emerald-500 mt-1"><i class="fa-solid fa-check text-xl"></i></div>
                             <div>
                                 <p class="text-lg font-black text-emerald-700">感覺稍微濕潤，可以捏成形，但不會滴水：</p>
-                                <p class="text-lg text-emerald-600 font-bold">恭喜您！這就是最完美的水分狀態，益生菌準備開始工作了。</p>
+                                <p class="text-lg text-emerald-600 font-bold">恭喜您！這就是最完美的水分狀態，有益<ruby>微<rt>ㄨㄟˊ</rt>生<rt>ㄕㄥ</rt>物<rt>ㄨˋ</rt></ruby>（好菌）準備開始工作了。</p>
                             </div>
                         </div>
                     </div>
@@ -231,10 +245,12 @@
         <div class="max-w-4xl mx-auto">
             <div class="flex items-center gap-4 mb-10">
                 <div class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-white text-3xl font-black shadow-md shrink-0">3</div>
-                <h2 class="text-3xl md:text-4xl font-black text-white">第三步：日常照顧與儀器輔助</h2>
+                <h2 class="text-3xl md:text-4xl font-black text-white">
+                    <ruby>第<rt>ㄉㄧˋ</rt>三<rt>ㄙㄢ</rt>步<rt>ㄅㄨˋ</rt></ruby>：日常照顧與儀器輔助
+                </h2>
             </div>
             
-            <p class="text-xl text-slate-300 font-bold mb-10">東西放進去後，並不是蓋上蓋子就結束了。我們需要定期給它空氣，並且利用科學儀器看溫度。</p>
+            <p class="text-xl text-slate-300 font-bold mb-10">東西放進去後，並不是蓋上蓋子就結束了。這是一個<ruby>好<rt>ㄏㄠˋ</rt>氧<rt>ㄧㄤˇ</rt>發<rt>ㄈㄚ</rt>酵<rt>ㄒㄧㄠˋ</rt></ruby>的過程，我們需要定期給它空氣，並且利用科學儀器看溫度。</p>
 
             <div class="space-y-8">
                 <!-- 照顧動作 -->
@@ -245,7 +261,7 @@
                     <div>
                         <h3 class="text-2xl font-black text-brand-light mb-3">每三到五天：打開蓋子翻一翻</h3>
                         <p class="text-lg text-slate-300 font-bold leading-relaxed">
-                            發酵箱裡面的益生菌非常需要呼吸空氣。如果不翻土，底部沒有空氣就會變成厭氧狀態，產生難聞的氣味。<br>
+                            發酵箱裡面的<ruby>微<rt>ㄨㄟˊ</rt>生<rt>ㄕㄥ</rt>物<rt>ㄨˋ</rt></ruby>非常需要呼吸空氣。如果不翻土，底部沒有空氣就會變成厭氧狀態，產生難聞的氣味。<br>
                             <span class="text-white font-black bg-slate-900 px-2 py-1 rounded">動作：</span> 請定期拿鏟子，把底下的土翻到上面來透透氣，就像是在炒菜一樣翻炒均勻。
                         </p>
                     </div>
@@ -275,7 +291,7 @@
                             <div class="text-amber-400 text-3xl mb-4"><i class="fa-solid fa-mobile-screen"></i></div>
                             <h4 class="text-xl font-black text-white mb-2">我們該看什麼數字？</h4>
                             <p class="text-slate-300 font-bold text-lg leading-relaxed">
-                                正常發酵時，溫度會跑到 <span class="text-amber-400 font-black text-2xl">55°C 到 65°C</span> 之間，甚至會冒出白煙！請不要緊張，這代表裡面的益生菌正在努力工作發熱，高溫可以把裡面的壞細菌和蟲卵都殺死。
+                                正常發酵時，溫度會跑到 <span class="text-amber-400 font-black text-2xl">55°C 到 65°C</span> 之間，甚至會冒出白煙！請不要緊張，這代表裡面的<ruby>微<rt>ㄨㄟˊ</rt>生<rt>ㄕㄥ</rt>物<rt>ㄨˋ</rt></ruby>正在努力工作發熱，高溫可以把裡面的病原菌和蟲卵都殺滅。
                             </p>
                         </div>
                     </div>
@@ -296,7 +312,7 @@
                 
                 <div class="space-y-4">
                     <div class="bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm">
-                        <h4 class="text-xl font-black text-slate-800 mb-2 flex items-center"><i class="fa-solid fa-circle-question text-amber-500 mr-2"></i> 狀況一：發出像臭水溝一樣的酸臭味</h4>
+                        <h4 class="text-xl font-black text-slate-800 mb-2 flex items-center"><i class="fa-solid fa-circle-question text-amber-500 mr-2"></i> 狀況一：發出像酸水溝一樣的臭味</h4>
                         <p class="text-lg text-slate-600 font-bold pl-7">
                             <span class="text-brand-dark font-black">解決方法：</span> 這是因為太濕或是太久沒翻動了。請立刻打開蓋子，加入大量「乾燥的落葉」，並用鏟子用力翻攪均勻，讓空氣進去，隔天味道就會消失了。
                         </p>
@@ -304,7 +320,7 @@
                     <div class="bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm">
                         <h4 class="text-xl font-black text-slate-800 mb-2 flex items-center"><i class="fa-solid fa-circle-question text-amber-500 mr-2"></i> 狀況二：過了好幾天，溫度都冷冰冰的沒有上升</h4>
                         <p class="text-lg text-slate-600 font-bold pl-7">
-                            <span class="text-brand-dark font-black">解決方法：</span> 可能是材料太少，或是太乾了。請檢查水分是否像擰乾的毛巾，如果太乾請加一點水。如果材料只有薄薄一層，益生菌無法保溫，請再去收集更多咖啡渣與落葉加進去。
+                            <span class="text-brand-dark font-black">解決方法：</span> 可能是材料太少，或是太乾了。請檢查水分是否像擰乾的毛巾，如果太乾請加一點水。如果材料只有薄薄一層，<ruby>微<rt>ㄨㄟˊ</rt>生<rt>ㄕㄥ</rt>物<rt>ㄨˋ</rt></ruby>無法保溫與發熱，請再去收集更多咖啡渣與落葉加進去。
                         </p>
                     </div>
                 </div>
@@ -312,7 +328,9 @@
 
             <!-- 收成與使用 -->
             <div class="bg-white rounded-3xl p-8 shadow-sm border border-emerald-200">
-                <h2 class="text-3xl font-black text-slate-800 mb-6 text-center">最後一步：收成與使用「黑金土」</h2>
+                <h2 class="text-3xl font-black text-slate-800 mb-6 text-center">
+                    <ruby>最<rt>ㄗㄨㄟˋ</rt>後<rt>ㄏㄡˋ</rt>一<rt>ㄧ</rt>步<rt>ㄅㄨˋ</rt></ruby>：收成與使用「<ruby>黑<rt>ㄏㄟ</rt>金<rt>ㄐㄧㄣ</rt>土<rt>ㄊㄨˇ</rt></ruby>」
+                </h2>
                 
                 <div class="flex flex-col md:flex-row gap-8 items-center">
                     <div class="w-full md:w-1/3 shrink-0">
@@ -322,12 +340,12 @@
                     </div>
                     <div class="w-full md:w-2/3">
                         <p class="text-lg text-slate-600 font-bold mb-4 leading-relaxed">
-                            經過大約 <span class="text-slate-800 font-black text-xl">45 天</span> 左右，您會發現溫度慢慢降回常溫。此時裡面的葉子和咖啡渣已經看不出原本的形狀，變成了黑黑、鬆鬆、帶有森林泥土香味的土壤。這就是營養豐富的「黑金土」！
+                            經過大約 <span class="text-slate-800 font-black text-xl">45 天</span> 左右，您會發現溫度慢慢降回常溫。此時裡面的葉子和咖啡渣已經看不出原本的形狀，變成了黑黑、鬆鬆、帶有森林泥土香味的<ruby>腐<rt>ㄈㄨˇ</rt>植<rt>ㄓˊ</rt>質<rt>ㄓˊ</rt></ruby>。這就是營養豐富的「黑金土」！
                         </p>
                         <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
                             <h4 class="font-black text-amber-800 mb-2">如何使用它來種花種菜？</h4>
                             <p class="text-lg text-amber-700 font-bold">
-                                黑金土非常營養，請不要單獨使用它來種植。<br>
+                                黑金土非常營養，請不要單獨使用它來種植，以免太營養導致植物受傷。<br>
                                 請將 <span class="font-black text-xl">1 份黑金土</span> 搭配 <span class="font-black text-xl">3 份普通泥土</span> 均勻混合後再將植物種下，就能讓植物長得頭好壯壯！
                             </p>
                         </div>
@@ -348,21 +366,39 @@
         document.addEventListener('DOMContentLoaded', () => {
             const saveBtn = document.getElementById('saveBtn');
             const printMessage = document.getElementById('printMessage');
+            const toggleZhuyinBtn = document.getElementById('toggleZhuyinBtn');
 
+            // 處理儲存列印
             if (saveBtn && printMessage) {
                 saveBtn.addEventListener('click', () => {
-                    // Show the instruction modal
                     printMessage.classList.remove('hidden');
-                    
-                    // Wait 1.5 seconds so the user can read the instruction, then trigger print
                     setTimeout(() => {
                         window.print();
-                        
-                        // Hide modal after print dialog opens/closes
                         setTimeout(() => {
                             printMessage.classList.add('hidden');
                         }, 1000);
                     }, 1500);
+                });
+            }
+
+            // 處理注音模式切換
+            if (toggleZhuyinBtn) {
+                toggleZhuyinBtn.addEventListener('click', () => {
+                    document.body.classList.toggle('zhuyin-mode');
+                    const span = toggleZhuyinBtn.querySelector('span');
+                    if (document.body.classList.contains('zhuyin-mode')) {
+                        span.innerText = '關閉親子注音';
+                        toggleZhuyinBtn.classList.replace('bg-amber-100', 'bg-brand-light');
+                        toggleZhuyinBtn.classList.replace('text-amber-700', 'text-brand-dark');
+                        toggleZhuyinBtn.classList.replace('border-amber-200', 'border-brand');
+                        toggleZhuyinBtn.classList.replace('hover:bg-amber-200', 'hover:bg-brand');
+                    } else {
+                        span.innerText = '開啟親子注音';
+                        toggleZhuyinBtn.classList.replace('bg-brand-light', 'bg-amber-100');
+                        toggleZhuyinBtn.classList.replace('text-brand-dark', 'text-amber-700');
+                        toggleZhuyinBtn.classList.replace('border-brand', 'border-amber-200');
+                        toggleZhuyinBtn.classList.replace('hover:bg-brand', 'hover:bg-amber-200');
+                    }
                 });
             }
         });
